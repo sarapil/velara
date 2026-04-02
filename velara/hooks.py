@@ -27,6 +27,7 @@ add_to_apps_screen = [
 # Includes in <head>
 # ------------------
 app_include_css = [
+        "/assets/velara/css/velara-theme.css",
 	"/assets/velara/css/velara-variables.css"
 ]
 
@@ -318,3 +319,8 @@ caps_field_maps = [
 	{"capability": "VL_view_occupancy_forecast", "doctype": "VL Night Audit", "field": "forecast_occupancy", "behavior": "hide"},
 ]
 
+# Website Route Rules
+# --------------------------------------------------------
+website_route_rules = [
+    {"from_route": "/velara/<path:app_path>", "to_route": "velara/<app_path>"},
+]

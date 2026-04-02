@@ -1,0 +1,120 @@
+/* Velara — Theme CSS Variables
+ * Brand colors and design tokens for Velara
+ * Domain: Hotel & Hospitality Management
+ */
+
+:root {
+  /* Primary Colors */
+  --velara-primary: #0EA5E9;
+  --velara-primary-dark: #0284C7;
+  --velara-primary-light: #0EA5E933;
+  --velara-primary-subtle: #0EA5E90D;
+
+  /* Neutral Colors */
+  --velara-bg: #FFFFFF;
+  --velara-bg-subtle: #F8FAFC;
+  --velara-text: #1E293B;
+  --velara-text-muted: #64748B;
+  --velara-border: #E2E8F0;
+
+  /* Status Colors */
+  --velara-success: #10B981;
+  --velara-warning: #F59E0B;
+  --velara-danger: #EF4444;
+  --velara-info: #3B82F6;
+
+  /* Spacing */
+  --velara-radius-sm: 6px;
+  --velara-radius-md: 10px;
+  --velara-radius-lg: 16px;
+
+  /* Shadows */
+  --velara-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --velara-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --velara-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  /* Typography */
+  --velara-font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+  --velara-font-size-xs: 0.75rem;
+  --velara-font-size-sm: 0.875rem;
+  --velara-font-size-base: 1rem;
+  --velara-font-size-lg: 1.125rem;
+  --velara-font-size-xl: 1.25rem;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --velara-bg: #0F172A;
+  --velara-bg-subtle: #1E293B;
+  --velara-text: #F1F5F9;
+  --velara-text-muted: #94A3B8;
+  --velara-border: #334155;
+  --velara-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --velara-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --velara-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+/* RTL Support */
+[dir="rtl"] .velara-sidebar {
+  border-inline-start: 2px solid var(--velara-primary);
+  margin-inline-start: 0;
+  margin-inline-end: 1rem;
+}
+
+/* Glassmorphism Card */
+.velara-glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--velara-border);
+  border-radius: var(--velara-radius-lg);
+  box-shadow: var(--velara-shadow-md);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.velara-glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--velara-shadow-lg);
+}
+
+[data-theme="dark"] .velara-glass-card {
+  background: rgba(30, 41, 59, 0.7);
+}
+
+/* Status Badge */
+.velara-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: var(--velara-font-size-xs);
+  font-weight: 600;
+}
+
+.velara-badge--success { background: var(--velara-success)1A; color: var(--velara-success); }
+.velara-badge--warning { background: var(--velara-warning)1A; color: var(--velara-warning); }
+.velara-badge--danger { background: var(--velara-danger)1A; color: var(--velara-danger); }
+.velara-badge--info { background: var(--velara-info)1A; color: var(--velara-info); }
+
+/* Workspace Header */
+.velara-ws-header {
+  background: linear-gradient(135deg, var(--velara-primary), var(--velara-primary-dark));
+  color: white;
+  padding: 2rem;
+  border-radius: var(--velara-radius-lg);
+  margin-bottom: 1.5rem;
+}
+
+.velara-ws-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.velara-ws-header p {
+  margin: 0.5rem 0 0;
+  opacity: 0.85;
+  font-size: var(--velara-font-size-sm);
+}
