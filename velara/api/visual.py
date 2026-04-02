@@ -9,6 +9,8 @@ from frappe import _
 @frappe.whitelist()
 def get_guest_journey_graph(reservation=None):
 	"""Get guest journey as a dependency graph for frappe.visual.dependencyGraph()."""
+	frappe.only_for(["VL User", "VL Manager", "System Manager"])
+
 	nodes = [
 		{"id": "search", "label": _("Search"), "type": "start", "status": "completed"},
 		{"id": "reserve", "label": _("Reservation"), "type": "document", "status": "completed"},
@@ -56,6 +58,8 @@ def get_guest_journey_graph(reservation=None):
 @frappe.whitelist()
 def get_hotel_module_map():
 	"""Get VELARA module map for frappe.visual.appMap()."""
+	frappe.only_for(["VL User", "VL Manager", "System Manager"])
+
 	modules = [
 		{"id": "velara", "label": "VELARA", "type": "app", "icon": "building"},
 		{"id": "front_desk", "label": _("Front Desk"), "type": "module", "icon": "bell-concierge"},
@@ -81,6 +85,8 @@ def get_hotel_module_map():
 @frappe.whitelist()
 def get_reservation_workflow_graph():
 	"""Get reservation workflow for frappe.visual.dependencyGraph()."""
+	frappe.only_for(["VL User", "VL Manager", "System Manager"])
+
 	nodes = [
 		{"id": "draft", "label": _("Draft"), "type": "state", "color": "#95a5a6"},
 		{"id": "tentative", "label": _("Tentative"), "type": "state", "color": "#f39c12"},

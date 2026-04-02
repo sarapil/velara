@@ -1,0 +1,58 @@
+{
+  "app": "velara",
+  "charts": [],
+  "content": "[{\"id\": \"1a1f9c77dd83\", \"type\": \"card\", \"data\": {\"card_name\": \"Loyalty\", \"col\": 4}}]",
+  "creation": "2026-04-02 12:10:51.257656",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "star",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Velara Loyalty",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Loyalty",
+      "link_count": 2,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Loyalty Program",
+      "link_to": "VL Loyalty Program",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Loyalty Transaction",
+      "link_to": "VL Loyalty Transaction",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-02 12:10:51.257656",
+  "modified_by": "Administrator",
+  "module": "Velara Loyalty",
+  "name": "Velara Loyalty",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "Velara",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 10,
+  "shortcuts": [],
+  "title": "Velara Loyalty"
+}

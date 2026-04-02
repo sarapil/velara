@@ -1,0 +1,95 @@
+{%- extends "templates/web.html" -%}
+
+{%- block page_content -%}
+<div class="velara-home">
+	<div class="hero-section text-center py-5" style="background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%); color: white; border-radius: 12px; margin-bottom: 2rem;">
+		<h1 class="mb-3">
+			<i class="fa fa-hotel"></i> Velara
+		</h1>
+		<p class="lead mb-0">{{ _("Hospitality & Hotel Management System") }}</p>
+	</div>
+
+	<!-- Quick Links -->
+	<div class="row mb-4">
+		<div class="col-12">
+			<h4 class="mb-3">{{ _("Quick Access") }}</h4>
+		</div>
+		{% set links = [
+			{"icon": "fa-concierge-bell", "title": _("Front Desk"), "url": "/app/velara-front-desk", "color": "#0D9488"},
+			{"icon": "fa-th-large", "title": _("Room Rack"), "url": "/app/velara-room-rack", "color": "#3B82F6"},
+			{"icon": "fa-chart-line", "title": _("Dashboard"), "url": "/app/velara-dashboard", "color": "#8B5CF6"},
+			{"icon": "fa-calendar-check", "title": _("Reservations"), "url": "/app/vl-reservation", "color": "#F59E0B"},
+			{"icon": "fa-users", "title": _("Guests"), "url": "/app/vl-guest", "color": "#EC4899"},
+			{"icon": "fa-bed", "title": _("Rooms"), "url": "/app/vl-room", "color": "#10B981"},
+			{"icon": "fa-broom", "title": _("Housekeeping"), "url": "/app/vl-hk-task", "color": "#F97316"},
+			{"icon": "fa-wrench", "title": _("Maintenance"), "url": "/app/vl-maintenance-request", "color": "#EF4444"},
+		] %}
+		{% for link in links %}
+		<div class="col-md-3 col-sm-6 mb-3">
+			<a href="{{ link.url }}" class="card p-3 text-center text-decoration-none shadow-sm velara-quick-link" style="border-left: 4px solid {{ link.color }};">
+				<i class="fa {{ link.icon }} fa-2x mb-2" style="color: {{ link.color }};"></i>
+				<div class="font-weight-bold">{{ link.title }}</div>
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+
+	<!-- Modules -->
+	<div class="row mb-4">
+		<div class="col-12">
+			<h4 class="mb-3">{{ _("Modules") }}</h4>
+		</div>
+		{% set modules = [
+			{"icon": "fa-door-open", "title": _("Front Desk"), "desc": _("Check-in, check-out, walk-ins"), "url": "/app/velara-front-desk", "color": "#0D9488"},
+			{"icon": "fa-utensils", "title": _("Food & Beverage"), "desc": _("Restaurant, minibar, room service"), "url": "/app/vl-restaurant", "color": "#D97706"},
+			{"icon": "fa-spa", "title": _("Spa & Wellness"), "desc": _("Bookings, services, therapists"), "url": "/app/vl-spa-booking", "color": "#7C3AED"},
+			{"icon": "fa-calendar-alt", "title": _("Events"), "desc": _("Venue booking, banquets, conferences"), "url": "/app/vl-event-booking", "color": "#2563EB"},
+			{"icon": "fa-coins", "title": _("Revenue"), "desc": _("Folios, charges, night audit"), "url": "/app/vl-night-audit", "color": "#059669"},
+			{"icon": "fa-gift", "title": _("Loyalty"), "desc": _("Points, tiers, rewards"), "url": "/app/vl-loyalty-program", "color": "#DB2777"},
+			{"icon": "fa-headset", "title": _("Guest Services"), "desc": _("Requests, concierge, feedback"), "url": "/app/vl-service-request", "color": "#4F46E5"},
+			{"icon": "fa-chart-bar", "title": _("Reports"), "desc": _("Occupancy, revenue, forecasting"), "url": "/app/velara-dashboard", "color": "#6366F1"},
+		] %}
+		{% for mod in modules %}
+		<div class="col-md-3 col-sm-6 mb-3">
+			<a href="{{ mod.url }}" class="card p-3 text-decoration-none shadow-sm velara-module-card h-100">
+				<div class="text-center mb-2">
+					<i class="fa {{ mod.icon }} fa-2x" style="color: {{ mod.color }};"></i>
+				</div>
+				<div class="font-weight-bold text-center text-dark">{{ mod.title }}</div>
+				<div class="text-muted small text-center mt-1">{{ mod.desc }}</div>
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+
+	<!-- Setup Links -->
+	<div class="row mt-4">
+		<div class="col-12">
+			<h4 class="mb-3">{{ _("Setup & Configuration") }}</h4>
+		</div>
+		{% set setup_links = [
+			{"title": _("Properties"), "url": "/app/vl-property"},
+			{"title": _("Room Types"), "url": "/app/vl-room-type"},
+			{"title": _("Rate Plans"), "url": "/app/vl-rate-plan"},
+			{"title": _("Seasons"), "url": "/app/vl-season"},
+			{"title": _("Amenities"), "url": "/app/vl-amenity"},
+			{"title": _("Cancellation Policies"), "url": "/app/vl-cancellation-policy"},
+			{"title": _("Floor Setup"), "url": "/app/vl-floor"},
+			{"title": _("Settings"), "url": "/app/vl-settings"},
+		] %}
+		{% for link in setup_links %}
+		<div class="col-md-3 col-sm-6 mb-2">
+			<a href="{{ link.url }}" class="btn btn-outline-secondary btn-block text-left">
+				<i class="fa fa-cog mr-2"></i>{{ link.title }}
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+<style>
+.velara-home .card { transition: transform 0.15s, box-shadow 0.15s; }
+.velara-home .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.velara-quick-link:hover, .velara-module-card:hover { text-decoration: none !important; }
+</style>
+{%- endblock -%}

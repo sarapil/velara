@@ -1,0 +1,121 @@
+{
+  "app": "velara",
+  "charts": [],
+  "content": "[{\"id\": \"f70fb3ea5b26\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Check-In\", \"col\": 3}}, {\"id\": \"fad16cdcd119\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Today's Check-Outs\", \"col\": 3}}, {\"id\": \"31c2913c8c3d\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Active Guests\", \"col\": 3}}, {\"id\": \"49cc789e924d\", \"type\": \"card\", \"data\": {\"card_name\": \"Check-In / Check-Out\", \"col\": 4}}, {\"id\": \"a431cfdd680b\", \"type\": \"card\", \"data\": {\"card_name\": \"Guests & Folios\", \"col\": 4}}]",
+  "creation": "2026-04-02 12:10:51.257656",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "building",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Velara Front Desk",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Check-In / Check-Out",
+      "link_count": 2,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Check In",
+      "link_to": "VL Check In",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Check Out",
+      "link_to": "VL Check Out",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Card Break",
+      "label": "Guests & Folios",
+      "link_count": 3,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Guest",
+      "link_to": "VL Guest",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Folio",
+      "link_to": "VL Folio",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Folio Charge",
+      "link_to": "VL Folio Charge",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-02 12:10:51.257656",
+  "modified_by": "Administrator",
+  "module": "Velara Front Desk",
+  "name": "Velara Front Desk",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "Velara",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 10,
+  "shortcuts": [
+    {
+      "color": "#E91E63",
+      "doc_view": "List",
+      "label": "New Check-In",
+      "link_to": "VL Check In",
+      "stats_filter": "",
+      "type": "DocType"
+    },
+    {
+      "color": "#E91E63",
+      "doc_view": "List",
+      "label": "Today's Check-Outs",
+      "link_to": "VL Check Out",
+      "stats_filter": "",
+      "type": "DocType"
+    },
+    {
+      "color": "#E91E63",
+      "doc_view": "List",
+      "label": "Active Guests",
+      "link_to": "VL Guest",
+      "stats_filter": "",
+      "type": "DocType"
+    }
+  ],
+  "title": "Velara Front Desk"
+}

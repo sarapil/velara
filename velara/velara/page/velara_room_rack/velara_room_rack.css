@@ -1,0 +1,97 @@
+/* Velara Room Rack Styles */
+.velara-room-rack {
+padding: var(--padding-lg);
+min-height: calc(100vh - 60px);
+}
+
+.rack-legend {
+display: flex;
+gap: var(--padding-lg);
+margin-bottom: var(--padding-xl);
+flex-wrap: wrap;
+}
+.legend-item {
+display: flex;
+align-items: center;
+gap: 6px;
+font-size: var(--text-sm);
+color: var(--text-muted);
+}
+.legend-dot {
+width: 12px;
+height: 12px;
+border-radius: 50%;
+display: inline-block;
+}
+
+.rack-floor {
+margin-bottom: var(--padding-xl);
+}
+.floor-header {
+margin-bottom: var(--padding-sm);
+padding-bottom: 8px;
+border-bottom: 1px solid var(--border-color);
+}
+.floor-header strong {
+font-size: 1.1rem;
+}
+
+.floor-rooms {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+gap: var(--padding-sm);
+}
+
+.room-card {
+background: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: var(--border-radius-md);
+padding: var(--padding-sm) var(--padding-md);
+cursor: pointer;
+transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+.room-card:hover {
+box-shadow: var(--shadow-sm);
+transform: translateY(-1px);
+}
+
+.room-number {
+font-size: 1.3rem;
+font-weight: 700;
+color: var(--heading-color);
+}
+.room-type-label {
+font-size: var(--text-xs);
+color: var(--text-muted);
+}
+.room-status {
+font-size: var(--text-sm);
+font-weight: 600;
+margin-top: 4px;
+}
+.room-guest {
+font-size: var(--text-xs);
+color: var(--text-color);
+margin-top: 2px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.floor-rooms { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* RTL */
+[dir="rtl"] .room-card {
+border-left: none;
+border-right-width: 4px;
+border-right-style: solid;
+}
+
+/* Dark mode */
+[data-theme="dark"] .room-card {
+background: var(--card-bg);
+border-color: var(--dark-border-color);
+}

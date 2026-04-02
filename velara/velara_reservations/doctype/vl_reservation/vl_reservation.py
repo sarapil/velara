@@ -98,6 +98,8 @@ class VLReservation(Document):
 
 	@frappe.whitelist()
 	def assign_room(self, room):
+		frappe.only_for(["VL Manager", "System Manager"])
+
 		if not frappe.db.exists("VL Room", room):
 			frappe.throw(_("Room {0} does not exist").format(room))
 		self.room = room
@@ -107,6 +109,8 @@ class VLReservation(Document):
 
 	@frappe.whitelist()
 	def create_folio(self):
+		frappe.only_for(["VL Manager", "System Manager"])
+
 		if self.folio:
 			frappe.throw(_("Folio already exists: {0}").format(self.folio))
 		folio = frappe.new_doc("VL Folio")

@@ -1,0 +1,144 @@
+{
+  "app": "velara",
+  "charts": [],
+  "content": "[{\"id\": \"114dc353fe6b\", \"type\": \"card\", \"data\": {\"card_name\": \"Settings\", \"col\": 4}}, {\"id\": \"449e8f70febe\", \"type\": \"card\", \"data\": {\"card_name\": \"Room Configuration\", \"col\": 4}}, {\"id\": \"8beb21340b67\", \"type\": \"card\", \"data\": {\"card_name\": \"Pricing & Seasons\", \"col\": 4}}]",
+  "creation": "2026-04-02 12:10:51.257656",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "settings",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Velara Settings",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Settings",
+      "link_count": 4,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Settings",
+      "link_to": "VL Settings",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Property",
+      "link_to": "VL Property",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Card Break",
+      "label": "Room Configuration",
+      "link_count": 5,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Room Type",
+      "link_to": "VL Room Type",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Bed Type",
+      "link_to": "VL Bed Type",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Amenity",
+      "link_to": "VL Amenity",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Floor",
+      "link_to": "VL Floor",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Wing",
+      "link_to": "VL Wing",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Card Break",
+      "label": "Pricing & Seasons",
+      "link_count": 2,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Season",
+      "link_to": "VL Season",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Rate Plan",
+      "link_to": "VL Rate Plan",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-02 12:10:51.257656",
+  "modified_by": "Administrator",
+  "module": "Velara Setup",
+  "name": "Velara Settings",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "Velara",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 10,
+  "shortcuts": [],
+  "title": "Velara Settings"
+}

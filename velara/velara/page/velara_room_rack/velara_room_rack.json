@@ -1,0 +1,24 @@
+{
+ "content": null,
+ "creation": "2025-01-01 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "grid",
+ "idx": 0,
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Velara",
+ "name": "velara-room-rack",
+ "owner": "Administrator",
+ "page_name": "velara-room-rack",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "VL Front Desk Agent"},
+  {"role": "VL Front Desk Manager"},
+  {"role": "VL Housekeeping Supervisor"},
+  {"role": "VL General Manager"}
+ ],
+ "standard": "Yes",
+ "system_page": 0,
+ "title": "Room Rack"
+}

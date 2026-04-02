@@ -1,0 +1,48 @@
+{
+  "app": "velara",
+  "charts": [],
+  "content": "[{\"id\": \"97e51ffed336\", \"type\": \"card\", \"data\": {\"card_name\": \"Night Audit\", \"col\": 4}}]",
+  "creation": "2026-04-02 12:10:51.257656",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "moon",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Velara Night Audit",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Night Audit",
+      "link_count": 1,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Night Audit",
+      "link_to": "VL Night Audit",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    }
+  ],
+  "modified": "2026-04-02 12:10:51.257656",
+  "modified_by": "Administrator",
+  "module": "Velara Night Audit",
+  "name": "Velara Night Audit",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "Velara",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 10,
+  "shortcuts": [],
+  "title": "Velara Night Audit"
+}

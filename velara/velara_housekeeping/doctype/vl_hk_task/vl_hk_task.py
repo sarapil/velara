@@ -41,18 +41,24 @@ class VLHKTask(Document):
 
 	@frappe.whitelist()
 	def start_cleaning(self):
+		frappe.only_for(["VL Manager", "System Manager"])
+
 		self.status = "In Progress"
 		self.started_at = now_datetime()
 		self.save(ignore_permissions=True)
 
 	@frappe.whitelist()
 	def complete_cleaning(self):
+		frappe.only_for(["VL Manager", "System Manager"])
+
 		self.status = "Completed"
 		self.completed_at = now_datetime()
 		self.save(ignore_permissions=True)
 
 	@frappe.whitelist()
 	def pass_inspection(self, inspector=None):
+		frappe.only_for(["VL User", "VL Manager", "System Manager"])
+
 		self.status = "Inspected"
 		self.inspected_by = inspector or frappe.session.user
 		self.save(ignore_permissions=True)

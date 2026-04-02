@@ -1,0 +1,77 @@
+{
+  "app": "velara",
+  "charts": [],
+  "content": "[{\"id\": \"f5de676293e4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Today's Assignments\", \"col\": 4}}, {\"id\": \"8baa16f75ea1\", \"type\": \"card\", \"data\": {\"card_name\": \"Housekeeping\", \"col\": 4}}]",
+  "creation": "2026-04-02 12:10:51.257656",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "wash-dryclean",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Velara Housekeeping",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Housekeeping",
+      "link_count": 3,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "HK Assignment",
+      "link_to": "VL HK Assignment",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "HK Task",
+      "link_to": "VL HK Task",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Lost And Found",
+      "link_to": "VL Lost And Found",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-02 12:10:51.257656",
+  "modified_by": "Administrator",
+  "module": "Velara Housekeeping",
+  "name": "Velara Housekeeping",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "Velara",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 10,
+  "shortcuts": [
+    {
+      "color": "#E91E63",
+      "doc_view": "List",
+      "label": "Today's Assignments",
+      "link_to": "VL HK Assignment",
+      "stats_filter": "",
+      "type": "DocType"
+    }
+  ],
+  "title": "Velara Housekeeping"
+}

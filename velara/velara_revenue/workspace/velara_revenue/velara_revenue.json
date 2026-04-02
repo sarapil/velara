@@ -1,0 +1,48 @@
+{
+  "app": "velara",
+  "charts": [],
+  "content": "[{\"id\": \"893a69fae9ab\", \"type\": \"card\", \"data\": {\"card_name\": \"Revenue Management\", \"col\": 4}}]",
+  "creation": "2026-04-02 12:10:51.257656",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "chart-line",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Velara Revenue",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Revenue Management",
+      "link_count": 1,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Revenue Budget",
+      "link_to": "VL Revenue Budget",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    }
+  ],
+  "modified": "2026-04-02 12:10:51.257656",
+  "modified_by": "Administrator",
+  "module": "Velara Revenue",
+  "name": "Velara Revenue",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "Velara",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 10,
+  "shortcuts": [],
+  "title": "Velara Revenue"
+}

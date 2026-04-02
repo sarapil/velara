@@ -1,0 +1,85 @@
+{
+  "app": "velara",
+  "charts": [],
+  "content": "[{\"id\": \"835f4224264d\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"All Rooms\", \"col\": 4}}, {\"id\": \"3fbd00120d99\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Blocked Rooms\", \"col\": 4}}, {\"id\": \"aec8d25cc1bf\", \"type\": \"card\", \"data\": {\"card_name\": \"Rooms\", \"col\": 4}}]",
+  "creation": "2026-04-02 12:10:51.257656",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "door-enter",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Velara Rooms",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Rooms",
+      "link_count": 3,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Room",
+      "link_to": "VL Room",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Room Block",
+      "link_to": "VL Room Block",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Room Status Log",
+      "link_to": "VL Room Status Log",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-02 12:10:51.257656",
+  "modified_by": "Administrator",
+  "module": "Velara Rooms",
+  "name": "Velara Rooms",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "Velara",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 10,
+  "shortcuts": [
+    {
+      "color": "#E91E63",
+      "doc_view": "List",
+      "label": "All Rooms",
+      "link_to": "VL Room",
+      "stats_filter": "",
+      "type": "DocType"
+    },
+    {
+      "color": "#E91E63",
+      "doc_view": "List",
+      "label": "Blocked Rooms",
+      "link_to": "VL Room Block",
+      "stats_filter": "",
+      "type": "DocType"
+    }
+  ],
+  "title": "Velara Rooms"
+}

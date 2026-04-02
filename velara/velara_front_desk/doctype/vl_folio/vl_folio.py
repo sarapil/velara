@@ -53,6 +53,8 @@ class VLFolio(Document):
 	@frappe.whitelist()
 	def post_charge(self, charge_type, amount, description=None):
 		"""Post a charge to this folio."""
+		frappe.only_for(["VL Manager", "System Manager"])
+
 		row = self.append("charges", {})
 		row.charge_type = charge_type
 		row.amount = flt(amount)
@@ -64,6 +66,8 @@ class VLFolio(Document):
 	@frappe.whitelist()
 	def post_payment(self, amount, payment_method="Cash"):
 		"""Record a payment against this folio."""
+		frappe.only_for(["VL Manager", "System Manager"])
+
 		row = self.append("charges", {})
 		row.charge_type = "Payment"
 		row.amount = flt(amount)
@@ -75,6 +79,8 @@ class VLFolio(Document):
 	@frappe.whitelist()
 	def create_sales_invoice(self):
 		"""Generate ERPNext Sales Invoice from folio charges."""
+		frappe.only_for(["VL Manager", "System Manager"])
+
 		if not self.guest:
 			frappe.throw(_("Guest is required to create invoice"))
 

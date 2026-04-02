@@ -34,12 +34,16 @@ class VLMaintenanceRequest(Document):
 
 	@frappe.whitelist()
 	def start_work(self):
+		frappe.only_for(["VL Manager", "System Manager"])
+
 		self.status = "In Progress"
 		self.started_at = now_datetime()
 		self.save(ignore_permissions=True)
 
 	@frappe.whitelist()
 	def complete_work(self, notes=None):
+		frappe.only_for(["VL Manager", "System Manager"])
+
 		self.status = "Completed"
 		self.completed_at = now_datetime()
 		if notes:

@@ -1,0 +1,68 @@
+{
+  "app": "velara",
+  "charts": [],
+  "content": "[{\"id\": \"c90d6047b424\", \"type\": \"card\", \"data\": {\"card_name\": \"Food & Beverage\", \"col\": 4}}]",
+  "creation": "2026-04-02 12:10:51.257656",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "tools-kitchen-2",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Velara F&B",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Food & Beverage",
+      "link_count": 3,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Restaurant",
+      "link_to": "VL Restaurant",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Minibar Item",
+      "link_to": "VL Minibar Item",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Minibar Consumption",
+      "link_to": "VL Minibar Consumption",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-02 12:10:51.257656",
+  "modified_by": "Administrator",
+  "module": "Velara Food and Beverage",
+  "name": "Velara F&B",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "Velara",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 10,
+  "shortcuts": [],
+  "title": "Velara F&B"
+}

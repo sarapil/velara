@@ -1,0 +1,95 @@
+{
+  "app": "velara",
+  "charts": [],
+  "content": "[{\"id\": \"f9c141a4d466\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Reservation\", \"col\": 3}}, {\"id\": \"0a1f75e0460d\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Group Bookings\", \"col\": 3}}, {\"id\": \"2f78dd360482\", \"type\": \"card\", \"data\": {\"card_name\": \"Reservations\", \"col\": 4}}]",
+  "creation": "2026-04-02 12:10:51.257656",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "calendar-event",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Velara Reservations",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Reservations",
+      "link_count": 4,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Reservation",
+      "link_to": "VL Reservation",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Group Booking",
+      "link_to": "VL Group Booking",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Rate Plan",
+      "link_to": "VL Rate Plan",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Cancellation Policy",
+      "link_to": "VL Cancellation Policy",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-02 12:10:51.257656",
+  "modified_by": "Administrator",
+  "module": "Velara Reservations",
+  "name": "Velara Reservations",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "Velara",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 10,
+  "shortcuts": [
+    {
+      "color": "#E91E63",
+      "doc_view": "List",
+      "label": "New Reservation",
+      "link_to": "VL Reservation",
+      "stats_filter": "",
+      "type": "DocType"
+    },
+    {
+      "color": "#E91E63",
+      "doc_view": "List",
+      "label": "Group Bookings",
+      "link_to": "VL Group Booking",
+      "stats_filter": "",
+      "type": "DocType"
+    }
+  ],
+  "title": "Velara Reservations"
+}

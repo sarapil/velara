@@ -1,0 +1,83 @@
+/* Velara Dashboard Styles */
+.velara-dashboard {
+padding: var(--padding-lg);
+min-height: calc(100vh - 60px);
+}
+
+.vl-metrics-row {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: var(--padding-md);
+margin-bottom: var(--padding-xl);
+}
+
+.vl-metric-card {
+background: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: var(--border-radius-lg);
+padding: var(--padding-lg);
+text-align: center;
+transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.vl-metric-card:hover {
+box-shadow: var(--shadow-sm);
+transform: translateY(-2px);
+}
+.vl-metric-card .metric-icon { margin-bottom: 8px; opacity: 0.7; }
+.vl-metric-card .metric-value { font-size: 1.8rem; font-weight: 700; line-height: 1.2; }
+.vl-metric-card .metric-label { font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px; }
+
+.vl-metric-blue .metric-value { color: var(--blue-500); }
+.vl-metric-green .metric-value { color: var(--green-500); }
+.vl-metric-orange .metric-value { color: var(--orange-500); }
+.vl-metric-red .metric-value { color: var(--red-500); }
+.vl-metric-purple .metric-value { color: var(--purple-500); }
+.vl-metric-cyan .metric-value { color: var(--cyan-500); }
+
+.vl-charts-row, .vl-tables-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: var(--padding-lg);
+margin-bottom: var(--padding-xl);
+}
+
+.vl-chart-card, .vl-table-card {
+background: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: var(--border-radius-lg);
+padding: var(--padding-lg);
+}
+.vl-chart-card h5, .vl-table-card h5 {
+font-weight: 600;
+margin-bottom: var(--padding-md);
+color: var(--heading-color);
+}
+
+.vl-hk-summary {
+background: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: var(--border-radius-lg);
+padding: var(--padding-lg);
+}
+.vl-hk-summary h5 { font-weight: 600; margin-bottom: var(--padding-md); }
+.vl-hk-summary .hk-container { display: flex; gap: var(--padding-lg); flex-wrap: wrap; }
+.vl-hk-pill { display: flex; align-items: center; gap: 8px; }
+.vl-hk-pill .hk-label { font-size: var(--text-sm); color: var(--text-muted); }
+
+/* Responsive */
+@media (max-width: 768px) {
+.vl-metrics-row { grid-template-columns: repeat(2, 1fr); }
+.vl-charts-row, .vl-tables-row { grid-template-columns: 1fr; }
+}
+
+/* RTL */
+[dir="rtl"] .velara-dashboard { direction: rtl; }
+
+/* Dark mode */
+[data-theme="dark"] .vl-metric-card,
+[data-theme="dark"] .vl-chart-card,
+[data-theme="dark"] .vl-table-card,
+[data-theme="dark"] .vl-hk-summary {
+background: var(--card-bg);
+border-color: var(--dark-border-color);
+}

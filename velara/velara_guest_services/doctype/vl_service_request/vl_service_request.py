@@ -35,6 +35,8 @@ class VLServiceRequest(Document):
 
 	@frappe.whitelist()
 	def resolve(self, resolution_notes=None):
+		frappe.only_for(["VL User", "VL Manager", "System Manager"])
+
 		self.status = "Completed"
 		self.completed_at = now_datetime()
 		self.save(ignore_permissions=True)

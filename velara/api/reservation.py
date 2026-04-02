@@ -10,6 +10,8 @@ from velara.utils import check_room_availability, calculate_room_rate
 @frappe.whitelist()
 def check_availability(room_type, check_in, check_out):
 	"""Check room availability for a date range."""
+	frappe.only_for(["VL User", "VL Manager", "System Manager"])
+
 	available_rooms = check_room_availability(room_type, check_in, check_out)
 	return {
 		"available": len(available_rooms),
@@ -20,6 +22,7 @@ def check_availability(room_type, check_in, check_out):
 @frappe.whitelist()
 def get_rate_quote(room_type, check_in, check_out, rate_plan=None, guest=None):
 	"""Get a rate quote for a stay."""
+	frappe.only_for(["System Manager", "VL Admin", "VL User"])
 	total = calculate_room_rate(room_type, check_in, check_out, rate_plan, guest)
 	from frappe.utils import date_diff
 	nights = date_diff(check_out, check_in)

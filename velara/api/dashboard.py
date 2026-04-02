@@ -18,11 +18,11 @@ def get_dashboard_stats():
 	if frappe.db.exists("DocType", "VL Room"):
 		stats["rooms"] = {
 			"total": frappe.db.count("VL Room", {"is_active": 1}),
-			"occupied": frappe.db.count("VL Room", {"status": "Occupied", "is_active": 1}),
-			"available": frappe.db.count("VL Room", {"status": "Available", "is_active": 1}),
-			"dirty": frappe.db.count("VL Room", {"status": "Dirty", "is_active": 1}),
-			"out_of_order": frappe.db.count("VL Room", {"status": "Out of Order", "is_active": 1}),
-			"out_of_service": frappe.db.count("VL Room", {"status": "Out of Service", "is_active": 1}),
+			"occupied": frappe.db.count("VL Room", {"room_status": "Occupied", "is_active": 1}),
+			"available": frappe.db.count("VL Room", {"room_status": "Available", "is_active": 1}),
+			"dirty": frappe.db.count("VL Room", {"room_status": "Dirty", "is_active": 1}),
+			"out_of_order": frappe.db.count("VL Room", {"room_status": "Out of Order", "is_active": 1}),
+			"out_of_service": frappe.db.count("VL Room", {"room_status": "Out of Service", "is_active": 1}),
 		}
 		total = stats["rooms"]["total"] or 1
 		stats["rooms"]["occupancy_pct"] = flt(stats["rooms"]["occupied"] / total * 100, 1)
@@ -117,7 +117,7 @@ def get_room_status_map():
 		filters={"is_active": 1},
 		fields=[
 			"name", "room_number", "room_type", "floor", "wing",
-			"status", "current_guest", "current_reservation",
+			"room_status", "current_guest", "current_reservation",
 			"is_connecting", "connecting_room",
 			"hk_status", "maintenance_status"
 		],
@@ -168,3 +168,45 @@ def get_arrivals_departures(date=None):
 	)
 
 	return result
+
+
+@frappe.whitelist()
+def get_dashboard_data():
+	"""Flat dashboard data for the Velara Dashboard page.
+
+	Combines stats, arrivals/departures, and housekeeping into a single
+	response with the flat field names expected by the page JS.
+	"""
+	frappe.only_for(["VL User", "VL Manager", "System Manager"])
+
+	stats = get_dashboard_stats()
+	arrivals_departures = get_arrivals_departures()
+
+	rooms = stats.get("rooms") or {}
+	today_ops = stats.get("today") or {}
+	hk = stats.get("housekeeping") or {}
+
+	return {
+		# Metrics row
+		"total_rooms": rooms.get("total", 0),
+		"occupied": rooms.get("occupied", 0),
+		"available": rooms.get("available", 0),
+		"occupancy_pct": rooms.get("occupancy_pct", 0),
+		"arrivals_today": today_ops.get("arrivals", 0),
+		"departures_today": today_ops.get("departures", 0),
+		"revenue_today": stats.get("revenue_today", 0),
+		"adr": flt(stats.get("revenue_today", 0) / (rooms.get("occupied", 0) or 1), 2),
+
+		# Tables
+		"arrivals": arrivals_departures.get("arrivals", []),
+		"departures": arrivals_departures.get("departures", []),
+
+		# Housekeeping summary
+		"housekeeping": {
+			"clean": rooms.get("available", 0),
+			"dirty": rooms.get("dirty", 0),
+			"in_progress": hk.get("in_progress", 0),
+			"inspected": 0,
+			"out_of_order": rooms.get("out_of_order", 0),
+		},
+	}

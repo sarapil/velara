@@ -9,7 +9,8 @@ from frappe import _
 @frappe.whitelist()
 def get_hotel_staff():
 	"""Get all hotel staff with their VELARA roles."""
-	frappe.only_for(["System Manager", "Velara Admin", "Velara General Manager"])
+	frappe.only_for(["VL User", "VL Manager", "System Manager"])
+
 
 	staff = []
 	velara_roles = frappe.get_all("Role", filters={"name": ["like", "Velara%"]}, pluck="name")
@@ -44,7 +45,8 @@ def get_hotel_staff():
 @frappe.whitelist()
 def assign_role(user, role):
 	"""Assign a VELARA role to a user."""
-	frappe.only_for(["System Manager", "Velara Admin"])
+	frappe.only_for(["VL Manager", "System Manager"])
+
 
 	if not role.startswith("Velara"):
 		frappe.throw(_("Can only assign Velara roles"))
@@ -62,7 +64,8 @@ def assign_role(user, role):
 @frappe.whitelist()
 def remove_role(user, role):
 	"""Remove a VELARA role from a user."""
-	frappe.only_for(["System Manager", "Velara Admin"])
+	frappe.only_for(["VL Manager", "System Manager"])
+
 
 	if not role.startswith("Velara"):
 		frappe.throw(_("Can only remove Velara roles"))

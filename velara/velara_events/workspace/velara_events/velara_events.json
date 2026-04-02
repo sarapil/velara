@@ -1,0 +1,58 @@
+{
+  "app": "velara",
+  "charts": [],
+  "content": "[{\"id\": \"192ebe11e3d6\", \"type\": \"card\", \"data\": {\"card_name\": \"Events\", \"col\": 4}}]",
+  "creation": "2026-04-02 12:10:51.257656",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "confetti",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Velara Events",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Events",
+      "link_count": 2,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Event Booking",
+      "link_to": "VL Event Booking",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Event Venue",
+      "link_to": "VL Event Venue",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-02 12:10:51.257656",
+  "modified_by": "Administrator",
+  "module": "Velara Events",
+  "name": "Velara Events",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "Velara",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 10,
+  "shortcuts": [],
+  "title": "Velara Events"
+}

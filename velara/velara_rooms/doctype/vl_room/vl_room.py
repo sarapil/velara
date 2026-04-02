@@ -46,6 +46,8 @@ class VLRoom(Document):
 	@frappe.whitelist()
 	def change_status(self, new_status, reason=None):
 		"""Change room status with logging."""
+		frappe.only_for(["VL Manager", "System Manager"])
+
 		self.room_status = new_status
 		self.save(ignore_permissions=True)
 		return self.room_status

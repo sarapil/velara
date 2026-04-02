@@ -45,7 +45,7 @@ def get_floor_map(floor=None):
 		filters=filters,
 		fields=[
 			"name", "room_number", "room_type", "floor", "wing",
-			"status", "current_guest", "current_reservation",
+			"room_status", "current_guest", "current_reservation",
 			"hk_status", "bed_type", "is_smoking", "is_accessible",
 			"is_connecting", "connecting_room"
 		],
@@ -54,15 +54,18 @@ def get_floor_map(floor=None):
 
 	# Get floors list
 	floors = frappe.get_all(
-		"VL Room",
-		filters={"is_active": 1},
-		fields=["distinct floor as floor"],
-		order_by="floor asc"
+		"VL Floor",
+		fields=["name", "floor_name", "floor_number"],
+		order_by="floor_number asc"
 	)
+
+	# Filter to floors that actually have active rooms
+	floor_names = {r.floor for r in rooms}
+	floors = [f for f in floors if f.name in floor_names]
 
 	return {
 		"rooms": rooms,
-		"floors": [f.floor for f in floors],
+		"floors": floors,
 	}
 
 

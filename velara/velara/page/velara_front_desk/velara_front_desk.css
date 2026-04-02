@@ -1,0 +1,73 @@
+/* Velara Front Desk Styles */
+.velara-front-desk {
+padding: var(--padding-lg);
+min-height: calc(100vh - 60px);
+}
+
+.fd-quick-stats {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: var(--padding-md);
+margin-bottom: var(--padding-xl);
+}
+
+.fd-stat {
+background: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: var(--border-radius-lg);
+padding: var(--padding-lg);
+text-align: center;
+}
+.fd-stat .stat-value { font-size: 2rem; font-weight: 700; }
+.fd-stat .stat-label { font-size: var(--text-sm); color: var(--text-muted); }
+.fd-stat-green .stat-value { color: var(--green-500); }
+.fd-stat-orange .stat-value { color: var(--orange-500); }
+.fd-stat-blue .stat-value { color: var(--blue-500); }
+.fd-stat-cyan .stat-value { color: var(--cyan-500); }
+
+.fd-sections {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: var(--padding-lg);
+margin-bottom: var(--padding-xl);
+}
+
+.fd-section {
+background: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: var(--border-radius-lg);
+padding: var(--padding-lg);
+margin-bottom: var(--padding-lg);
+}
+.fd-section h5 { font-weight: 600; margin-bottom: var(--padding-md); }
+
+.fd-guest-row {
+display: flex;
+align-items: center;
+gap: var(--padding-md);
+padding: var(--padding-sm) 0;
+border-bottom: 1px solid var(--border-color);
+}
+.fd-guest-row:last-child { border-bottom: none; }
+.fd-guest-row .guest-info { flex: 1; }
+.fd-guest-row .guest-info strong { display: block; }
+.fd-guest-row .guest-info .text-muted { font-size: var(--text-xs); }
+.fd-guest-row .guest-room { font-weight: 600; min-width: 80px; text-align: center; }
+.fd-guest-row .guest-balance { min-width: 80px; text-align: right; font-weight: 600; }
+
+/* Responsive */
+@media (max-width: 768px) {
+.fd-quick-stats { grid-template-columns: repeat(2, 1fr); }
+.fd-sections { grid-template-columns: 1fr; }
+}
+
+/* RTL */
+[dir="rtl"] .velara-front-desk { direction: rtl; }
+[dir="rtl"] .fd-guest-row .guest-balance { text-align: left; }
+
+/* Dark mode */
+[data-theme="dark"] .fd-stat,
+[data-theme="dark"] .fd-section {
+background: var(--card-bg);
+border-color: var(--dark-border-color);
+}

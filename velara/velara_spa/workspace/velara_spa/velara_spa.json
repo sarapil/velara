@@ -1,0 +1,58 @@
+{
+  "app": "velara",
+  "charts": [],
+  "content": "[{\"id\": \"b4b218a094c3\", \"type\": \"card\", \"data\": {\"card_name\": \"Spa & Wellness\", \"col\": 4}}]",
+  "creation": "2026-04-02 12:10:51.257656",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "yoga",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Velara Spa",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Spa & Wellness",
+      "link_count": 2,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Spa Service",
+      "link_to": "VL Spa Service",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Spa Booking",
+      "link_to": "VL Spa Booking",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-02 12:10:51.257656",
+  "modified_by": "Administrator",
+  "module": "Velara Spa",
+  "name": "Velara Spa",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "Velara",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 10,
+  "shortcuts": [],
+  "title": "Velara Spa"
+}
