@@ -1,0 +1,10 @@
+{
+  "_comment": "Test users for Velara",
+  "users": [
+    {
+      "email": "test_velara@example.com",
+      "first_name": "Test",
+      "roles": []
+    }
+  ]
+}

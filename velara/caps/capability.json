@@ -1,0 +1,302 @@
+[
+  {
+    "name": "VL_access_front_desk",
+    "category": "Module",
+    "description": "Access Front Desk module"
+  },
+  {
+    "name": "VL_access_reservations",
+    "category": "Module",
+    "description": "Access Reservations module"
+  },
+  {
+    "name": "VL_access_rooms",
+    "category": "Module",
+    "description": "Access Rooms module"
+  },
+  {
+    "name": "VL_access_housekeeping",
+    "category": "Module",
+    "description": "Access Housekeeping module"
+  },
+  {
+    "name": "VL_access_fnb",
+    "category": "Module",
+    "description": "Access Food & Beverage module"
+  },
+  {
+    "name": "VL_access_revenue",
+    "category": "Module",
+    "description": "Access Revenue Management module"
+  },
+  {
+    "name": "VL_access_guest_services",
+    "category": "Module",
+    "description": "Access Guest Services module"
+  },
+  {
+    "name": "VL_access_events",
+    "category": "Module",
+    "description": "Access Events & Banquets module"
+  },
+  {
+    "name": "VL_access_maintenance",
+    "category": "Module",
+    "description": "Access Maintenance module"
+  },
+  {
+    "name": "VL_access_loyalty",
+    "category": "Module",
+    "description": "Access Loyalty & CRM module"
+  },
+  {
+    "name": "VL_access_night_audit",
+    "category": "Module",
+    "description": "Access Night Audit module"
+  },
+  {
+    "name": "VL_access_spa",
+    "category": "Module",
+    "description": "Access Spa & Wellness module"
+  },
+  {
+    "name": "VL_access_reports",
+    "category": "Module",
+    "description": "Access Reports & Analytics module"
+  },
+  {
+    "name": "VL_access_settings",
+    "category": "Module",
+    "description": "Access VELARA Settings"
+  },
+  {
+    "name": "VL_access_dashboard",
+    "category": "Module",
+    "description": "Access VELARA Dashboard"
+  },
+  {
+    "name": "VL_check_in_guest",
+    "category": "Action",
+    "description": "Perform guest check-in"
+  },
+  {
+    "name": "VL_check_out_guest",
+    "category": "Action",
+    "description": "Perform guest check-out"
+  },
+  {
+    "name": "VL_assign_room",
+    "category": "Action",
+    "description": "Assign room to reservation"
+  },
+  {
+    "name": "VL_change_room",
+    "category": "Action",
+    "description": "Change guest room"
+  },
+  {
+    "name": "VL_post_charge",
+    "category": "Action",
+    "description": "Post charge to guest folio"
+  },
+  {
+    "name": "VL_settle_folio",
+    "category": "Action",
+    "description": "Settle and close guest folio"
+  },
+  {
+    "name": "VL_void_charge",
+    "category": "Action",
+    "description": "Void a posted charge"
+  },
+  {
+    "name": "VL_issue_key_card",
+    "category": "Action",
+    "description": "Issue/reissue key cards"
+  },
+  {
+    "name": "VL_create_reservation",
+    "category": "Action",
+    "description": "Create new reservations"
+  },
+  {
+    "name": "VL_modify_reservation",
+    "category": "Action",
+    "description": "Modify existing reservations"
+  },
+  {
+    "name": "VL_cancel_reservation",
+    "category": "Action",
+    "description": "Cancel reservations"
+  },
+  {
+    "name": "VL_confirm_reservation",
+    "category": "Action",
+    "description": "Confirm tentative reservations"
+  },
+  {
+    "name": "VL_create_group_booking",
+    "category": "Action",
+    "description": "Create group bookings"
+  },
+  {
+    "name": "VL_assign_hk_task",
+    "category": "Action",
+    "description": "Assign housekeeping tasks"
+  },
+  {
+    "name": "VL_complete_hk_task",
+    "category": "Action",
+    "description": "Mark cleaning complete"
+  },
+  {
+    "name": "VL_inspect_room",
+    "category": "Action",
+    "description": "Perform room inspection"
+  },
+  {
+    "name": "VL_override_room_status",
+    "category": "Action",
+    "description": "Override room status"
+  },
+  {
+    "name": "VL_override_rate",
+    "category": "Action",
+    "description": "Override standard room rates"
+  },
+  {
+    "name": "VL_apply_discount",
+    "category": "Action",
+    "description": "Apply discounts to reservations"
+  },
+  {
+    "name": "VL_manage_rate_plans",
+    "category": "Action",
+    "description": "Create/edit rate plans"
+  },
+  {
+    "name": "VL_manage_channels",
+    "category": "Action",
+    "description": "Configure channel manager"
+  },
+  {
+    "name": "VL_create_service_request",
+    "category": "Action",
+    "description": "Create service requests"
+  },
+  {
+    "name": "VL_resolve_service_request",
+    "category": "Action",
+    "description": "Resolve service requests"
+  },
+  {
+    "name": "VL_approve_complimentary",
+    "category": "Action",
+    "description": "Approve complimentary services"
+  },
+  {
+    "name": "VL_create_event_booking",
+    "category": "Action",
+    "description": "Create event bookings"
+  },
+  {
+    "name": "VL_approve_event_booking",
+    "category": "Action",
+    "description": "Approve event bookings"
+  },
+  {
+    "name": "VL_run_night_audit",
+    "category": "Action",
+    "description": "Execute night audit process"
+  },
+  {
+    "name": "VL_close_business_day",
+    "category": "Action",
+    "description": "Close business day"
+  },
+  {
+    "name": "VL_create_maintenance_req",
+    "category": "Action",
+    "description": "Create maintenance requests"
+  },
+  {
+    "name": "VL_resolve_maintenance",
+    "category": "Action",
+    "description": "Resolve maintenance requests"
+  },
+  {
+    "name": "VL_enroll_loyalty",
+    "category": "Action",
+    "description": "Enroll guests in loyalty program"
+  },
+  {
+    "name": "VL_redeem_points",
+    "category": "Action",
+    "description": "Redeem loyalty points"
+  },
+  {
+    "name": "VL_create_spa_booking",
+    "category": "Action",
+    "description": "Create spa bookings"
+  },
+  {
+    "name": "VL_view_revenue_data",
+    "category": "Field",
+    "description": "View revenue/financial data"
+  },
+  {
+    "name": "VL_view_cost_data",
+    "category": "Field",
+    "description": "View cost and expense data"
+  },
+  {
+    "name": "VL_view_guest_payment_info",
+    "category": "Field",
+    "description": "View guest payment details"
+  },
+  {
+    "name": "VL_view_occupancy_forecast",
+    "category": "Field",
+    "description": "View occupancy forecast"
+  },
+  {
+    "name": "VL_view_rate_plans",
+    "category": "Field",
+    "description": "View rate plan configurations"
+  },
+  {
+    "name": "VL_view_staff_tips",
+    "category": "Field",
+    "description": "View staff tips data"
+  },
+  {
+    "name": "VL_export_reports",
+    "category": "Report",
+    "description": "Export reports to PDF/Excel"
+  },
+  {
+    "name": "VL_view_revenue_reports",
+    "category": "Report",
+    "description": "View revenue reports"
+  },
+  {
+    "name": "VL_view_occupancy_reports",
+    "category": "Report",
+    "description": "View occupancy reports"
+  },
+  {
+    "name": "VL_view_guest_reports",
+    "category": "Report",
+    "description": "View guest analytics"
+  },
+  {
+    "name": "VL_view_housekeeping_reports",
+    "category": "Report",
+    "description": "View HK reports"
+  },
+  {
+    "name": "VL_view_financial_reports",
+    "category": "Report",
+    "description": "View financial reports"
+  }
+]
