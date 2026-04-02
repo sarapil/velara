@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "creation": "2026-03-30 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "program_name",
+  "is_active",
+  "points_per_currency",
+  "cb_1",
+  "silver_threshold",
+  "gold_threshold",
+  "platinum_threshold",
+  "diamond_threshold",
+  "tiers_section",
+  "silver_discount",
+  "gold_discount",
+  "platinum_discount",
+  "diamond_discount"
+ ],
+ "fields": [
+  {
+   "fieldname": "program_name",
+   "fieldtype": "Data",
+   "label": "Program Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": "1"
+  },
+  {
+   "fieldname": "points_per_currency",
+   "fieldtype": "Float",
+   "label": "Points per Currency Unit",
+   "default": "1"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "silver_threshold",
+   "fieldtype": "Int",
+   "label": "Silver Threshold",
+   "default": "1000"
+  },
+  {
+   "fieldname": "gold_threshold",
+   "fieldtype": "Int",
+   "label": "Gold Threshold",
+   "default": "5000"
+  },
+  {
+   "fieldname": "platinum_threshold",
+   "fieldtype": "Int",
+   "label": "Platinum Threshold",
+   "default": "15000"
+  },
+  {
+   "fieldname": "diamond_threshold",
+   "fieldtype": "Int",
+   "label": "Diamond Threshold",
+   "default": "50000"
+  },
+  {
+   "fieldname": "tiers_section",
+   "fieldtype": "Section Break",
+   "label": "Tier Benefits"
+  },
+  {
+   "fieldname": "silver_discount",
+   "fieldtype": "Percent",
+   "label": "Silver Discount %",
+   "default": "5"
+  },
+  {
+   "fieldname": "gold_discount",
+   "fieldtype": "Percent",
+   "label": "Gold Discount %",
+   "default": "10"
+  },
+  {
+   "fieldname": "platinum_discount",
+   "fieldtype": "Percent",
+   "label": "Platinum Discount %",
+   "default": "15"
+  },
+  {
+   "fieldname": "diamond_discount",
+   "fieldtype": "Percent",
+   "label": "Diamond Discount %",
+   "default": "20"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2026-03-30 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Velara Loyalty",
+ "name": "VL Loyalty Program",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "Velara Revenue Manager",
+   "read": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "field:program_name",
+ "issingle": 1
+}

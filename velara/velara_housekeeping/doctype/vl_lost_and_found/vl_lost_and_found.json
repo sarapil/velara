@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "creation": "2026-03-30 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_description",
+  "room",
+  "found_by",
+  "found_date",
+  "cb_1",
+  "status",
+  "claimed_by",
+  "claimed_date",
+  "storage_location",
+  "image"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_description",
+   "fieldtype": "Data",
+   "label": "Item Description",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "label": "Found in Room",
+   "options": "VL Room"
+  },
+  {
+   "fieldname": "found_by",
+   "fieldtype": "Link",
+   "label": "Found By",
+   "options": "User"
+  },
+  {
+   "fieldname": "found_date",
+   "fieldtype": "Date",
+   "label": "Found Date",
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Found\nClaimed\nDisposed\nDonated",
+   "default": "Found",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "claimed_by",
+   "fieldtype": "Data",
+   "label": "Claimed By"
+  },
+  {
+   "fieldname": "claimed_date",
+   "fieldtype": "Date",
+   "label": "Claimed Date"
+  },
+  {
+   "fieldname": "storage_location",
+   "fieldtype": "Data",
+   "label": "Storage Location"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2026-03-30 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Velara Housekeeping",
+ "name": "VL Lost and Found",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Housekeeping Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Housekeeper",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Front Desk Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Front Desk Agent",
+   "read": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Concierge",
+   "read": 1,
+   "export": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "VL-LF-.#####",
+ "title_field": "item_description",
+ "show_title_field_in_link": 1
+}

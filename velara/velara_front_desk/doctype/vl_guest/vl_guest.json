@@ -1,0 +1,320 @@
+{
+ "actions": [],
+ "creation": "2026-03-30 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "guest_name",
+  "first_name",
+  "last_name",
+  "cb_1",
+  "customer",
+  "gender",
+  "date_of_birth",
+  "contact_section",
+  "email",
+  "mobile",
+  "phone",
+  "cb_2",
+  "nationality",
+  "address",
+  "id_section",
+  "id_type",
+  "id_number",
+  "id_expiry",
+  "id_attachment",
+  "vip_section",
+  "vip_code",
+  "loyalty_tier",
+  "loyalty_points",
+  "cb_3",
+  "total_stays",
+  "total_revenue",
+  "last_visit",
+  "pref_section",
+  "preferred_room_type",
+  "preferred_floor",
+  "smoking_preference",
+  "dietary_requirements",
+  "special_notes",
+  "image"
+ ],
+ "fields": [
+  {
+   "fieldname": "guest_name",
+   "fieldtype": "Data",
+   "label": "Guest Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nOther"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "options": "Phone",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "label": "Nationality",
+   "options": "Country"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "id_section",
+   "fieldtype": "Section Break",
+   "label": "Identification",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "id_type",
+   "fieldtype": "Select",
+   "label": "ID Type",
+   "options": "\nPassport\nNational ID\nDriving License\nOther"
+  },
+  {
+   "fieldname": "id_number",
+   "fieldtype": "Data",
+   "label": "ID Number"
+  },
+  {
+   "fieldname": "id_expiry",
+   "fieldtype": "Date",
+   "label": "ID Expiry Date"
+  },
+  {
+   "fieldname": "id_attachment",
+   "fieldtype": "Attach",
+   "label": "ID Scan"
+  },
+  {
+   "fieldname": "vip_section",
+   "fieldtype": "Section Break",
+   "label": "VIP & Loyalty"
+  },
+  {
+   "fieldname": "vip_code",
+   "fieldtype": "Select",
+   "label": "VIP Code",
+   "options": "\nNone\nVIP 1\nVIP 2\nVIP 3\nCelebrity\nBlacklist",
+   "default": "None"
+  },
+  {
+   "fieldname": "loyalty_tier",
+   "fieldtype": "Select",
+   "label": "Loyalty Tier",
+   "options": "\nNone\nSilver\nGold\nPlatinum\nDiamond",
+   "default": "None"
+  },
+  {
+   "fieldname": "loyalty_points",
+   "fieldtype": "Int",
+   "label": "Loyalty Points",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_stays",
+   "fieldtype": "Int",
+   "label": "Total Stays",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_revenue",
+   "fieldtype": "Currency",
+   "label": "Total Revenue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_visit",
+   "fieldtype": "Date",
+   "label": "Last Visit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pref_section",
+   "fieldtype": "Section Break",
+   "label": "Preferences",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "preferred_room_type",
+   "fieldtype": "Link",
+   "label": "Preferred Room Type",
+   "options": "VL Room Type"
+  },
+  {
+   "fieldname": "preferred_floor",
+   "fieldtype": "Link",
+   "label": "Preferred Floor",
+   "options": "VL Floor"
+  },
+  {
+   "fieldname": "smoking_preference",
+   "fieldtype": "Select",
+   "label": "Smoking",
+   "options": "\nNon-Smoking\nSmoking\nNo Preference"
+  },
+  {
+   "fieldname": "dietary_requirements",
+   "fieldtype": "Small Text",
+   "label": "Dietary Requirements"
+  },
+  {
+   "fieldname": "special_notes",
+   "fieldtype": "Text",
+   "label": "Special Notes"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2026-03-30 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Velara Front Desk",
+ "name": "VL Guest",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Front Desk Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Front Desk Agent",
+   "read": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Concierge",
+   "read": 1,
+   "export": 1
+  },
+  {
+   "role": "Velara Viewer",
+   "read": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "VL-GST-.#####",
+ "title_field": "guest_name",
+ "show_title_field_in_link": 1,
+ "search_fields": "first_name,last_name,email,mobile,nationality",
+ "image_field": "image"
+}

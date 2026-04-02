@@ -1,0 +1,35 @@
+{
+	"add_total_row": 0,
+	"columns": [],
+	"disabled": 0,
+	"docstatus": 0,
+	"doctype": "Report",
+	"filters": [
+		{
+			"fieldname": "floor",
+			"fieldtype": "Link",
+			"label": "Floor",
+			"options": "VL Floor",
+			"mandatory": 0
+		},
+		{
+			"fieldname": "room_status",
+			"fieldtype": "Select",
+			"label": "Room Status",
+			"options": "\nAvailable\nOccupied\nDirty\nClean\nInspected\nOut of Order\nOut of Service",
+			"mandatory": 0
+		}
+	],
+	"is_standard": "Yes",
+	"module": "Velara Reports",
+	"name": "VL Housekeeping Status",
+	"ref_doctype": "VL Room",
+	"report_name": "VL Housekeeping Status",
+	"report_type": "Script Report",
+	"roles": [
+		{"role": "Velara Admin"},
+		{"role": "Velara General Manager"},
+		{"role": "Velara Housekeeping Manager"},
+		{"role": "Velara Front Desk Manager"}
+	]
+}

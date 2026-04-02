@@ -1,0 +1,220 @@
+{
+ "actions": [],
+ "creation": "2026-03-30 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "room_number",
+  "room_name",
+  "room_type",
+  "property",
+  "cb_1",
+  "floor",
+  "wing",
+  "bed_type",
+  "max_occupancy",
+  "status_section",
+  "room_status",
+  "housekeeping_status",
+  "fo_status",
+  "cb_2",
+  "current_guest",
+  "current_reservation",
+  "current_folio",
+  "rate_section",
+  "default_rate",
+  "override_rate",
+  "image"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_number",
+   "fieldtype": "Data",
+   "label": "Room Number",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "room_name",
+   "fieldtype": "Data",
+   "label": "Room Name"
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Link",
+   "label": "Room Type",
+   "options": "VL Room Type",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "VL Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Link",
+   "label": "Floor",
+   "options": "VL Floor"
+  },
+  {
+   "fieldname": "wing",
+   "fieldtype": "Link",
+   "label": "Wing",
+   "options": "VL Wing"
+  },
+  {
+   "fieldname": "bed_type",
+   "fieldtype": "Link",
+   "label": "Bed Type",
+   "options": "VL Bed Type"
+  },
+  {
+   "fieldname": "max_occupancy",
+   "fieldtype": "Int",
+   "label": "Max Occupancy",
+   "default": "2",
+   "fetch_from": "room_type.max_occupancy"
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Current Status"
+  },
+  {
+   "fieldname": "room_status",
+   "fieldtype": "Select",
+   "label": "Room Status",
+   "options": "Available\nOccupied\nReserved\nBlocked\nOut of Order\nOut of Service",
+   "default": "Available",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "housekeeping_status",
+   "fieldtype": "Select",
+   "label": "HK Status",
+   "options": "Clean\nDirty\nInspected\nOut of Order\nPickup",
+   "default": "Clean",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "fo_status",
+   "fieldtype": "Select",
+   "label": "Front Office Status",
+   "options": "Vacant\nOccupied\nDue Out\nChecked Out",
+   "default": "Vacant"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_guest",
+   "fieldtype": "Link",
+   "label": "Current Guest",
+   "options": "VL Guest",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_reservation",
+   "fieldtype": "Link",
+   "label": "Current Reservation",
+   "options": "VL Reservation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_folio",
+   "fieldtype": "Link",
+   "label": "Current Folio",
+   "options": "VL Folio",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rate_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "default_rate",
+   "fieldtype": "Currency",
+   "label": "Default Rate",
+   "fetch_from": "room_type.default_rate"
+  },
+  {
+   "fieldname": "override_rate",
+   "fieldtype": "Currency",
+   "label": "Override Rate"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Room Image"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2026-03-30 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Velara Rooms",
+ "name": "VL Room",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Front Desk Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "Velara Front Desk Agent",
+   "read": 1,
+   "export": 1
+  },
+  {
+   "role": "Velara Viewer",
+   "read": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "field:room_number",
+ "title_field": "room_number",
+ "show_title_field_in_link": 1,
+ "search_fields": "room_type,property,floor,room_status",
+ "image_field": "image"
+}

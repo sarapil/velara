@@ -1,0 +1,249 @@
+{
+ "actions": [],
+ "creation": "2026-03-30 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "audit_date",
+  "status",
+  "started_at",
+  "completed_at",
+  "run_by",
+  "stats_section",
+  "total_rooms",
+  "occupied_rooms",
+  "occupancy_rate",
+  "cb_1",
+  "adr",
+  "revpar",
+  "total_revenue",
+  "room_revenue",
+  "fnb_revenue",
+  "other_revenue",
+  "arrivals_section",
+  "arrivals",
+  "departures",
+  "no_shows",
+  "cb_2",
+  "room_charges_posted",
+  "discrepancies",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "audit_date",
+   "fieldtype": "Date",
+   "label": "Audit Date",
+   "reqd": 1,
+   "in_list_view": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nIn Progress\nCompleted\nRolled Back",
+   "default": "Pending",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "started_at",
+   "fieldtype": "Datetime",
+   "label": "Started At"
+  },
+  {
+   "fieldname": "completed_at",
+   "fieldtype": "Datetime",
+   "label": "Completed At"
+  },
+  {
+   "fieldname": "run_by",
+   "fieldtype": "Link",
+   "label": "Run By",
+   "options": "User"
+  },
+  {
+   "fieldname": "stats_section",
+   "fieldtype": "Section Break",
+   "label": "Statistics"
+  },
+  {
+   "fieldname": "total_rooms",
+   "fieldtype": "Int",
+   "label": "Total Rooms",
+   "read_only": 1
+  },
+  {
+   "fieldname": "occupied_rooms",
+   "fieldtype": "Int",
+   "label": "Occupied Rooms",
+   "read_only": 1
+  },
+  {
+   "fieldname": "occupancy_rate",
+   "fieldtype": "Percent",
+   "label": "Occupancy Rate",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adr",
+   "fieldtype": "Currency",
+   "label": "ADR",
+   "read_only": 1,
+   "description": "Average Daily Rate",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "revpar",
+   "fieldtype": "Currency",
+   "label": "RevPAR",
+   "read_only": 1,
+   "description": "Revenue Per Available Room"
+  },
+  {
+   "fieldname": "total_revenue",
+   "fieldtype": "Currency",
+   "label": "Total Revenue",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "room_revenue",
+   "fieldtype": "Currency",
+   "label": "Room Revenue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fnb_revenue",
+   "fieldtype": "Currency",
+   "label": "F&B Revenue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "other_revenue",
+   "fieldtype": "Currency",
+   "label": "Other Revenue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "arrivals_section",
+   "fieldtype": "Section Break",
+   "label": "Movement"
+  },
+  {
+   "fieldname": "arrivals",
+   "fieldtype": "Int",
+   "label": "Arrivals",
+   "read_only": 1
+  },
+  {
+   "fieldname": "departures",
+   "fieldtype": "Int",
+   "label": "Departures",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_shows",
+   "fieldtype": "Int",
+   "label": "No Shows",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "room_charges_posted",
+   "fieldtype": "Int",
+   "label": "Room Charges Posted",
+   "read_only": 1
+  },
+  {
+   "fieldname": "discrepancies",
+   "fieldtype": "Int",
+   "label": "Discrepancies",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Audit Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "VL Night Audit",
+   "no_copy": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-03-30 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Velara Night Audit",
+ "name": "VL Night Audit",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "Velara Night Auditor",
+   "read": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "VL-NA-.YYYY.-.#####",
+ "search_fields": "audit_date,status"
+}

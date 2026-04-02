@@ -1,0 +1,35 @@
+{
+	"add_total_row": 1,
+	"columns": [],
+	"disabled": 0,
+	"docstatus": 0,
+	"doctype": "Report",
+	"filters": [
+		{
+			"fieldname": "from_date",
+			"fieldtype": "Date",
+			"label": "From Date",
+			"mandatory": 0,
+			"wildcard_filter": 0
+		},
+		{
+			"fieldname": "to_date",
+			"fieldtype": "Date",
+			"label": "To Date",
+			"mandatory": 0,
+			"wildcard_filter": 0
+		}
+	],
+	"is_standard": "Yes",
+	"module": "Velara Reports",
+	"name": "VL Daily Occupancy",
+	"ref_doctype": "VL Room",
+	"report_name": "VL Daily Occupancy",
+	"report_type": "Script Report",
+	"roles": [
+		{"role": "Velara Admin"},
+		{"role": "Velara General Manager"},
+		{"role": "Velara Revenue Manager"},
+		{"role": "Velara Front Desk Manager"}
+	]
+}

@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "creation": "2026-03-30 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rate_plan_name",
+  "rate_plan_code",
+  "description",
+  "cb_1",
+  "meal_plan",
+  "is_refundable",
+  "cancellation_policy",
+  "rates_section",
+  "base_rate_type",
+  "fixed_rate",
+  "multiplier"
+ ],
+ "fields": [
+  {
+   "fieldname": "rate_plan_name",
+   "fieldtype": "Data",
+   "label": "Rate Plan Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rate_plan_code",
+   "fieldtype": "Data",
+   "label": "Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meal_plan",
+   "fieldtype": "Select",
+   "label": "Meal Plan",
+   "options": "\nRoom Only\nBed & Breakfast\nHalf Board\nFull Board\nAll Inclusive"
+  },
+  {
+   "fieldname": "is_refundable",
+   "fieldtype": "Check",
+   "label": "Refundable",
+   "default": "1"
+  },
+  {
+   "fieldname": "cancellation_policy",
+   "fieldtype": "Link",
+   "label": "Cancellation Policy",
+   "options": "VL Cancellation Policy"
+  },
+  {
+   "fieldname": "rates_section",
+   "fieldtype": "Section Break",
+   "label": "Rate Configuration"
+  },
+  {
+   "fieldname": "base_rate_type",
+   "fieldtype": "Select",
+   "label": "Rate Based On",
+   "options": "Room Type Default\nFixed Amount\nMultiplier"
+  },
+  {
+   "fieldname": "fixed_rate",
+   "fieldtype": "Currency",
+   "label": "Fixed Rate",
+   "depends_on": "eval:doc.base_rate_type=='Fixed Amount'"
+  },
+  {
+   "fieldname": "multiplier",
+   "fieldtype": "Float",
+   "label": "Multiplier",
+   "depends_on": "eval:doc.base_rate_type=='Multiplier'",
+   "default": "1.0"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2026-03-30 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Velara Reservations",
+ "name": "VL Rate Plan",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "Velara Revenue Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "Velara Front Desk Manager",
+   "read": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "field:rate_plan_name"
+}

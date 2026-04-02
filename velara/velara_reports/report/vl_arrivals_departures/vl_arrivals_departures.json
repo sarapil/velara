@@ -1,0 +1,28 @@
+{
+	"add_total_row": 0,
+	"columns": [],
+	"disabled": 0,
+	"docstatus": 0,
+	"doctype": "Report",
+	"filters": [
+		{
+			"fieldname": "date",
+			"fieldtype": "Date",
+			"label": "Date",
+			"mandatory": 0,
+			"default": "Today"
+		}
+	],
+	"is_standard": "Yes",
+	"module": "Velara Reports",
+	"name": "VL Arrivals Departures",
+	"ref_doctype": "VL Reservation",
+	"report_name": "VL Arrivals Departures",
+	"report_type": "Script Report",
+	"roles": [
+		{"role": "Velara Admin"},
+		{"role": "Velara General Manager"},
+		{"role": "Velara Front Desk Manager"},
+		{"role": "Velara Front Desk Agent"}
+	]
+}

@@ -1,0 +1,21 @@
+{
+ "app": "velara",
+ "bg_color": "#F59E0B",
+ "creation": "2026-04-01 10:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon_type": "App",
+ "idx": 1,
+ "label": "Velara F&B",
+ "link": "/app/velara-fnb",
+ "link_type": "External",
+ "logo_url": "/assets/velara/icons/desktop_icons/solid/velara_fnb.svg",
+ "modified": "2026-04-01 10:00:00.000000",
+ "modified_by": "Administrator",
+ "name": "Velara F&B",
+ "owner": "Administrator",
+ "restrict_removal": 0,
+ "roles": [],
+ "standard": 1
+}

@@ -1,0 +1,219 @@
+{
+ "actions": [],
+ "autoname": "VL Settings",
+ "creation": "2026-03-30 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "property_section",
+  "default_property",
+  "default_check_in_time",
+  "default_check_out_time",
+  "cb_1",
+  "default_currency",
+  "default_tax_template",
+  "night_audit_time",
+  "modules_section",
+  "rooms_enabled",
+  "reservations_enabled",
+  "front_desk_enabled",
+  "housekeeping_enabled",
+  "cb_2",
+  "fnb_enabled",
+  "revenue_enabled",
+  "guest_services_enabled",
+  "events_enabled",
+  "cb_3",
+  "maintenance_enabled",
+  "loyalty_enabled",
+  "night_audit_enabled",
+  "spa_enabled",
+  "integration_section",
+  "channel_manager_enabled",
+  "iot_enabled",
+  "whatsapp_enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "property_section",
+   "fieldtype": "Section Break",
+   "label": "Property Settings"
+  },
+  {
+   "fieldname": "default_property",
+   "fieldtype": "Link",
+   "label": "Default Property",
+   "options": "VL Property"
+  },
+  {
+   "fieldname": "default_check_in_time",
+   "fieldtype": "Time",
+   "label": "Default Check-In Time",
+   "default": "14:00"
+  },
+  {
+   "fieldname": "default_check_out_time",
+   "fieldtype": "Time",
+   "label": "Default Check-Out Time",
+   "default": "12:00"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Default Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "default_tax_template",
+   "fieldtype": "Link",
+   "label": "Default Tax Template",
+   "options": "Sales Taxes and Charges Template"
+  },
+  {
+   "fieldname": "night_audit_time",
+   "fieldtype": "Time",
+   "label": "Night Audit Time",
+   "default": "02:00"
+  },
+  {
+   "fieldname": "modules_section",
+   "fieldtype": "Section Break",
+   "label": "Module Settings"
+  },
+  {
+   "fieldname": "rooms_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Rooms",
+   "default": "1"
+  },
+  {
+   "fieldname": "reservations_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Reservations",
+   "default": "1"
+  },
+  {
+   "fieldname": "front_desk_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Front Desk",
+   "default": "1"
+  },
+  {
+   "fieldname": "housekeeping_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Housekeeping",
+   "default": "1"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fnb_enabled",
+   "fieldtype": "Check",
+   "label": "Enable F&B",
+   "default": "1"
+  },
+  {
+   "fieldname": "revenue_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Revenue Mgmt",
+   "default": "1"
+  },
+  {
+   "fieldname": "guest_services_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Guest Services",
+   "default": "1"
+  },
+  {
+   "fieldname": "events_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Events",
+   "default": "1"
+  },
+  {
+   "fieldname": "cb_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Maintenance",
+   "default": "1"
+  },
+  {
+   "fieldname": "loyalty_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Loyalty",
+   "default": "1"
+  },
+  {
+   "fieldname": "night_audit_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Night Audit",
+   "default": "1"
+  },
+  {
+   "fieldname": "spa_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Spa",
+   "default": "0"
+  },
+  {
+   "fieldname": "integration_section",
+   "fieldtype": "Section Break",
+   "label": "Integrations"
+  },
+  {
+   "fieldname": "channel_manager_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Channel Manager",
+   "default": "0"
+  },
+  {
+   "fieldname": "iot_enabled",
+   "fieldtype": "Check",
+   "label": "Enable IoT / Smart Room",
+   "default": "0"
+  },
+  {
+   "fieldname": "whatsapp_enabled",
+   "fieldtype": "Check",
+   "label": "Enable WhatsApp Guest Comm.",
+   "default": "0"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "is_tree": 0,
+ "links": [],
+ "modified": "2026-03-30 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Velara Setup",
+ "name": "VL Settings",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "issingle": 1
+}

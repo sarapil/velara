@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "autoname": "field:room_type_name",
+ "creation": "2026-03-30 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "room_type_name",
+  "room_type_code",
+  "description",
+  "cb_1",
+  "default_rate",
+  "max_occupancy",
+  "extra_bed_capacity",
+  "base_bed_type",
+  "amenities_section",
+  "amenities",
+  "image"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_type_name",
+   "fieldtype": "Data",
+   "label": "Room Type Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "room_type_code",
+   "fieldtype": "Data",
+   "label": "Code",
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_rate",
+   "fieldtype": "Currency",
+   "label": "Default Rate",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "max_occupancy",
+   "fieldtype": "Int",
+   "label": "Max Occupancy",
+   "default": "2"
+  },
+  {
+   "fieldname": "extra_bed_capacity",
+   "fieldtype": "Int",
+   "label": "Extra Bed Capacity",
+   "default": "1"
+  },
+  {
+   "fieldname": "base_bed_type",
+   "fieldtype": "Link",
+   "label": "Default Bed Type",
+   "options": "VL Bed Type"
+  },
+  {
+   "fieldname": "amenities_section",
+   "fieldtype": "Section Break",
+   "label": "Amenities"
+  },
+  {
+   "fieldname": "amenities",
+   "fieldtype": "Table MultiSelect",
+   "label": "Amenities",
+   "options": "VL Room Type Amenity"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "is_tree": 0,
+ "links": [],
+ "modified": "2026-03-30 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Velara Setup",
+ "name": "VL Room Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1
+  },
+  {
+   "role": "Velara Front Desk Manager",
+   "read": 1,
+   "export": 1
+  },
+  {
+   "role": "Velara Revenue Manager",
+   "read": 1,
+   "export": 1
+  },
+  {
+   "role": "Velara Viewer",
+   "read": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "title_field": "room_type_name",
+ "show_title_field_in_link": 1,
+ "image_field": "image"
+}

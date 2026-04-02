@@ -1,0 +1,358 @@
+{
+ "actions": [],
+ "creation": "2026-03-30 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "guest",
+  "guest_name",
+  "property",
+  "cb_1",
+  "status",
+  "booking_source",
+  "confirmation_number",
+  "stay_section",
+  "check_in_date",
+  "check_out_date",
+  "nights",
+  "cb_2",
+  "room_type",
+  "room",
+  "adults",
+  "children",
+  "rate_section",
+  "rate_plan",
+  "room_rate",
+  "total_room_charges",
+  "cb_3",
+  "discount_percent",
+  "net_total",
+  "folio",
+  "requests_section",
+  "special_requests",
+  "arrival_time",
+  "meal_plan",
+  "group_section",
+  "group_booking",
+  "is_group_master",
+  "cancel_section",
+  "cancellation_policy",
+  "cancelled_on",
+  "cancellation_reason",
+  "cancellation_charge",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "label": "Guest",
+   "options": "VL Guest",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "guest_name",
+   "fieldtype": "Data",
+   "label": "Guest Name",
+   "fetch_from": "guest.guest_name",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "VL Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nConfirmed\nChecked In\nChecked Out\nCancelled\nNo Show\nWaitlist",
+   "default": "Draft",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_source",
+   "fieldtype": "Select",
+   "label": "Booking Source",
+   "options": "\nDirect\nWebsite\nOTA - Booking.com\nOTA - Expedia\nOTA - Agoda\nTravel Agent\nCorporate\nGroup\nPhone\nWalk-In",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "confirmation_number",
+   "fieldtype": "Data",
+   "label": "Confirmation #",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stay_section",
+   "fieldtype": "Section Break",
+   "label": "Stay Details"
+  },
+  {
+   "fieldname": "check_in_date",
+   "fieldtype": "Date",
+   "label": "Check-In Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "check_out_date",
+   "fieldtype": "Date",
+   "label": "Check-Out Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "nights",
+   "fieldtype": "Int",
+   "label": "Nights",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Link",
+   "label": "Room Type",
+   "options": "VL Room Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "label": "Assigned Room",
+   "options": "VL Room"
+  },
+  {
+   "fieldname": "adults",
+   "fieldtype": "Int",
+   "label": "Adults",
+   "default": "1"
+  },
+  {
+   "fieldname": "children",
+   "fieldtype": "Int",
+   "label": "Children",
+   "default": "0"
+  },
+  {
+   "fieldname": "rate_section",
+   "fieldtype": "Section Break",
+   "label": "Rate & Charges"
+  },
+  {
+   "fieldname": "rate_plan",
+   "fieldtype": "Link",
+   "label": "Rate Plan",
+   "options": "VL Rate Plan"
+  },
+  {
+   "fieldname": "room_rate",
+   "fieldtype": "Currency",
+   "label": "Room Rate / Night",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_room_charges",
+   "fieldtype": "Currency",
+   "label": "Total Room Charges",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "discount_percent",
+   "fieldtype": "Percent",
+   "label": "Discount %"
+  },
+  {
+   "fieldname": "net_total",
+   "fieldtype": "Currency",
+   "label": "Net Total",
+   "read_only": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "folio",
+   "fieldtype": "Link",
+   "label": "Folio",
+   "options": "VL Folio",
+   "read_only": 1
+  },
+  {
+   "fieldname": "requests_section",
+   "fieldtype": "Section Break",
+   "label": "Guest Requests",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "special_requests",
+   "fieldtype": "Small Text",
+   "label": "Special Requests"
+  },
+  {
+   "fieldname": "arrival_time",
+   "fieldtype": "Time",
+   "label": "Expected Arrival Time"
+  },
+  {
+   "fieldname": "meal_plan",
+   "fieldtype": "Select",
+   "label": "Meal Plan",
+   "options": "\nRoom Only\nBed & Breakfast\nHalf Board\nFull Board\nAll Inclusive"
+  },
+  {
+   "fieldname": "group_section",
+   "fieldtype": "Section Break",
+   "label": "Group Booking",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "group_booking",
+   "fieldtype": "Link",
+   "label": "Group Booking",
+   "options": "VL Group Booking"
+  },
+  {
+   "fieldname": "is_group_master",
+   "fieldtype": "Check",
+   "label": "Is Group Master"
+  },
+  {
+   "fieldname": "cancel_section",
+   "fieldtype": "Section Break",
+   "label": "Cancellation",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "cancellation_policy",
+   "fieldtype": "Link",
+   "label": "Cancellation Policy",
+   "options": "VL Cancellation Policy"
+  },
+  {
+   "fieldname": "cancelled_on",
+   "fieldtype": "Datetime",
+   "label": "Cancelled On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cancellation_reason",
+   "fieldtype": "Small Text",
+   "label": "Cancellation Reason"
+  },
+  {
+   "fieldname": "cancellation_charge",
+   "fieldtype": "Currency",
+   "label": "Cancellation Charge",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "VL Reservation",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-03-30 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Velara Reservations",
+ "name": "VL Reservation",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Front Desk Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Front Desk Agent",
+   "read": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Revenue Manager",
+   "read": 1,
+   "export": 1
+  },
+  {
+   "role": "Velara Viewer",
+   "read": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "VL-RES-.YYYY.-.#####",
+ "title_field": "guest_name",
+ "show_title_field_in_link": 1,
+ "search_fields": "guest,guest_name,room,status,check_in_date"
+}

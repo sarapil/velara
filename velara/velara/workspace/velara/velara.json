@@ -1,0 +1,327 @@
+[
+  {
+    "doctype": "Workspace",
+    "name": "Velara",
+    "module": "Velara",
+    "label": "Velara",
+    "title": "Velara Hotel Management",
+    "icon": "building",
+    "is_hidden": 0,
+    "for_user": "",
+    "parent_page": "",
+    "public": 1,
+    "sequence_id": 10,
+    "content": "[{\"id\":\"hero\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Velara</b> Hotel Management</span>\",\"level\":4,\"col\":12}},{\"id\":\"shortcuts\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"VL Reservation\",\"col\":4}},{\"id\":\"shortcuts2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"VL Room\",\"col\":4}},{\"id\":\"shortcuts3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"VL Guest\",\"col\":4}}]",
+    "links": [
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Settings",
+        "link_to": "VL Settings",
+        "icon": "settings",
+        "only_for": "System Manager,Velara Admin"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Property",
+        "link_to": "VL Property",
+        "icon": "building"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Room Type",
+        "link_to": "VL Room Type",
+        "icon": "home"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Rooms",
+        "link_to": "VL Room",
+        "icon": "door-enter"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Reservations",
+        "link_to": "VL Reservation",
+        "icon": "calendar-event"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Guests",
+        "link_to": "VL Guest",
+        "icon": "user"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Folios",
+        "link_to": "VL Folio",
+        "icon": "file-invoice"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Check In",
+        "link_to": "VL Check In",
+        "icon": "login"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Check Out",
+        "link_to": "VL Check Out",
+        "icon": "logout"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "HK Tasks",
+        "link_to": "VL HK Task",
+        "icon": "wash"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Service Requests",
+        "link_to": "VL Service Request",
+        "icon": "bell"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Events",
+        "link_to": "VL Event Booking",
+        "icon": "calendar"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Maintenance",
+        "link_to": "VL Maintenance Request",
+        "icon": "tool"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Restaurants",
+        "link_to": "VL Restaurant",
+        "icon": "soup"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Night Audit",
+        "link_to": "VL Night Audit",
+        "icon": "moon"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Spa Bookings",
+        "link_to": "VL Spa Booking",
+        "icon": "leaf"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Guest Feedback",
+        "link_to": "VL Guest Feedback",
+        "icon": "star"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Revenue Budget",
+        "link_to": "VL Revenue Budget",
+        "icon": "chart-bar"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Group Bookings",
+        "link_to": "VL Group Booking",
+        "icon": "users"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Rate Plans",
+        "link_to": "VL Rate Plan",
+        "icon": "tag"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Floors",
+        "link_to": "VL Floor",
+        "icon": "building"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Wings",
+        "link_to": "VL Wing",
+        "icon": "layout-sidebar"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Amenities",
+        "link_to": "VL Amenity",
+        "icon": "sparkles"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Bed Types",
+        "link_to": "VL Bed Type",
+        "icon": "bed"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Seasons",
+        "link_to": "VL Season",
+        "icon": "sun"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Cancellation Policies",
+        "link_to": "VL Cancellation Policy",
+        "icon": "circle-x"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Room Blocks",
+        "link_to": "VL Room Block",
+        "icon": "lock"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "HK Assignments",
+        "link_to": "VL HK Assignment",
+        "icon": "clipboard-check"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Lost and Found",
+        "link_to": "VL Lost and Found",
+        "icon": "search"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Wake Up Calls",
+        "link_to": "VL Wake Up Call",
+        "icon": "alarm"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Event Venues",
+        "link_to": "VL Event Venue",
+        "icon": "map-pin"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Preventive Schedules",
+        "link_to": "VL Preventive Schedule",
+        "icon": "calendar-time"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Minibar Consumption",
+        "link_to": "VL Minibar Consumption",
+        "icon": "glass-full"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Spa Services",
+        "link_to": "VL Spa Service",
+        "icon": "leaf"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Loyalty Program",
+        "link_to": "VL Loyalty Program",
+        "icon": "award"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "DocType",
+        "label": "Loyalty Transactions",
+        "link_to": "VL Loyalty Transaction",
+        "icon": "arrows-transfer-down"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "Report",
+        "label": "Daily Occupancy",
+        "link_to": "VL Daily Occupancy",
+        "icon": "chart-line",
+        "dependencies": "VL Room"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "Report",
+        "label": "Revenue Summary",
+        "link_to": "VL Revenue Summary",
+        "icon": "chart-bar",
+        "dependencies": "VL Folio"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "Report",
+        "label": "Arrivals & Departures",
+        "link_to": "VL Arrivals Departures",
+        "icon": "arrows-exchange",
+        "dependencies": "VL Reservation"
+      },
+      {
+        "doctype": "Workspace Link",
+        "type": "Report",
+        "label": "Housekeeping Status",
+        "link_to": "VL Housekeeping Status",
+        "icon": "wash",
+        "dependencies": "VL Room"
+      }
+    ],
+    "shortcuts": [
+      {
+        "doctype": "Workspace Shortcut",
+        "type": "DocType",
+        "label": "Reservations",
+        "link_to": "VL Reservation",
+        "color": "Blue",
+        "stats_filter": "{\"status\": \"Confirmed\"}"
+      },
+      {
+        "doctype": "Workspace Shortcut",
+        "type": "DocType",
+        "label": "Rooms",
+        "link_to": "VL Room",
+        "color": "Green"
+      },
+      {
+        "doctype": "Workspace Shortcut",
+        "type": "DocType",
+        "label": "Guests",
+        "link_to": "VL Guest",
+        "color": "Yellow"
+      }
+    ]
+  }
+]

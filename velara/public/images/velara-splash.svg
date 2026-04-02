@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9A84C"/>
+      <stop offset="100%" style="stop-color:#E8D8A0"/>
+    </linearGradient>
+    <linearGradient id="sbg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B2A4A"/>
+      <stop offset="100%" style="stop-color:#0F1A2E"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#sbg)"/>
+  <!-- Decorative line pattern -->
+  <g opacity="0.08" stroke="#C9A84C" stroke-width="0.5">
+    <line x1="0" y1="0" x2="600" y2="400"/>
+    <line x1="100" y1="0" x2="600" y2="300"/>
+    <line x1="200" y1="0" x2="600" y2="200"/>
+    <line x1="0" y1="100" x2="500" y2="400"/>
+    <line x1="0" y1="200" x2="400" y2="400"/>
+  </g>
+  <!-- Hotel building silhouette -->
+  <g transform="translate(300,155)" filter="url(#glow)" opacity="0">
+    <!-- Main tower -->
+    <rect x="-30" y="-60" width="60" height="90" rx="3" fill="url(#sg)"/>
+    <!-- Wings -->
+    <rect x="-55" y="-30" width="25" height="60" rx="3" fill="url(#sg)" opacity="0.8"/>
+    <rect x="30" y="-30" width="25" height="60" rx="3" fill="url(#sg)" opacity="0.8"/>
+    <!-- Windows -->
+    <g fill="#1B2A4A">
+      <rect x="-20" y="-50" width="10" height="10" rx="1"/>
+      <rect x="10" y="-50" width="10" height="10" rx="1"/>
+      <rect x="-20" y="-30" width="10" height="10" rx="1"/>
+      <rect x="10" y="-30" width="10" height="10" rx="1"/>
+      <rect x="-20" y="-10" width="10" height="10" rx="1"/>
+      <rect x="10" y="-10" width="10" height="10" rx="1"/>
+    </g>
+    <!-- Door -->
+    <rect x="-8" y="15" width="16" height="15" rx="2" fill="#1B2A4A"/>
+    <!-- Star -->
+    <polygon points="0,-75 4,-65 14,-65 6,-59 9,-49 0,-55 -9,-49 -6,-59 -14,-65 -4,-65" fill="url(#sg)"/>
+    <animate attributeName="opacity" from="0" to="1" dur="1s" begin="0.3s" fill="freeze"/>
+  </g>
+  <!-- VELARA text -->
+  <text x="300" y="260" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="700" fill="url(#sg)" letter-spacing="12" opacity="0">
+    VELARA
+    <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="1s" fill="freeze"/>
+  </text>
+  <!-- Tagline -->
+  <text x="300" y="290" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="14" fill="#C9A84C" opacity="0" letter-spacing="4">
+    HOTEL MANAGEMENT
+    <animate attributeName="opacity" from="0" to="0.7" dur="0.6s" begin="1.5s" fill="freeze"/>
+  </text>
+  <!-- Loading bar -->
+  <rect x="200" y="330" width="200" height="2" rx="1" fill="#1B2A4A" stroke="#C9A84C" stroke-width="0.3"/>
+  <rect x="200" y="330" width="0" height="2" rx="1" fill="url(#sg)">
+    <animate attributeName="width" from="0" to="200" dur="2s" begin="0.5s" fill="freeze"/>
+  </rect>
+</svg>

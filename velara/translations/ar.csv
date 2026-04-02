@@ -1,0 +1,1069 @@
+source_text,translated_text,context
+# ========================
+# DocType Names
+# ========================
+VL Night Audit,مراجعة ليلية,
+VL Folio,ملف الحساب,
+VL Folio Charge,رسوم الحساب,
+VL Check In,تسجيل الوصول,
+VL Check Out,تسجيل المغادرة,
+VL Guest,الضيف,
+VL Room,الغرفة,
+VL Room Block,حجب الغرفة,
+VL Room Status Log,سجل حالة الغرفة,
+VL Reservation,الحجز,
+VL Group Booking,حجز جماعي,
+VL Rate Plan,خطة الأسعار,
+VL Cancellation Policy,سياسة الإلغاء,
+VL HK Task,مهمة التدبير المنزلي,
+VL HK Assignment,تعيين التدبير المنزلي,
+VL Lost and Found,المفقودات والموجودات,
+VL Service Request,طلب خدمة,
+VL Guest Feedback,ملاحظات الضيف,
+VL Wake Up Call,مكالمة إيقاظ,
+VL Event Booking,حجز فعالية,
+VL Event Venue,قاعة الفعاليات,
+VL Spa Service,خدمة السبا,
+VL Spa Booking,حجز السبا,
+VL Maintenance Request,طلب صيانة,
+VL Preventive Schedule,جدول الصيانة الوقائية,
+VL Minibar Item,صنف الميني بار,
+VL Minibar Consumption,استهلاك الميني بار,
+VL Restaurant,المطعم,
+VL Loyalty Program,برنامج الولاء,
+VL Loyalty Transaction,معاملة الولاء,
+VL Revenue Budget,ميزانية الإيرادات,
+VL Property,العقار,
+VL Settings,الإعدادات,
+VL Room Type,نوع الغرفة,
+VL Room Type Amenity,مرفق نوع الغرفة,
+VL Floor,الطابق,
+VL Wing,الجناح,
+VL Amenity,المرفق,
+VL Bed Type,نوع السرير,
+VL Season,الموسم,
+# ========================
+# Module Names
+# ========================
+Velara,فيلارا,
+Velara Setup,إعداد فيلارا,
+Velara Rooms,غرف فيلارا,
+Velara Reservations,حجوزات فيلارا,
+Velara Front Desk,الاستقبال فيلارا,
+Velara Housekeeping,التدبير المنزلي فيلارا,
+Velara Food and Beverage,الأغذية والمشروبات فيلارا,
+Velara Revenue,الإيرادات فيلارا,
+Velara Guest Services,خدمات الضيوف فيلارا,
+Velara Events,الفعاليات فيلارا,
+Velara Maintenance,الصيانة فيلارا,
+Velara Loyalty,الولاء فيلارا,
+Velara Night Audit,المراجعة الليلية فيلارا,
+Velara Spa,السبا فيلارا,
+Velara Reports,تقارير فيلارا,
+# ========================
+# Role Names
+# ========================
+Velara Admin,مدير فيلارا,
+Velara General Manager,المدير العام فيلارا,
+Velara Front Desk Manager,مدير الاستقبال,
+Velara Front Desk Agent,موظف الاستقبال,
+Velara Housekeeping Manager,مدير التدبير المنزلي,
+Velara Housekeeper,عامل التدبير المنزلي,
+Velara Revenue Manager,مدير الإيرادات,
+Velara FnB Manager,مدير الأغذية والمشروبات,
+Velara Concierge,خدمة الكونسيرج,
+Velara Maintenance Tech,فني الصيانة,
+Velara Events Coordinator,منسق الفعاليات,
+Velara Spa Manager,مدير السبا,
+Velara Night Auditor,المدقق الليلي,
+Velara Viewer,مشاهد فيلارا,
+# ========================
+# Statuses - Reservation
+# ========================
+Draft,مسودة,
+Confirmed,مؤكد,
+Checked In,تم تسجيل الوصول,
+Checked Out,تم تسجيل المغادرة,
+Cancelled,ملغي,
+No Show,لم يحضر,
+Waitlist,قائمة الانتظار,
+Tentative,مبدئي,
+Guaranteed,مضمون,
+# ========================
+# Statuses - Room
+# ========================
+Available,متاح,
+Occupied,مشغول,
+Reserved,محجوز,
+Blocked,محجوب,
+Out of Order,خارج الخدمة,
+Out of Service,خارج الاستخدام,
+# ========================
+# Statuses - Housekeeping
+# ========================
+Clean,نظيف,
+Dirty,متسخ,
+Inspected,تم الفحص,
+Pickup,التقاط,
+# ========================
+# Statuses - Front Office
+# ========================
+Vacant,شاغر,
+Due Out,مغادرة متوقعة,
+# ========================
+# Statuses - Folio
+# ========================
+Open,مفتوح,
+Settled,تمت التسوية,
+Closed,مغلق,
+Void,ملغي,
+# ========================
+# Statuses - General
+# ========================
+Pending,معلّق,
+In Progress,قيد التنفيذ,
+Completed,مكتمل,
+Assigned,معيّن,
+Inspecting,قيد الفحص,
+Resolved,تم الحل,
+Active,نشط,
+Expired,منتهي الصلاحية,
+Suspended,معلّق,
+Posted,مرحّل,
+Approved,موافق عليه,
+Rejected,مرفوض,
+On Hold,في الانتظار,
+Partially Paid,مدفوع جزئياً,
+Paid,مدفوع,
+# ========================
+# Statuses - Event Booking
+# ========================
+Inquiry,استفسار,
+# ========================
+# Statuses - Spa
+# ========================
+Booked,محجوز,
+# ========================
+# Statuses - Wake Up Call
+# ========================
+Scheduled,مجدول,
+No Answer,لا إجابة,
+# ========================
+# Statuses - Night Audit
+# ========================
+Rolled Back,تم التراجع,
+# ========================
+# Statuses - Lost and Found
+# ========================
+Found,موجود,
+Claimed,تم المطالبة,
+Disposed,تم التخلص,
+Donated,تم التبرع,
+# ========================
+# Loyalty Transaction Types
+# ========================
+Earn,كسب,
+Redeem,استبدال,
+Expire,انتهاء صلاحية,
+Adjust,تعديل,
+# ========================
+# Folio Types
+# ========================
+Guest,ضيف,
+Master,رئيسي,
+Group,مجموعة,
+Company,شركة,
+Deposit,إيداع,
+# ========================
+# Charge Types
+# ========================
+Room Charge,رسوم الغرفة,
+Food & Beverage,أغذية ومشروبات,
+Minibar,ميني بار,
+Laundry,غسيل,
+Telephone,هاتف,
+Spa,سبا,
+Parking,مواقف سيارات,
+Internet,إنترنت,
+Room Service,خدمة الغرف,
+Damage,أضرار,
+Misc,متنوع,
+Tax,ضريبة,
+Discount,خصم,
+Payment,دفعة,
+# ========================
+# Booking Sources
+# ========================
+Direct,مباشر,
+Website,الموقع الإلكتروني,
+OTA - Booking.com,OTA - بوكينج,
+OTA - Expedia,OTA - إكسبيديا,
+OTA - Agoda,OTA - أجودا,
+Travel Agent,وكيل سفر,
+Corporate,شركة,
+Phone,هاتف,
+Walk-In,حضور مباشر,
+# ========================
+# Meal Plans
+# ========================
+Room Only,غرفة فقط,
+Bed & Breakfast,مبيت وإفطار,
+Half Board,نصف إقامة,
+Full Board,إقامة كاملة,
+All Inclusive,شامل الكل,
+# ========================
+# Gender
+# ========================
+Male,ذكر,
+Female,أنثى,
+Other,آخر,
+# ========================
+# ID Types
+# ========================
+Passport,جواز سفر,
+National ID,بطاقة هوية وطنية,
+Driving License,رخصة قيادة,
+# ========================
+# VIP Codes
+# ========================
+None,لا يوجد,
+VIP 1,كبار الشخصيات 1,
+VIP 2,كبار الشخصيات 2,
+VIP 3,كبار الشخصيات 3,
+Celebrity,مشهور,
+Blacklist,قائمة سوداء,
+# ========================
+# Loyalty Tiers
+# ========================
+Silver,فضي,
+Gold,ذهبي,
+Platinum,بلاتيني,
+Diamond,ألماسي,
+# ========================
+# Smoking Preferences
+# ========================
+Non-Smoking,لغير المدخنين,
+Smoking,للمدخنين,
+No Preference,لا تفضيل,
+# ========================
+# HK Task Types
+# ========================
+Checkout Clean,تنظيف بعد المغادرة,
+Stay-over Clean,تنظيف أثناء الإقامة,
+Deep Clean,تنظيف عميق,
+Turndown,تجهيز مسائي,
+Inspection,فحص,
+Public Area,منطقة عامة,
+Special Request,طلب خاص,
+# ========================
+# HK Shifts
+# ========================
+Morning,صباحي,
+Afternoon,مسائي,
+Night,ليلي,
+# ========================
+# Priority Levels
+# ========================
+Low,منخفض,
+Medium,متوسط,
+High,مرتفع,
+Urgent,عاجل,
+Emergency,طوارئ,
+# ========================
+# Event Types
+# ========================
+Wedding,زفاف,
+Conference,مؤتمر,
+Meeting,اجتماع,
+Banquet,مأدبة,
+Exhibition,معرض,
+Workshop,ورشة عمل,
+Party,حفلة,
+# ========================
+# Event Venue Types
+# ========================
+Ballroom,قاعة حفلات,
+Conference Room,قاعة مؤتمرات,
+Meeting Room,غرفة اجتماعات,
+Banquet Hall,قاعة مآدب,
+Garden,حديقة,
+Poolside,جانب المسبح,
+Rooftop,السطح,
+# ========================
+# Spa Service Types
+# ========================
+Massage,تدليك,
+Facial,عناية بالوجه,
+Body Treatment,علاج الجسم,
+Nail,عناية بالأظافر,
+Hair,عناية بالشعر,
+Sauna,ساونا,
+Pool,مسبح,
+Fitness,لياقة بدنية,
+# ========================
+# Maintenance Categories
+# ========================
+Plumbing,سباكة,
+Electrical,كهرباء,
+HVAC,تكييف وتهوية,
+Furniture,أثاث,
+Appliance,أجهزة,
+Building,مبنى,
+Painting,دهان,
+Flooring,أرضيات,
+IT/Telecom,تقنية/اتصالات,
+# ========================
+# Preventive Maintenance
+# ========================
+Elevator,مصعد,
+Fire Safety,السلامة من الحريق,
+Generator,مولد كهربائي,
+# ========================
+# Preventive Schedule Frequencies
+# ========================
+Daily,يومي,
+Weekly,أسبوعي,
+Monthly,شهري,
+Quarterly,ربع سنوي,
+Semi-Annual,نصف سنوي,
+Annual,سنوي,
+# ========================
+# Amenity Types
+# ========================
+Room,غرفة,
+Bathroom,حمام,
+Technology,تقنية,
+Food & Drink,طعام ومشروبات,
+Outdoor,خارجي,
+Accessibility,إمكانية الوصول,
+# ========================
+# Room Block Reasons
+# ========================
+Maintenance,صيانة,
+Renovation,تجديد,
+VIP Block,حجب كبار الشخصيات,
+Group Block,حجب مجموعة,
+# ========================
+# Property Types
+# ========================
+Hotel,فندق,
+Resort,منتجع,
+Boutique Hotel,فندق بوتيك,
+Motel,موتيل,
+Hostel,نزل,
+Apartment Hotel,فندق شقق,
+Villa,فيلا,
+Guest House,بيت ضيافة,
+# ========================
+# Star Ratings
+# ========================
+1 Star,نجمة واحدة,
+2 Stars,نجمتان,
+3 Stars,3 نجوم,
+4 Stars,4 نجوم,
+5 Stars,5 نجوم,
+5 Stars Deluxe,5 نجوم فاخر,
+# ========================
+# Rate Plan Options
+# ========================
+Room Type Default,افتراضي نوع الغرفة,
+Fixed Amount,مبلغ ثابت,
+Multiplier,معامل ضرب,
+# ========================
+# Cancellation Charge Types
+# ========================
+Percentage,نسبة مئوية,
+Fixed,ثابت,
+First Night,الليلة الأولى,
+# ========================
+# Feedback Sources
+# ========================
+In-Person,شخصياً,
+Email,بريد إلكتروني,
+Survey,استبيان,
+OTA Review,تقييم OTA,
+Social Media,وسائل التواصل الاجتماعي,
+# ========================
+# Revenue Budget Months
+# ========================
+January,يناير,
+February,فبراير,
+March,مارس,
+April,أبريل,
+May,مايو,
+June,يونيو,
+July,يوليو,
+August,أغسطس,
+September,سبتمبر,
+October,أكتوبر,
+November,نوفمبر,
+December,ديسمبر,
+# ========================
+# Workflow Actions
+# ========================
+Confirm,تأكيد,
+Guarantee,ضمان,
+Check In,تسجيل الوصول,
+Check Out,تسجيل المغادرة,
+Cancel,إلغاء,
+Mark No Show,تسجيل عدم حضور,
+Assign,تعيين,
+Start Cleaning,بدء التنظيف,
+Complete Cleaning,إتمام التنظيف,
+Inspect,فحص,
+Pass Inspection,اجتياز الفحص,
+Fail Inspection,عدم اجتياز الفحص,
+Post Charge,ترحيل رسوم,
+Settle Folio,تسوية الحساب,
+Void Charge,إلغاء رسوم,
+Approve,موافقة,
+Reject,رفض,
+Resolve,حل,
+Close,إغلاق,
+Reopen,إعادة فتح,
+Submit,تقديم,
+Hold,تعليق,
+Resume,استئناف,
+# ========================
+# Button / Action Labels
+# ========================
+Post Payment,ترحيل دفعة,
+Create Invoice,إنشاء فاتورة,
+New Reservation,حجز جديد,
+Stay History,سجل الإقامات,
+Customer,العميل,
+Assign Room,تعيين غرفة,
+Create Folio,إنشاء ملف حساب,
+Mark No Show,تسجيل عدم حضور,
+Complete,إكمال,
+Mark Clean,تعليم نظيف,
+Mark Inspected,تعليم تم الفحص,
+Block Room,حجب الغرفة,
+Mark Available,تعليم متاح,
+Start Work,بدء العمل,
+View Folio,عرض ملف الحساب,
+View Guest Profile,عرض ملف الضيف,
+Create Guest Profile,إنشاء ملف ضيف,
+Post to Room,ترحيل إلى الغرفة,
+Post,ترحيل,
+Select Room,اختيار غرفة,
+Actions,إجراءات,
+View,عرض,
+Post to Guest Folio,ترحيل إلى حساب الضيف,
+# ========================
+# Indicator / Dashboard Labels
+# ========================
+"Occupancy: {0}%",النسبة المئوية للإشغال: {0}%,
+"ADR: {0}",متوسط سعر الغرفة: {0},
+"RevPAR: {0}",الإيراد لكل غرفة متاحة: {0},
+"Revenue: {0}",الإيرادات: {0},
+"Balance: {0}",الرصيد: {0},
+Ready for Check-In,جاهز لتسجيل الوصول,
+"Room: {0}",الغرفة: {0},
+Ready for Check-Out,جاهز لتسجيل المغادرة,
+"Outstanding Balance: {0}",الرصيد المعلق: {0},
+"Points: {0}",النقاط: {0},
+"Stays: {0}",الإقامات: {0},
+"Nights: {0}",الليالي: {0},
+"Folio: {0}",ملف الحساب: {0},
+"Guest: {0}",الضيف: {0},
+"Res: {0}",الحجز: {0},
+"Duration: {0} min",المدة: {0} دقيقة,
+"Hotel Dept: {0}",قسم الفندق: {0},
+"Reservation: {0}",الحجز: {0},
+"Posted to Folio {0}",تم الترحيل إلى الحساب {0},
+Charge posted,تم ترحيل الرسوم,
+# ========================
+# Dialog / Form Labels
+# ========================
+Charge Type,نوع الرسوم,
+Amount,المبلغ,
+Description,الوصف,
+Method,الطريقة,
+Notes,ملاحظات,
+Inspection Failed,فشل الفحص,
+# ========================
+# Error / Validation Messages
+# ========================
+"Night audit already completed for {0}: {1}",المراجعة الليلية مكتملة بالفعل لـ {0}: {1},
+Cannot submit folio with outstanding balance of {0},لا يمكن تقديم ملف الحساب مع رصيد معلق بقيمة {0},
+"Payment via {0}",الدفع عبر {0},
+Guest is required to create invoice,الضيف مطلوب لإنشاء الفاتورة,
+Guest {0} has no linked Customer,الضيف {0} ليس له عميل مرتبط,
+Reservation is required for check-in,الحجز مطلوب لتسجيل الوصول,
+Reservation {0} is not submitted,الحجز {0} لم يتم تقديمه,
+"Reservation {0} cannot be checked in (Status: {1})",لا يمكن تسجيل وصول الحجز {0} (الحالة: {1}),
+No room assigned to the reservation. Please assign a room first.,لم يتم تعيين غرفة للحجز. يرجى تعيين غرفة أولاً.,
+"Room {0} is {1} and cannot be used for check-in",الغرفة {0} حالتها {1} ولا يمكن استخدامها لتسجيل الوصول,
+Reservation is required,الحجز مطلوب,
+"Reservation {0} is not checked in (Status: {1})",الحجز {0} غير مسجل وصول (الحالة: {1}),
+"Folio {0} has outstanding balance of {1}",ملف الحساب {0} لديه رصيد معلق بقيمة {1},
+First Name or Last Name is required,الاسم الأول أو اسم العائلة مطلوب,
+"Invalid email address: {0}",بريد إلكتروني غير صالح: {0},
+"A guest with {0} number {1} already exists: {2}",يوجد ضيف بالفعل برقم {0} {1}: {2},
+"Room {0} not found",الغرفة {0} غير موجودة,
+"Guest {0} not found",الضيف {0} غير موجود,
+VL Reservation DocType not found,نوع المستند VL Reservation غير موجود,
+"No rooms available for {0} from {1} to {2}",لا توجد غرف متاحة لـ {0} من {1} إلى {2},
+Can only assign Velara roles,يمكن تعيين أدوار فيلارا فقط,
+Can only remove Velara roles,يمكن إزالة أدوار فيلارا فقط,
+Room Number is required,رقم الغرفة مطلوب,
+From Date and To Date are required,تاريخ البداية وتاريخ النهاية مطلوبان,
+To Date cannot be before From Date,لا يمكن أن يكون تاريخ النهاية قبل تاريخ البداية,
+"Room {0} is already blocked for overlapping dates (Block: {1})",الغرفة {0} محجوبة بالفعل لتواريخ متداخلة (الحجب: {1}),
+End Date cannot be before Start Date,لا يمكن أن يكون تاريخ الانتهاء قبل تاريخ البداية,
+Rate Multiplier must be greater than zero,معامل الضرب يجب أن يكون أكبر من صفر,
+Check-in and Check-out dates are required,تواريخ تسجيل الوصول والمغادرة مطلوبة,
+Check-out date must be after Check-in date,يجب أن يكون تاريخ المغادرة بعد تاريخ الوصول,
+Room Type is required,نوع الغرفة مطلوب,
+Guest is required,الضيف مطلوب,
+"Room {0} is already reserved (Reservation: {1})",الغرفة {0} محجوزة بالفعل (الحجز: {1}),
+"Room {0} does not exist",الغرفة {0} غير موجودة,
+"Folio already exists: {0}",ملف الحساب موجود بالفعل: {0},
+Housekeeper is required,عامل التدبير المنزلي مطلوب,
+Room is required,الغرفة مطلوبة,
+End time must be after Start time,يجب أن يكون وقت النهاية بعد وقت البداية,
+"Venue {0} is booked during this time (Event: {1})",القاعة {0} محجوزة في هذا الوقت (الفعالية: {1}),
+Base Rate must be greater than zero,السعر الأساسي يجب أن يكون أكبر من صفر,
+Minimum Rate cannot exceed Maximum Rate,الحد الأدنى للسعر لا يمكن أن يتجاوز الحد الأقصى,
+Cancellation charge percentage cannot exceed 100%,نسبة رسوم الإلغاء لا يمكن أن تتجاوز 100%,
+Points per currency unit cannot be negative,النقاط لكل وحدة عملة لا يمكن أن تكون سالبة,
+Points must be greater than zero,يجب أن تكون النقاط أكبر من صفر,
+"Guest has only {0} points, cannot redeem {1}",الضيف لديه {0} نقطة فقط، لا يمكن استبدال {1},
+Budget amount cannot be negative,مبلغ الميزانية لا يمكن أن يكون سالباً,
+Therapist {0} already has a booking at this time,المعالج {0} لديه حجز في هذا الوقت بالفعل,
+Wake-up time is required,وقت الإيقاظ مطلوب,
+No rooms available for the selected dates,لا توجد غرف متاحة للتواريخ المحددة,
+Are you sure you want to cancel this reservation?,هل أنت متأكد من إلغاء هذا الحجز؟,
+# ========================
+# Charge / Posting Descriptions
+# ========================
+Nightly room charge,رسوم الغرفة الليلية,
+"Nightly room charge - {0}",رسوم الغرفة الليلية - {0},
+"Invoice: {0}",الفاتورة: {0},
+"Minibar consumption - Room {0}",استهلاك الميني بار - الغرفة {0},
+"Spa: {0}",سبا: {0},
+Late checkout charge,رسوم المغادرة المتأخرة,
+# ========================
+# Utility Strings
+# ========================
+1 Night,ليلة واحدة,
+"{0} Nights",{0} ليالي,
+# ========================
+# Report Names
+# ========================
+VL Arrivals Departures,الوصولات والمغادرات,
+VL Daily Occupancy,الإشغال اليومي,
+VL Housekeeping Status,حالة التدبير المنزلي,
+VL Revenue Summary,ملخص الإيرادات,
+# ========================
+# Report Column Headers - Revenue Summary
+# ========================
+Date,التاريخ,
+Room Revenue,إيرادات الغرف,
+F&B Revenue,إيرادات الأغذية والمشروبات,
+Spa Revenue,إيرادات السبا,
+Other Revenue,إيرادات أخرى,
+Total Revenue,إجمالي الإيرادات,
+ADR,متوسط سعر الغرفة,
+RevPAR,الإيراد لكل غرفة متاحة,
+# ========================
+# Report Column Headers - Daily Occupancy
+# ========================
+Total Rooms,إجمالي الغرف,
+Occupied,مشغولة,
+"Occupancy %",نسبة الإشغال %,
+Arrivals,الوصولات,
+Departures,المغادرات,
+# ========================
+# Report Column Headers - Housekeeping Status
+# ========================
+Floor,الطابق,
+Room Type,نوع الغرفة,
+Room Status,حالة الغرفة,
+HK Status,حالة التدبير المنزلي,
+Current Guest,الضيف الحالي,
+HK Task,مهمة التدبير المنزلي,
+Assigned To,معيّن إلى,
+Task Status,حالة المهمة,
+# ========================
+# Report Column Headers - Arrivals Departures
+# ========================
+Reservation,الحجز,
+Guest Name,اسم الضيف,
+Nights,الليالي,
+Status,الحالة,
+Type,النوع,
+VIP,كبار الشخصيات,
+# ========================
+# Report Data Values
+# ========================
+Arrival,وصول,
+Departure,مغادرة,
+In-House,مقيم,
+# ========================
+# Visual / Workflow Graph Labels - Guest Journey
+# ========================
+Search,بحث,
+Confirmation,تأكيد,
+In-House,مقيم في الفندق,
+Charges,الرسوم,
+Invoice,الفاتورة,
+Feedback,ملاحظات,
+# ========================
+# Module Map Labels
+# ========================
+Front Desk,الاستقبال,
+Reservations,الحجوزات,
+Rooms,الغرف,
+Housekeeping,التدبير المنزلي,
+F&B,الأغذية والمشروبات,
+Revenue,الإيرادات,
+Guest Services,خدمات الضيوف,
+Events,الفعاليات,
+Loyalty,الولاء,
+Night Audit,المراجعة الليلية,
+Reports,التقارير,
+# ========================
+# Workspace Labels
+# ========================
+Velara Hotel Management,فيلارا لإدارة الفنادق,
+Settings,الإعدادات,
+Property,العقار,
+Rooms,الغرف,
+Guests,الضيوف,
+Folios,ملفات الحسابات,
+HK Tasks,مهام التدبير المنزلي,
+Service Requests,طلبات الخدمة,
+Maintenance,الصيانة,
+Restaurants,المطاعم,
+Spa Bookings,حجوزات السبا,
+Guest Feedback,ملاحظات الضيوف,
+Revenue Budget,ميزانية الإيرادات,
+Group Bookings,الحجوزات الجماعية,
+Rate Plans,خطط الأسعار,
+Floors,الطوابق,
+Wings,الأجنحة,
+Amenities,المرافق,
+Bed Types,أنواع الأسرّة,
+Seasons,المواسم,
+Cancellation Policies,سياسات الإلغاء,
+Room Blocks,حجب الغرف,
+HK Assignments,تعيينات التدبير المنزلي,
+Lost and Found,المفقودات والموجودات,
+Wake Up Calls,مكالمات الإيقاظ,
+Event Venues,قاعات الفعاليات,
+Preventive Schedules,جداول الصيانة الوقائية,
+Minibar Consumption,استهلاك الميني بار,
+Spa Services,خدمات السبا,
+Loyalty Program,برنامج الولاء,
+Loyalty Transactions,معاملات الولاء,
+Daily Occupancy,الإشغال اليومي,
+Revenue Summary,ملخص الإيرادات,
+Arrivals & Departures,الوصولات والمغادرات,
+Housekeeping Status,حالة التدبير المنزلي,
+# ========================
+# Customer Dashboard
+# ========================
+Hotel,فندق,
+# ========================
+# Field Labels - Night Audit
+# ========================
+Audit Date,تاريخ المراجعة,
+Started At,بدأ في,
+Completed At,اكتمل في,
+Run By,بواسطة,
+Statistics,الإحصائيات,
+Total Rooms,إجمالي الغرف,
+Occupied Rooms,الغرف المشغولة,
+Occupancy Rate,معدل الإشغال,
+Movement,الحركة,
+No Shows,عدم الحضور,
+Room Charges Posted,رسوم الغرف المرحّلة,
+Discrepancies,التناقضات,
+Audit Notes,ملاحظات المراجعة,
+Amended From,معدّل من,
+# ========================
+# Field Labels - Folio
+# ========================
+Folio Type,نوع ملف الحساب,
+Bill To Company,فوترة لشركة,
+Totals,المجاميع,
+Total Charges,إجمالي الرسوم,
+Total Tax,إجمالي الضريبة,
+Total Payments,إجمالي المدفوعات,
+Grand Total,المجموع الكلي,
+Paid Amount,المبلغ المدفوع,
+Balance,الرصيد,
+# ========================
+# Field Labels - Check In
+# ========================
+Check-In Time,وقت تسجيل الوصول,
+ID Verified,تم التحقق من الهوية,
+Deposit Collected,تم تحصيل التأمين,
+"Key Card #",رقم بطاقة المفتاح,
+# ========================
+# Field Labels - Check Out
+# ========================
+Check-Out Time,وقت تسجيل المغادرة,
+Folio Balance,رصيد الحساب,
+Late Checkout,مغادرة متأخرة,
+Late Checkout Charge,رسوم المغادرة المتأخرة,
+Guest Rating,تقييم الضيف,
+# ========================
+# Field Labels - Guest
+# ========================
+First Name,الاسم الأول,
+Last Name,اسم العائلة,
+Gender,الجنس,
+Date of Birth,تاريخ الميلاد,
+Contact,جهة الاتصال,
+Mobile,الجوال,
+Nationality,الجنسية,
+Address,العنوان,
+Identification,التعريف,
+ID Type,نوع الهوية,
+ID Number,رقم الهوية,
+ID Expiry Date,تاريخ انتهاء الهوية,
+ID Scan,مسح الهوية,
+VIP & Loyalty,كبار الشخصيات والولاء,
+VIP Code,رمز كبار الشخصيات,
+Loyalty Tier,مستوى الولاء,
+Loyalty Points,نقاط الولاء,
+Total Stays,إجمالي الإقامات,
+Last Visit,آخر زيارة,
+Preferences,التفضيلات,
+Preferred Room Type,نوع الغرفة المفضل,
+Preferred Floor,الطابق المفضل,
+Dietary Requirements,المتطلبات الغذائية,
+Special Notes,ملاحظات خاصة,
+Photo,الصورة,
+# ========================
+# Field Labels - Folio Charge
+# ========================
+Qty,الكمية,
+Rate,السعر,
+Posted By,مرحّل بواسطة,
+Sales Invoice,فاتورة مبيعات,
+# ========================
+# Field Labels - Restaurant
+# ========================
+Restaurant Name,اسم المطعم,
+Cuisine Type,نوع المطبخ,
+Seating Capacity,سعة الجلوس,
+Opening Time,وقت الافتتاح,
+Closing Time,وقت الإغلاق,
+Offers Room Service,يقدم خدمة الغرف,
+POS Profile,ملف نقطة البيع,
+Item,الصنف,
+Item Name,اسم الصنف,
+Posted to Folio,مرحّل إلى الحساب,
+# ========================
+# Field Labels - HK
+# ========================
+Housekeeper,عامل التدبير المنزلي,
+Rooms Assigned,الغرف المعيّنة,
+Rooms Completed,الغرف المكتملة,
+Shift,الوردية,
+Task Type,نوع المهمة,
+Priority,الأولوية,
+Schedule,الجدول,
+Scheduled Date,التاريخ المجدول,
+"Duration (mins)",المدة (دقائق),
+Inspected By,تم الفحص بواسطة,
+Inspection Notes,ملاحظات الفحص,
+# ========================
+# Field Labels - Lost and Found
+# ========================
+Item Description,وصف الصنف,
+Found in Room,وُجد في الغرفة,
+Found By,وُجد بواسطة,
+Found Date,تاريخ العثور,
+Claimed By,تمت المطالبة بواسطة,
+Claimed Date,تاريخ المطالبة,
+Storage Location,مكان التخزين,
+# ========================
+# Field Labels - Event Booking
+# ========================
+Event Name,اسم الفعالية,
+Venue,القاعة,
+Event Type,نوع الفعالية,
+Contact Person,الشخص المسؤول,
+Contact Phone,هاتف الاتصال,
+Start,البداية,
+End,النهاية,
+Setup Start,بداية التجهيز,
+Expected Guests,عدد الضيوف المتوقع,
+Financial,المالية,
+Total Amount,المبلغ الإجمالي,
+Requirements,المتطلبات,
+# ========================
+# Field Labels - Event Venue
+# ========================
+Venue Name,اسم القاعة,
+Theater Capacity,سعة المسرح,
+Banquet Capacity,سعة المأدبة,
+Classroom Capacity,سعة الفصل,
+Boardroom Capacity,سعة غرفة الاجتماعات,
+"Area (sq m)",المساحة (م²),
+Hourly Rate,السعر بالساعة,
+Daily Rate,السعر اليومي,
+Image,الصورة,
+# ========================
+# Field Labels - Spa
+# ========================
+Service Name,اسم الخدمة,
+"Duration (min)",المدة (دقيقة),
+Therapist,المعالج,
+Appointment Time,وقت الموعد,
+Guest Room,غرفة الضيف,
+Charge,الرسوم,
+# ========================
+# Field Labels - Preventive Schedule
+# ========================
+Schedule Name,اسم الجدول,
+Category,الفئة,
+Frequency,التكرار,
+Next Due Date,تاريخ الاستحقاق التالي,
+Last Completed,آخر إتمام,
+Default Assignee,المعيّن الافتراضي,
+"Location (if not room)",الموقع (إن لم تكن غرفة),
+# ========================
+# Field Labels - Maintenance
+# ========================
+Reported By,أبلغ عنها,
+Reported Date,تاريخ الإبلاغ,
+Cost,التكلفة,
+Resolution Notes,ملاحظات الحل,
+# ========================
+# Field Labels - Rate Plan
+# ========================
+Rate Plan Name,اسم خطة الأسعار,
+Code,الرمز,
+Meal Plan,خطة الوجبات,
+Refundable,قابل للاسترداد,
+Cancellation Policy,سياسة الإلغاء,
+Rate Configuration,تكوين الأسعار,
+Rate Based On,السعر بناءً على,
+Fixed Rate,سعر ثابت,
+# ========================
+# Field Labels - Cancellation Policy
+# ========================
+Policy Name,اسم السياسة,
+"Free Cancellation (hours before)",إلغاء مجاني (ساعات قبل),
+Charge Value,قيمة الرسوم,
+# ========================
+# Field Labels - Group Booking
+# ========================
+Group Name,اسم المجموعة,
+Company / Org,الشركة / المؤسسة,
+# ========================
+# Field Labels - Reservation
+# ========================
+Check-In Date,تاريخ تسجيل الوصول,
+Check-Out Date,تاريخ تسجيل المغادرة,
+Booking Source,مصدر الحجز,
+"Confirmation #",رقم التأكيد,
+Stay Details,تفاصيل الإقامة,
+Assigned Room,الغرفة المعيّنة,
+Adults,بالغون,
+Children,أطفال,
+Rate & Charges,الأسعار والرسوم,
+Rate Plan,خطة الأسعار,
+"Room Rate / Night",سعر الغرفة / ليلة,
+Total Room Charges,إجمالي رسوم الغرفة,
+"Discount %",نسبة الخصم %,
+Net Total,صافي المجموع,
+Guest Requests,طلبات الضيف,
+Special Requests,طلبات خاصة,
+Expected Arrival Time,وقت الوصول المتوقع,
+Group Booking,حجز جماعي,
+Is Group Master,حجز جماعي رئيسي,
+Cancellation,الإلغاء,
+Cancelled On,تم الإلغاء في,
+Cancellation Reason,سبب الإلغاء,
+Cancellation Charge,رسوم الإلغاء,
+# ========================
+# Field Labels - Service Request
+# ========================
+Request Type,نوع الطلب,
+Requested At,طُلب في,
+Chargeable,قابل للفوترة,
+# ========================
+# Field Labels - Guest Feedback
+# ========================
+Overall Rating,التقييم العام,
+Source,المصدر,
+Detailed Ratings,التقييمات التفصيلية,
+Cleanliness,النظافة,
+Service,الخدمة,
+Comfort,الراحة,
+Location,الموقع,
+Value for Money,القيمة مقابل المال,
+Comments,التعليقات,
+Guest Comments,تعليقات الضيف,
+Management Response,رد الإدارة,
+Issue Resolved,تم حل المشكلة,
+# ========================
+# Field Labels - Wake Up Call
+# ========================
+Wake Up Time,وقت الإيقاظ,
+Attempts,المحاولات,
+# ========================
+# Field Labels - Room Status Log
+# ========================
+From Status,من الحالة,
+To Status,إلى الحالة,
+Changed By,تم التغيير بواسطة,
+Timestamp,الطابع الزمني,
+Reason,السبب,
+# ========================
+# Field Labels - Room
+# ========================
+Room Number,رقم الغرفة,
+Room Name,اسم الغرفة,
+Wing,الجناح,
+Bed Type,نوع السرير,
+Max Occupancy,الحد الأقصى للإشغال,
+Current Status,الحالة الحالية,
+Front Office Status,حالة الاستقبال,
+Current Guest,الضيف الحالي,
+Current Reservation,الحجز الحالي,
+Current Folio,ملف الحساب الحالي,
+Pricing,التسعير,
+Default Rate,السعر الافتراضي,
+Override Rate,السعر المعدّل,
+Room Image,صورة الغرفة,
+# ========================
+# Field Labels - Room Block
+# ========================
+From Date,من تاريخ,
+To Date,إلى تاريخ,
+# ========================
+# Field Labels - Wing / Floor
+# ========================
+Wing Name,اسم الجناح,
+Floor Name,اسم الطابق,
+Floor Number,رقم الطابق,
+# ========================
+# Field Labels - Room Type
+# ========================
+Room Type Name,اسم نوع الغرفة,
+Extra Bed Capacity,سعة السرير الإضافي,
+Default Bed Type,نوع السرير الافتراضي,
+# ========================
+# Field Labels - Amenity
+# ========================
+Amenity Name,اسم المرفق,
+"Icon Name (Tabler)",اسم الأيقونة (Tabler),
+Is Chargeable,قابل للفوترة,
+Charge Amount,مبلغ الرسوم,
+# ========================
+# Field Labels - Property
+# ========================
+Property Name,اسم العقار,
+Property Code,رمز العقار,
+Star Rating,تصنيف النجوم,
+Property Type,نوع العقار,
+Contact Information,معلومات الاتصال,
+City,المدينة,
+Country,البلد,
+Defaults,الإعدادات الافتراضية,
+Default Manager,المدير الافتراضي,
+Cost Center,مركز التكلفة,
+Room Income Account,حساب إيرادات الغرف,
+Property Image,صورة العقار,
+# ========================
+# Field Labels - Settings
+# ========================
+Property Settings,إعدادات العقار,
+Default Property,العقار الافتراضي,
+Default Check-In Time,وقت تسجيل الوصول الافتراضي,
+Default Check-Out Time,وقت تسجيل المغادرة الافتراضي,
+Default Currency,العملة الافتراضية,
+Default Tax Template,قالب الضريبة الافتراضي,
+Night Audit Time,وقت المراجعة الليلية,
+Module Settings,إعدادات الوحدات,
+Enable Rooms,تفعيل الغرف,
+Enable Reservations,تفعيل الحجوزات,
+Enable Front Desk,تفعيل الاستقبال,
+Enable Housekeeping,تفعيل التدبير المنزلي,
+Enable F&B,تفعيل الأغذية والمشروبات,
+Enable Revenue Mgmt,تفعيل إدارة الإيرادات,
+Enable Guest Services,تفعيل خدمات الضيوف,
+Enable Events,تفعيل الفعاليات,
+Enable Maintenance,تفعيل الصيانة,
+Enable Loyalty,تفعيل الولاء,
+Enable Night Audit,تفعيل المراجعة الليلية,
+Enable Spa,تفعيل السبا,
+Integrations,التكاملات,
+Enable Channel Manager,تفعيل مدير القنوات,
+Enable IoT / Smart Room,تفعيل إنترنت الأشياء / الغرفة الذكية,
+Enable WhatsApp Guest Comm.,تفعيل تواصل واتساب مع الضيوف,
+# ========================
+# Field Labels - Season
+# ========================
+Season Name,اسم الموسم,
+Start Date,تاريخ البداية,
+End Date,تاريخ النهاية,
+Rate Multiplier,معامل السعر,
+Calendar Color,لون التقويم,
+# ========================
+# Field Labels - Loyalty Program
+# ========================
+Program Name,اسم البرنامج,
+Points per Currency Unit,النقاط لكل وحدة عملة,
+Silver Threshold,حد الفضي,
+Gold Threshold,حد الذهبي,
+Platinum Threshold,حد البلاتيني,
+Diamond Threshold,حد الألماسي,
+Tier Benefits,مزايا المستوى,
+"Silver Discount %",نسبة خصم الفضي %,
+"Gold Discount %",نسبة خصم الذهبي %,
+"Platinum Discount %",نسبة خصم البلاتيني %,
+"Diamond Discount %",نسبة خصم الألماسي %,
+# ========================
+# Field Labels - Loyalty Transaction
+# ========================
+Points,النقاط,
+Ref DocType,نوع المستند المرجعي,
+Reference,المرجع,
+Remarks,ملاحظات,
+# ========================
+# Field Labels - Revenue Budget
+# ========================
+Budget Name,اسم الميزانية,
+Fiscal Year,السنة المالية,
+Month,الشهر,
+Budgeted Occupancy,الإشغال المخطط,
+Budgeted ADR,متوسط سعر الغرفة المخطط,
+Budgeted Revenue,الإيرادات المخططة,
+Actual Revenue,الإيرادات الفعلية,
+Variance,الفرق,
+# ========================
+# Field Descriptions
+# ========================
+Average Daily Rate,متوسط سعر الغرفة اليومي,
+Revenue Per Available Room,الإيراد لكل غرفة متاحة,
+"1.0 = normal, 1.5 = 50% premium, 0.8 = 20% discount","1.0 = عادي، 1.5 = علاوة 50%، 0.8 = خصم 20%",
+# ========================
+# Service Request Types
+# ========================
+Amenity,مرفق,
+Transportation,نقل,
+Concierge,كونسيرج,
+Wakeup Call,مكالمة إيقاظ,
+Baby Sitting,رعاية أطفال,
+Tour Booking,حجز جولة,
+Restaurant Reservation,حجز مطعم,
+# ========================
+# Install / Uninstall Messages
+# ========================
+VELARA Hotel Management installed successfully! 🏨,تم تثبيت نظام فيلارا لإدارة الفنادق بنجاح! 🏨,
+VELARA Hotel Management uninstalled. 👋,تم إلغاء تثبيت نظام فيلارا لإدارة الفنادق. 👋,
+# ========================
+# App Metadata
+# ========================
+VELARA,فيلارا,
+Hotel & Hospitality Management System,نظام إدارة الفنادق والضيافة,
+"Hotel & Hospitality Management System - نظام إدارة الفنادق والضيافة",نظام إدارة الفنادق والضيافة,

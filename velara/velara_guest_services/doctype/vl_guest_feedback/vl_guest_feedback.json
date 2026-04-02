@@ -1,0 +1,229 @@
+{
+ "actions": [],
+ "creation": "2026-03-30 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "guest",
+  "reservation",
+  "room",
+  "cb_1",
+  "overall_rating",
+  "feedback_date",
+  "feedback_source",
+  "ratings_section",
+  "cleanliness_rating",
+  "service_rating",
+  "food_rating",
+  "cb_2",
+  "comfort_rating",
+  "location_rating",
+  "value_rating",
+  "comments_section",
+  "comments",
+  "management_response",
+  "is_resolved"
+ ],
+ "fields": [
+  {
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "label": "Guest",
+   "options": "VL Guest",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "reservation",
+   "fieldtype": "Link",
+   "label": "Reservation",
+   "options": "VL Reservation"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "label": "Room",
+   "options": "VL Room"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overall_rating",
+   "fieldtype": "Rating",
+   "label": "Overall Rating",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "feedback_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "feedback_source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "\nIn-Person\nEmail\nSurvey\nOTA Review\nSocial Media"
+  },
+  {
+   "fieldname": "ratings_section",
+   "fieldtype": "Section Break",
+   "label": "Detailed Ratings"
+  },
+  {
+   "fieldname": "cleanliness_rating",
+   "fieldtype": "Rating",
+   "label": "Cleanliness"
+  },
+  {
+   "fieldname": "service_rating",
+   "fieldtype": "Rating",
+   "label": "Service"
+  },
+  {
+   "fieldname": "food_rating",
+   "fieldtype": "Rating",
+   "label": "Food & Beverage"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "comfort_rating",
+   "fieldtype": "Rating",
+   "label": "Comfort"
+  },
+  {
+   "fieldname": "location_rating",
+   "fieldtype": "Rating",
+   "label": "Location"
+  },
+  {
+   "fieldname": "value_rating",
+   "fieldtype": "Rating",
+   "label": "Value for Money"
+  },
+  {
+   "fieldname": "comments_section",
+   "fieldtype": "Section Break",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text",
+   "label": "Guest Comments"
+  },
+  {
+   "fieldname": "management_response",
+   "fieldtype": "Text",
+   "label": "Management Response"
+  },
+  {
+   "fieldname": "is_resolved",
+   "fieldtype": "Check",
+   "label": "Issue Resolved"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2026-03-30 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Velara Guest Services",
+ "name": "VL Guest Feedback",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Concierge",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Front Desk Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Front Desk Agent",
+   "read": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "VL-FB-.YYYY.-.#####",
+ "search_fields": "guest,reservation,overall_rating"
+}

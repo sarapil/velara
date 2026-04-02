@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9A84C"/>
+      <stop offset="100%" style="stop-color:#E8D8A0"/>
+    </linearGradient>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B2A4A"/>
+      <stop offset="100%" style="stop-color:#2D4470"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#navyGrad)">
+    <animate attributeName="r" values="235;240;235" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Outer gold ring -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="url(#goldGrad)" stroke-width="3" opacity="0.6">
+    <animate attributeName="stroke-dasharray" values="0 1400;1400 0" dur="2s" fill="freeze"/>
+  </circle>
+
+  <!-- Hotel building - main tower -->
+  <rect x="196" y="140" width="120" height="200" rx="4" fill="url(#goldGrad)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.3s" fill="freeze"/>
+    <animate attributeName="y" values="180;140" dur="0.8s" begin="0.3s" fill="freeze"/>
+  </rect>
+
+  <!-- Left wing -->
+  <rect x="140" y="200" width="56" height="140" rx="4" fill="url(#goldGrad)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.6s" fill="freeze"/>
+    <animate attributeName="x" values="160;140" dur="0.6s" begin="0.6s" fill="freeze"/>
+  </rect>
+
+  <!-- Right wing -->
+  <rect x="316" y="200" width="56" height="140" rx="4" fill="url(#goldGrad)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.6s" fill="freeze"/>
+    <animate attributeName="x" values="296;316" dur="0.6s" begin="0.6s" fill="freeze"/>
+  </rect>
+
+  <!-- Windows - main tower -->
+  <g fill="#1B2A4A" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.2s" fill="freeze"/>
+    <!-- Row 1 -->
+    <rect x="212" y="160" width="16" height="16" rx="2"/>
+    <rect x="236" y="160" width="16" height="16" rx="2"/>
+    <rect x="260" y="160" width="16" height="16" rx="2"/>
+    <rect x="284" y="160" width="16" height="16" rx="2"/>
+    <!-- Row 2 -->
+    <rect x="212" y="186" width="16" height="16" rx="2"/>
+    <rect x="236" y="186" width="16" height="16" rx="2"/>
+    <rect x="260" y="186" width="16" height="16" rx="2"/>
+    <rect x="284" y="186" width="16" height="16" rx="2"/>
+    <!-- Row 3 -->
+    <rect x="212" y="212" width="16" height="16" rx="2"/>
+    <rect x="236" y="212" width="16" height="16" rx="2"/>
+    <rect x="260" y="212" width="16" height="16" rx="2"/>
+    <rect x="284" y="212" width="16" height="16" rx="2"/>
+    <!-- Row 4 -->
+    <rect x="212" y="238" width="16" height="16" rx="2"/>
+    <rect x="236" y="238" width="16" height="16" rx="2"/>
+    <rect x="260" y="238" width="16" height="16" rx="2"/>
+    <rect x="284" y="238" width="16" height="16" rx="2"/>
+    <!-- Row 5 -->
+    <rect x="212" y="264" width="16" height="16" rx="2"/>
+    <rect x="236" y="264" width="16" height="16" rx="2"/>
+    <rect x="260" y="264" width="16" height="16" rx="2"/>
+    <rect x="284" y="264" width="16" height="16" rx="2"/>
+  </g>
+
+  <!-- Window glow animation -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0.4;0;0.4;0" dur="4s" begin="2s" repeatCount="indefinite"/>
+    <rect x="236" y="186" width="16" height="16" rx="2" fill="#FFFDE7"/>
+    <rect x="284" y="212" width="16" height="16" rx="2" fill="#FFFDE7"/>
+    <rect x="212" y="264" width="16" height="16" rx="2" fill="#FFFDE7"/>
+  </g>
+
+  <!-- Entrance door -->
+  <rect x="240" y="306" width="32" height="34" rx="3" fill="#1B2A4A" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.4s" fill="freeze"/>
+  </rect>
+  <circle cx="266" cy="323" r="2" fill="#C9A84C" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.5s" fill="freeze"/>
+  </circle>
+
+  <!-- Star above building -->
+  <polygon points="256,100 262,118 280,118 266,128 271,146 256,136 241,146 246,128 232,118 250,118"
+           fill="url(#goldGrad)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.6s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 256 123;5 256 123;-5 256 123;0 256 123"
+                      dur="4s" begin="2s" repeatCount="indefinite"/>
+  </polygon>
+
+  <!-- Base line -->
+  <line x1="120" y1="340" x2="392" y2="340" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1s" fill="freeze"/>
+  </line>
+
+  <!-- VELARA text -->
+  <text x="256" y="390" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="52" font-weight="700" letter-spacing="12" fill="url(#goldGrad)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.8s" begin="1.8s" fill="freeze"/>
+    VELARA
+  </text>
+
+  <!-- Tagline -->
+  <text x="256" y="418" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="14" letter-spacing="6" fill="#E8D8A0" opacity="0">
+    <animate attributeName="opacity" values="0;0.7" dur="0.8s" begin="2.2s" fill="freeze"/>
+    HOTEL MANAGEMENT
+  </text>
+</svg>

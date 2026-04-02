@@ -1,0 +1,204 @@
+/* VELARA Hotel Management — CSS Variables
+ * Brand: Gold #C9A84C + Navy #1B2A4A
+ */
+:root {
+	/* Primary - Gold */
+	--vl-gold: #C9A84C;
+	--vl-gold-light: #E8D8A0;
+	--vl-gold-lighter: #F5EDD0;
+	--vl-gold-dark: #A88B33;
+	--vl-gold-gradient: linear-gradient(135deg, #C9A84C 0%, #E8D8A0 100%);
+
+	/* Secondary - Navy */
+	--vl-navy: #1B2A4A;
+	--vl-navy-light: #2D4470;
+	--vl-navy-lighter: #3D5A8A;
+	--vl-navy-dark: #111C33;
+	--vl-navy-gradient: linear-gradient(135deg, #1B2A4A 0%, #2D4470 100%);
+
+	/* Accent */
+	--vl-accent: #C9A84C;
+	--vl-accent-bg: rgba(201, 168, 76, 0.08);
+	--vl-accent-hover: rgba(201, 168, 76, 0.15);
+
+	/* Status Colors - Hotel Specific */
+	--vl-available: #38A169;
+	--vl-occupied: #E53E3E;
+	--vl-reserved: #3182CE;
+	--vl-blocked: #718096;
+	--vl-out-of-order: #D69E2E;
+	--vl-dirty: #E53E3E;
+	--vl-clean: #38A169;
+	--vl-inspected: #3182CE;
+	--vl-pickup: #DD6B20;
+
+	/* VIP Tiers */
+	--vl-vip-1: #C9A84C;
+	--vl-vip-2: #B8860B;
+	--vl-vip-3: #8B4513;
+	--vl-celebrity: #9F7AEA;
+	--vl-blacklist: #E53E3E;
+
+	/* Loyalty Tiers */
+	--vl-tier-silver: #A0AEC0;
+	--vl-tier-gold: #C9A84C;
+	--vl-tier-platinum: #B0B0B0;
+	--vl-tier-diamond: #63B3ED;
+
+	/* Spacing & Sizing */
+	--vl-border-radius: 8px;
+	--vl-card-shadow: 0 2px 8px rgba(27, 42, 74, 0.08);
+	--vl-card-shadow-hover: 0 4px 16px rgba(27, 42, 74, 0.15);
+
+	/* Typography */
+	--vl-heading-font: inherit;
+	--vl-heading-weight: 600;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+	--vl-gold: #D4B85C;
+	--vl-gold-light: #B8A040;
+	--vl-gold-lighter: #8B7830;
+	--vl-navy: #A0B4D0;
+	--vl-navy-light: #8098B8;
+	--vl-accent-bg: rgba(201, 168, 76, 0.12);
+	--vl-accent-hover: rgba(201, 168, 76, 0.20);
+	--vl-card-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ================================================
+   Global Velara Styles
+   ================================================ */
+.velara-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 2px 8px;
+	border-radius: 4px;
+	font-size: var(--text-xs);
+	font-weight: 500;
+}
+
+.velara-badge.available { background: rgba(56, 161, 105, 0.12); color: var(--vl-available); }
+.velara-badge.occupied { background: rgba(229, 62, 62, 0.12); color: var(--vl-occupied); }
+.velara-badge.reserved { background: rgba(49, 130, 206, 0.12); color: var(--vl-reserved); }
+.velara-badge.blocked { background: rgba(113, 128, 150, 0.12); color: var(--vl-blocked); }
+.velara-badge.clean { background: rgba(56, 161, 105, 0.12); color: var(--vl-clean); }
+.velara-badge.dirty { background: rgba(229, 62, 62, 0.12); color: var(--vl-dirty); }
+.velara-badge.inspected { background: rgba(49, 130, 206, 0.12); color: var(--vl-inspected); }
+
+/* Room status indicator dot */
+.vl-status-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 6px;
+}
+.vl-status-dot.available { background: var(--vl-available); }
+.vl-status-dot.occupied { background: var(--vl-occupied); }
+.vl-status-dot.reserved { background: var(--vl-reserved); }
+.vl-status-dot.blocked { background: var(--vl-blocked); }
+
+/* Card component */
+.velara-card {
+	background: var(--card-bg);
+	border: 1px solid var(--border-color);
+	border-radius: var(--vl-border-radius);
+	padding: 16px;
+	box-shadow: var(--vl-card-shadow);
+	transition: box-shadow 0.2s ease;
+}
+.velara-card:hover {
+	box-shadow: var(--vl-card-shadow-hover);
+}
+
+/* Gold accent header */
+.velara-header-accent {
+	border-left: 3px solid var(--vl-gold);
+	padding-left: 12px;
+}
+
+/* VIP badge */
+.vl-vip-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 2px 8px;
+	border-radius: 4px;
+	font-size: var(--text-xs);
+	font-weight: 600;
+}
+.vl-vip-badge.vip-1 { background: rgba(201, 168, 76, 0.15); color: var(--vl-vip-1); }
+.vl-vip-badge.vip-2 { background: rgba(184, 134, 11, 0.15); color: var(--vl-vip-2); }
+.vl-vip-badge.vip-3 { background: rgba(139, 69, 19, 0.15); color: var(--vl-vip-3); }
+.vl-vip-badge.celebrity { background: rgba(159, 122, 234, 0.15); color: var(--vl-celebrity); }
+
+/* Loyalty tier badge */
+.vl-tier-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 2px 10px;
+	border-radius: 12px;
+	font-size: var(--text-xs);
+	font-weight: 600;
+}
+.vl-tier-badge.silver { background: rgba(160, 174, 192, 0.2); color: var(--vl-tier-silver); }
+.vl-tier-badge.gold { background: rgba(201, 168, 76, 0.2); color: var(--vl-tier-gold); }
+.vl-tier-badge.platinum { background: rgba(176, 176, 176, 0.2); color: var(--vl-tier-platinum); }
+.vl-tier-badge.diamond { background: rgba(99, 179, 237, 0.2); color: var(--vl-tier-diamond); }
+
+/* KPI Card for dashboard */
+.vl-kpi-card {
+	text-align: center;
+	padding: 20px 16px;
+}
+.vl-kpi-card .kpi-value {
+	font-size: 28px;
+	font-weight: 700;
+	color: var(--vl-navy);
+	line-height: 1;
+}
+.vl-kpi-card .kpi-label {
+	font-size: var(--text-sm);
+	color: var(--text-muted);
+	margin-top: 4px;
+}
+.vl-kpi-card .kpi-delta {
+	font-size: var(--text-xs);
+	margin-top: 4px;
+}
+.vl-kpi-card .kpi-delta.positive { color: var(--vl-available); }
+.vl-kpi-card .kpi-delta.negative { color: var(--vl-occupied); }
+
+/* Floor map grid */
+.vl-floor-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+	gap: 8px;
+	padding: 12px;
+}
+.vl-room-cell {
+	aspect-ratio: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--vl-border-radius);
+	border: 1px solid var(--border-color);
+	cursor: pointer;
+	transition: all 0.15s ease;
+	font-size: var(--text-sm);
+	font-weight: 500;
+}
+.vl-room-cell:hover {
+	transform: scale(1.05);
+	box-shadow: var(--vl-card-shadow-hover);
+}
+.vl-room-cell.available { background: rgba(56, 161, 105, 0.08); border-color: var(--vl-available); }
+.vl-room-cell.occupied { background: rgba(229, 62, 62, 0.08); border-color: var(--vl-occupied); }
+.vl-room-cell.reserved { background: rgba(49, 130, 206, 0.08); border-color: var(--vl-reserved); }
+.vl-room-cell.blocked { background: rgba(113, 128, 150, 0.08); border-color: var(--vl-blocked); }
+.vl-room-cell .room-number { font-weight: 600; }
+.vl-room-cell .room-type { font-size: var(--text-xs); color: var(--text-muted); }

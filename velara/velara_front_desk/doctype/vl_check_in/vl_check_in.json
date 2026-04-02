@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "creation": "2026-03-30 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "reservation",
+  "guest",
+  "guest_name",
+  "room",
+  "cb_1",
+  "check_in_time",
+  "id_verified",
+  "deposit_collected",
+  "key_card_number",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "reservation",
+   "fieldtype": "Link",
+   "label": "Reservation",
+   "options": "VL Reservation",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "label": "Guest",
+   "options": "VL Guest",
+   "reqd": 1,
+   "in_list_view": 1,
+   "fetch_from": "reservation.guest"
+  },
+  {
+   "fieldname": "guest_name",
+   "fieldtype": "Data",
+   "label": "Guest Name",
+   "fetch_from": "guest.guest_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "label": "Room",
+   "options": "VL Room",
+   "reqd": 1,
+   "in_list_view": 1,
+   "fetch_from": "reservation.room"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "check_in_time",
+   "fieldtype": "Datetime",
+   "label": "Check-In Time",
+   "default": "Now"
+  },
+  {
+   "fieldname": "id_verified",
+   "fieldtype": "Check",
+   "label": "ID Verified"
+  },
+  {
+   "fieldname": "deposit_collected",
+   "fieldtype": "Currency",
+   "label": "Deposit Collected"
+  },
+  {
+   "fieldname": "key_card_number",
+   "fieldtype": "Data",
+   "label": "Key Card #"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "VL Check In",
+   "no_copy": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-03-30 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Velara Front Desk",
+ "name": "VL Check In",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Admin",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara General Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Front Desk Manager",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Velara Front Desk Agent",
+   "read": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "VL-CI-.YYYY.-.#####",
+ "title_field": "guest_name",
+ "show_title_field_in_link": 0,
+ "search_fields": "guest,room,reservation"
+}
