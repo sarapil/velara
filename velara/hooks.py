@@ -71,7 +71,7 @@ role_home_page = {
 before_install = "velara.install.before_install"
 after_install = "velara.install.after_install"
 
-after_migrate = ["velara.velara.seed.seed_data"]
+after_migrate = ["velara.seed.seed_data"]
 
 # Uninstallation
 # ------------------

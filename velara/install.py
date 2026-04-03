@@ -16,7 +16,15 @@ def after_install():
 	create_roles()
 	create_settings()
 	create_custom_fields_on_erpnext()
-	update_desktop_layouts()
+	# ── Desktop Icon injection (Frappe v16 /desk) ──
+	from velara.desktop_utils import inject_app_desktop_icon
+	inject_app_desktop_icon(
+	    app="velara",
+	    label="VELARA",
+	    route="/app/velara",
+	    logo_url="/assets/velara/images/velara-logo.svg",
+	    bg_color="#C9A84C",
+	)
 	frappe.db.commit()
 	frappe.msgprint(_("VELARA Hotel Management installed successfully! 🏨"))
 
@@ -182,10 +190,3 @@ def create_custom_fields_on_erpnext():
 		frappe.log_error("VELARA: Error creating custom fields")
 
 
-def update_desktop_layouts():
-	"""Add VELARA to all Desktop Layout shortcuts."""
-	try:
-		layouts = frappe.get_all("Desktop Icon", filters={"standard": 1}, pluck="name")
-		# The app will appear automatically via add_to_apps_screen in hooks.py
-	except Exception:
-		pass

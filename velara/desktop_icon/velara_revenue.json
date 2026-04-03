@@ -1,21 +1,21 @@
 {
  "app": "velara",
- "bg_color": "#EF4444",
  "creation": "2026-04-01 10:00:00.000000",
  "docstatus": 0,
  "doctype": "Desktop Icon",
  "hidden": 0,
- "icon_type": "App",
+ "icon_type": "Link",
  "idx": 1,
  "label": "Velara Revenue",
- "link": "/app/velara-revenue",
- "link_type": "External",
+ "link_type": "Workspace Sidebar",
  "logo_url": "/assets/velara/icons/desktop_icons/solid/velara_revenue.svg",
- "modified": "2026-04-01 10:00:00.000000",
+ "modified": "2026-04-03 08:34:44.210364",
  "modified_by": "Administrator",
  "name": "Velara Revenue",
  "owner": "Administrator",
  "restrict_removal": 0,
  "roles": [],
- "standard": 1
+ "standard": 1,
+ "parent_icon": "Velara",
+ "link_to": "Velara Revenue"
 }
