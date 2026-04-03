@@ -1,0 +1,12 @@
+{
+  "app": "velara",
+  "name": "Velara",
+  "icon": "building",
+  "color": "#8E44AD",
+  "languages": [
+    "en",
+    "ar"
+  ],
+  "default_language": "en",
+  "fallback_language": "en"
+}
