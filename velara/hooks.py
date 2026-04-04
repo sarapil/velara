@@ -10,7 +10,7 @@ app_logo_url = "/assets/velara/images/velara-logo.svg"
 
 # Required Apps
 # ------------------
-required_apps = ["frappe", "erpnext", "hrms", "frappe_visual"]
+required_apps = ["frappe", "erpnext", "hrms", "frappe_visual", "arkan_help"]
 
 # Apps Screen
 # ------------------

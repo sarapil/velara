@@ -1,0 +1,1069 @@
+source_text,source_text
+# ========================,# ========================
+# DocType Names,# DocType Names
+# ========================,# ========================
+VL Night Audit,VL Night Audit
+VL Folio,VL Folio
+VL Folio Charge,VL Folio Charge
+VL Check In,VL Check In
+VL Check Out,VL Check Out
+VL Guest,VL Guest
+VL Room,VL Room
+VL Room Block,VL Room Block
+VL Room Status Log,VL Room Status Log
+VL Reservation,VL Reservation
+VL Group Booking,VL Group Booking
+VL Rate Plan,VL Rate Plan
+VL Cancellation Policy,VL Cancellation Policy
+VL HK Task,VL HK Task
+VL HK Assignment,VL HK Assignment
+VL Lost and Found,VL Lost and Found
+VL Service Request,VL Service Request
+VL Guest Feedback,VL Guest Feedback
+VL Wake Up Call,VL Wake Up Call
+VL Event Booking,VL Event Booking
+VL Event Venue,VL Event Venue
+VL Spa Service,VL Spa Service
+VL Spa Booking,VL Spa Booking
+VL Maintenance Request,VL Maintenance Request
+VL Preventive Schedule,VL Preventive Schedule
+VL Minibar Item,VL Minibar Item
+VL Minibar Consumption,VL Minibar Consumption
+VL Restaurant,VL Restaurant
+VL Loyalty Program,VL Loyalty Program
+VL Loyalty Transaction,VL Loyalty Transaction
+VL Revenue Budget,VL Revenue Budget
+VL Property,VL Property
+VL Settings,VL Settings
+VL Room Type,VL Room Type
+VL Room Type Amenity,VL Room Type Amenity
+VL Floor,VL Floor
+VL Wing,VL Wing
+VL Amenity,VL Amenity
+VL Bed Type,VL Bed Type
+VL Season,VL Season
+# ========================,# ========================
+# Module Names,# Module Names
+# ========================,# ========================
+Velara,Velara
+Velara Setup,Velara Setup
+Velara Rooms,Velara Rooms
+Velara Reservations,Velara Reservations
+Velara Front Desk,Velara Front Desk
+Velara Housekeeping,Velara Housekeeping
+Velara Food and Beverage,Velara Food and Beverage
+Velara Revenue,Velara Revenue
+Velara Guest Services,Velara Guest Services
+Velara Events,Velara Events
+Velara Maintenance,Velara Maintenance
+Velara Loyalty,Velara Loyalty
+Velara Night Audit,Velara Night Audit
+Velara Spa,Velara Spa
+Velara Reports,Velara Reports
+# ========================,# ========================
+# Role Names,# Role Names
+# ========================,# ========================
+Velara Admin,Velara Admin
+Velara General Manager,Velara General Manager
+Velara Front Desk Manager,Velara Front Desk Manager
+Velara Front Desk Agent,Velara Front Desk Agent
+Velara Housekeeping Manager,Velara Housekeeping Manager
+Velara Housekeeper,Velara Housekeeper
+Velara Revenue Manager,Velara Revenue Manager
+Velara FnB Manager,Velara FnB Manager
+Velara Concierge,Velara Concierge
+Velara Maintenance Tech,Velara Maintenance Tech
+Velara Events Coordinator,Velara Events Coordinator
+Velara Spa Manager,Velara Spa Manager
+Velara Night Auditor,Velara Night Auditor
+Velara Viewer,Velara Viewer
+# ========================,# ========================
+# Statuses - Reservation,# Statuses - Reservation
+# ========================,# ========================
+Draft,Draft
+Confirmed,Confirmed
+Checked In,Checked In
+Checked Out,Checked Out
+Cancelled,Cancelled
+No Show,No Show
+Waitlist,Waitlist
+Tentative,Tentative
+Guaranteed,Guaranteed
+# ========================,# ========================
+# Statuses - Room,# Statuses - Room
+# ========================,# ========================
+Available,Available
+Occupied,Occupied
+Reserved,Reserved
+Blocked,Blocked
+Out of Order,Out of Order
+Out of Service,Out of Service
+# ========================,# ========================
+# Statuses - Housekeeping,# Statuses - Housekeeping
+# ========================,# ========================
+Clean,Clean
+Dirty,Dirty
+Inspected,Inspected
+Pickup,Pickup
+# ========================,# ========================
+# Statuses - Front Office,# Statuses - Front Office
+# ========================,# ========================
+Vacant,Vacant
+Due Out,Due Out
+# ========================,# ========================
+# Statuses - Folio,# Statuses - Folio
+# ========================,# ========================
+Open,Open
+Settled,Settled
+Closed,Closed
+Void,Void
+# ========================,# ========================
+# Statuses - General,# Statuses - General
+# ========================,# ========================
+Pending,Pending
+In Progress,In Progress
+Completed,Completed
+Assigned,Assigned
+Inspecting,Inspecting
+Resolved,Resolved
+Active,Active
+Expired,Expired
+Suspended,Suspended
+Posted,Posted
+Approved,Approved
+Rejected,Rejected
+On Hold,On Hold
+Partially Paid,Partially Paid
+Paid,Paid
+# ========================,# ========================
+# Statuses - Event Booking,# Statuses - Event Booking
+# ========================,# ========================
+Inquiry,Inquiry
+# ========================,# ========================
+# Statuses - Spa,# Statuses - Spa
+# ========================,# ========================
+Booked,Booked
+# ========================,# ========================
+# Statuses - Wake Up Call,# Statuses - Wake Up Call
+# ========================,# ========================
+Scheduled,Scheduled
+No Answer,No Answer
+# ========================,# ========================
+# Statuses - Night Audit,# Statuses - Night Audit
+# ========================,# ========================
+Rolled Back,Rolled Back
+# ========================,# ========================
+# Statuses - Lost and Found,# Statuses - Lost and Found
+# ========================,# ========================
+Found,Found
+Claimed,Claimed
+Disposed,Disposed
+Donated,Donated
+# ========================,# ========================
+# Loyalty Transaction Types,# Loyalty Transaction Types
+# ========================,# ========================
+Earn,Earn
+Redeem,Redeem
+Expire,Expire
+Adjust,Adjust
+# ========================,# ========================
+# Folio Types,# Folio Types
+# ========================,# ========================
+Guest,Guest
+Master,Master
+Group,Group
+Company,Company
+Deposit,Deposit
+# ========================,# ========================
+# Charge Types,# Charge Types
+# ========================,# ========================
+Room Charge,Room Charge
+Food & Beverage,Food & Beverage
+Minibar,Minibar
+Laundry,Laundry
+Telephone,Telephone
+Spa,Spa
+Parking,Parking
+Internet,Internet
+Room Service,Room Service
+Damage,Damage
+Misc,Misc
+Tax,Tax
+Discount,Discount
+Payment,Payment
+# ========================,# ========================
+# Booking Sources,# Booking Sources
+# ========================,# ========================
+Direct,Direct
+Website,Website
+OTA - Booking.com,OTA - Booking.com
+OTA - Expedia,OTA - Expedia
+OTA - Agoda,OTA - Agoda
+Travel Agent,Travel Agent
+Corporate,Corporate
+Phone,Phone
+Walk-In,Walk-In
+# ========================,# ========================
+# Meal Plans,# Meal Plans
+# ========================,# ========================
+Room Only,Room Only
+Bed & Breakfast,Bed & Breakfast
+Half Board,Half Board
+Full Board,Full Board
+All Inclusive,All Inclusive
+# ========================,# ========================
+# Gender,# Gender
+# ========================,# ========================
+Male,Male
+Female,Female
+Other,Other
+# ========================,# ========================
+# ID Types,# ID Types
+# ========================,# ========================
+Passport,Passport
+National ID,National ID
+Driving License,Driving License
+# ========================,# ========================
+# VIP Codes,# VIP Codes
+# ========================,# ========================
+None,None
+VIP 1,VIP 1
+VIP 2,VIP 2
+VIP 3,VIP 3
+Celebrity,Celebrity
+Blacklist,Blacklist
+# ========================,# ========================
+# Loyalty Tiers,# Loyalty Tiers
+# ========================,# ========================
+Silver,Silver
+Gold,Gold
+Platinum,Platinum
+Diamond,Diamond
+# ========================,# ========================
+# Smoking Preferences,# Smoking Preferences
+# ========================,# ========================
+Non-Smoking,Non-Smoking
+Smoking,Smoking
+No Preference,No Preference
+# ========================,# ========================
+# HK Task Types,# HK Task Types
+# ========================,# ========================
+Checkout Clean,Checkout Clean
+Stay-over Clean,Stay-over Clean
+Deep Clean,Deep Clean
+Turndown,Turndown
+Inspection,Inspection
+Public Area,Public Area
+Special Request,Special Request
+# ========================,# ========================
+# HK Shifts,# HK Shifts
+# ========================,# ========================
+Morning,Morning
+Afternoon,Afternoon
+Night,Night
+# ========================,# ========================
+# Priority Levels,# Priority Levels
+# ========================,# ========================
+Low,Low
+Medium,Medium
+High,High
+Urgent,Urgent
+Emergency,Emergency
+# ========================,# ========================
+# Event Types,# Event Types
+# ========================,# ========================
+Wedding,Wedding
+Conference,Conference
+Meeting,Meeting
+Banquet,Banquet
+Exhibition,Exhibition
+Workshop,Workshop
+Party,Party
+# ========================,# ========================
+# Event Venue Types,# Event Venue Types
+# ========================,# ========================
+Ballroom,Ballroom
+Conference Room,Conference Room
+Meeting Room,Meeting Room
+Banquet Hall,Banquet Hall
+Garden,Garden
+Poolside,Poolside
+Rooftop,Rooftop
+# ========================,# ========================
+# Spa Service Types,# Spa Service Types
+# ========================,# ========================
+Massage,Massage
+Facial,Facial
+Body Treatment,Body Treatment
+Nail,Nail
+Hair,Hair
+Sauna,Sauna
+Pool,Pool
+Fitness,Fitness
+# ========================,# ========================
+# Maintenance Categories,# Maintenance Categories
+# ========================,# ========================
+Plumbing,Plumbing
+Electrical,Electrical
+HVAC,HVAC
+Furniture,Furniture
+Appliance,Appliance
+Building,Building
+Painting,Painting
+Flooring,Flooring
+IT/Telecom,IT/Telecom
+# ========================,# ========================
+# Preventive Maintenance,# Preventive Maintenance
+# ========================,# ========================
+Elevator,Elevator
+Fire Safety,Fire Safety
+Generator,Generator
+# ========================,# ========================
+# Preventive Schedule Frequencies,# Preventive Schedule Frequencies
+# ========================,# ========================
+Daily,Daily
+Weekly,Weekly
+Monthly,Monthly
+Quarterly,Quarterly
+Semi-Annual,Semi-Annual
+Annual,Annual
+# ========================,# ========================
+# Amenity Types,# Amenity Types
+# ========================,# ========================
+Room,Room
+Bathroom,Bathroom
+Technology,Technology
+Food & Drink,Food & Drink
+Outdoor,Outdoor
+Accessibility,Accessibility
+# ========================,# ========================
+# Room Block Reasons,# Room Block Reasons
+# ========================,# ========================
+Maintenance,Maintenance
+Renovation,Renovation
+VIP Block,VIP Block
+Group Block,Group Block
+# ========================,# ========================
+# Property Types,# Property Types
+# ========================,# ========================
+Hotel,Hotel
+Resort,Resort
+Boutique Hotel,Boutique Hotel
+Motel,Motel
+Hostel,Hostel
+Apartment Hotel,Apartment Hotel
+Villa,Villa
+Guest House,Guest House
+# ========================,# ========================
+# Star Ratings,# Star Ratings
+# ========================,# ========================
+1 Star,1 Star
+2 Stars,2 Stars
+3 Stars,3 Stars
+4 Stars,4 Stars
+5 Stars,5 Stars
+5 Stars Deluxe,5 Stars Deluxe
+# ========================,# ========================
+# Rate Plan Options,# Rate Plan Options
+# ========================,# ========================
+Room Type Default,Room Type Default
+Fixed Amount,Fixed Amount
+Multiplier,Multiplier
+# ========================,# ========================
+# Cancellation Charge Types,# Cancellation Charge Types
+# ========================,# ========================
+Percentage,Percentage
+Fixed,Fixed
+First Night,First Night
+# ========================,# ========================
+# Feedback Sources,# Feedback Sources
+# ========================,# ========================
+In-Person,In-Person
+Email,Email
+Survey,Survey
+OTA Review,OTA Review
+Social Media,Social Media
+# ========================,# ========================
+# Revenue Budget Months,# Revenue Budget Months
+# ========================,# ========================
+January,January
+February,February
+March,March
+April,April
+May,May
+June,June
+July,July
+August,August
+September,September
+October,October
+November,November
+December,December
+# ========================,# ========================
+# Workflow Actions,# Workflow Actions
+# ========================,# ========================
+Confirm,Confirm
+Guarantee,Guarantee
+Check In,Check In
+Check Out,Check Out
+Cancel,Cancel
+Mark No Show,Mark No Show
+Assign,Assign
+Start Cleaning,Start Cleaning
+Complete Cleaning,Complete Cleaning
+Inspect,Inspect
+Pass Inspection,Pass Inspection
+Fail Inspection,Fail Inspection
+Post Charge,Post Charge
+Settle Folio,Settle Folio
+Void Charge,Void Charge
+Approve,Approve
+Reject,Reject
+Resolve,Resolve
+Close,Close
+Reopen,Reopen
+Submit,Submit
+Hold,Hold
+Resume,Resume
+# ========================,# ========================
+# Button / Action Labels,# Button / Action Labels
+# ========================,# ========================
+Post Payment,Post Payment
+Create Invoice,Create Invoice
+New Reservation,New Reservation
+Stay History,Stay History
+Customer,Customer
+Assign Room,Assign Room
+Create Folio,Create Folio
+Mark No Show,Mark No Show
+Complete,Complete
+Mark Clean,Mark Clean
+Mark Inspected,Mark Inspected
+Block Room,Block Room
+Mark Available,Mark Available
+Start Work,Start Work
+View Folio,View Folio
+View Guest Profile,View Guest Profile
+Create Guest Profile,Create Guest Profile
+Post to Room,Post to Room
+Post,Post
+Select Room,Select Room
+Actions,Actions
+View,View
+Post to Guest Folio,Post to Guest Folio
+# ========================,# ========================
+# Indicator / Dashboard Labels,# Indicator / Dashboard Labels
+# ========================,# ========================
+Occupancy: {0}%,Occupancy: {0}%
+ADR: {0},ADR: {0}
+RevPAR: {0},RevPAR: {0}
+Revenue: {0},Revenue: {0}
+Balance: {0},Balance: {0}
+Ready for Check-In,Ready for Check-In
+Room: {0},Room: {0}
+Ready for Check-Out,Ready for Check-Out
+Outstanding Balance: {0},Outstanding Balance: {0}
+Points: {0},Points: {0}
+Stays: {0},Stays: {0}
+Nights: {0},Nights: {0}
+Folio: {0},Folio: {0}
+Guest: {0},Guest: {0}
+Res: {0},Res: {0}
+Duration: {0} min,Duration: {0} min
+Hotel Dept: {0},Hotel Dept: {0}
+Reservation: {0},Reservation: {0}
+Posted to Folio {0},Posted to Folio {0}
+Charge posted,Charge posted
+# ========================,# ========================
+# Dialog / Form Labels,# Dialog / Form Labels
+# ========================,# ========================
+Charge Type,Charge Type
+Amount,Amount
+Description,Description
+Method,Method
+Notes,Notes
+Inspection Failed,Inspection Failed
+# ========================,# ========================
+# Error / Validation Messages,# Error / Validation Messages
+# ========================,# ========================
+Night audit already completed for {0}: {1},Night audit already completed for {0}: {1}
+Cannot submit folio with outstanding balance of {0},Cannot submit folio with outstanding balance of {0}
+Payment via {0},Payment via {0}
+Guest is required to create invoice,Guest is required to create invoice
+Guest {0} has no linked Customer,Guest {0} has no linked Customer
+Reservation is required for check-in,Reservation is required for check-in
+Reservation {0} is not submitted,Reservation {0} is not submitted
+Reservation {0} cannot be checked in (Status: {1}),Reservation {0} cannot be checked in (Status: {1})
+No room assigned to the reservation. Please assign a room first.,No room assigned to the reservation. Please assign a room first.
+Room {0} is {1} and cannot be used for check-in,Room {0} is {1} and cannot be used for check-in
+Reservation is required,Reservation is required
+Reservation {0} is not checked in (Status: {1}),Reservation {0} is not checked in (Status: {1})
+Folio {0} has outstanding balance of {1},Folio {0} has outstanding balance of {1}
+First Name or Last Name is required,First Name or Last Name is required
+Invalid email address: {0},Invalid email address: {0}
+A guest with {0} number {1} already exists: {2},A guest with {0} number {1} already exists: {2}
+Room {0} not found,Room {0} not found
+Guest {0} not found,Guest {0} not found
+VL Reservation DocType not found,VL Reservation DocType not found
+No rooms available for {0} from {1} to {2},No rooms available for {0} from {1} to {2}
+Can only assign Velara roles,Can only assign Velara roles
+Can only remove Velara roles,Can only remove Velara roles
+Room Number is required,Room Number is required
+From Date and To Date are required,From Date and To Date are required
+To Date cannot be before From Date,To Date cannot be before From Date
+Room {0} is already blocked for overlapping dates (Block: {1}),Room {0} is already blocked for overlapping dates (Block: {1})
+End Date cannot be before Start Date,End Date cannot be before Start Date
+Rate Multiplier must be greater than zero,Rate Multiplier must be greater than zero
+Check-in and Check-out dates are required,Check-in and Check-out dates are required
+Check-out date must be after Check-in date,Check-out date must be after Check-in date
+Room Type is required,Room Type is required
+Guest is required,Guest is required
+Room {0} is already reserved (Reservation: {1}),Room {0} is already reserved (Reservation: {1})
+Room {0} does not exist,Room {0} does not exist
+Folio already exists: {0},Folio already exists: {0}
+Housekeeper is required,Housekeeper is required
+Room is required,Room is required
+End time must be after Start time,End time must be after Start time
+Venue {0} is booked during this time (Event: {1}),Venue {0} is booked during this time (Event: {1})
+Base Rate must be greater than zero,Base Rate must be greater than zero
+Minimum Rate cannot exceed Maximum Rate,Minimum Rate cannot exceed Maximum Rate
+Cancellation charge percentage cannot exceed 100%,Cancellation charge percentage cannot exceed 100%
+Points per currency unit cannot be negative,Points per currency unit cannot be negative
+Points must be greater than zero,Points must be greater than zero
+"Guest has only {0} points, cannot redeem {1}","Guest has only {0} points, cannot redeem {1}"
+Budget amount cannot be negative,Budget amount cannot be negative
+Therapist {0} already has a booking at this time,Therapist {0} already has a booking at this time
+Wake-up time is required,Wake-up time is required
+No rooms available for the selected dates,No rooms available for the selected dates
+Are you sure you want to cancel this reservation?,Are you sure you want to cancel this reservation?
+# ========================,# ========================
+# Charge / Posting Descriptions,# Charge / Posting Descriptions
+# ========================,# ========================
+Nightly room charge,Nightly room charge
+Nightly room charge - {0},Nightly room charge - {0}
+Invoice: {0},Invoice: {0}
+Minibar consumption - Room {0},Minibar consumption - Room {0}
+Spa: {0},Spa: {0}
+Late checkout charge,Late checkout charge
+# ========================,# ========================
+# Utility Strings,# Utility Strings
+# ========================,# ========================
+1 Night,1 Night
+{0} Nights,{0} Nights
+# ========================,# ========================
+# Report Names,# Report Names
+# ========================,# ========================
+VL Arrivals Departures,VL Arrivals Departures
+VL Daily Occupancy,VL Daily Occupancy
+VL Housekeeping Status,VL Housekeeping Status
+VL Revenue Summary,VL Revenue Summary
+# ========================,# ========================
+# Report Column Headers - Revenue Summary,# Report Column Headers - Revenue Summary
+# ========================,# ========================
+Date,Date
+Room Revenue,Room Revenue
+F&B Revenue,F&B Revenue
+Spa Revenue,Spa Revenue
+Other Revenue,Other Revenue
+Total Revenue,Total Revenue
+ADR,ADR
+RevPAR,RevPAR
+# ========================,# ========================
+# Report Column Headers - Daily Occupancy,# Report Column Headers - Daily Occupancy
+# ========================,# ========================
+Total Rooms,Total Rooms
+Occupied,Occupied
+Occupancy %,Occupancy %
+Arrivals,Arrivals
+Departures,Departures
+# ========================,# ========================
+# Report Column Headers - Housekeeping Status,# Report Column Headers - Housekeeping Status
+# ========================,# ========================
+Floor,Floor
+Room Type,Room Type
+Room Status,Room Status
+HK Status,HK Status
+Current Guest,Current Guest
+HK Task,HK Task
+Assigned To,Assigned To
+Task Status,Task Status
+# ========================,# ========================
+# Report Column Headers - Arrivals Departures,# Report Column Headers - Arrivals Departures
+# ========================,# ========================
+Reservation,Reservation
+Guest Name,Guest Name
+Nights,Nights
+Status,Status
+Type,Type
+VIP,VIP
+# ========================,# ========================
+# Report Data Values,# Report Data Values
+# ========================,# ========================
+Arrival,Arrival
+Departure,Departure
+In-House,In-House
+# ========================,# ========================
+# Visual / Workflow Graph Labels - Guest Journey,# Visual / Workflow Graph Labels - Guest Journey
+# ========================,# ========================
+Search,Search
+Confirmation,Confirmation
+In-House,In-House
+Charges,Charges
+Invoice,Invoice
+Feedback,Feedback
+# ========================,# ========================
+# Module Map Labels,# Module Map Labels
+# ========================,# ========================
+Front Desk,Front Desk
+Reservations,Reservations
+Rooms,Rooms
+Housekeeping,Housekeeping
+F&B,F&B
+Revenue,Revenue
+Guest Services,Guest Services
+Events,Events
+Loyalty,Loyalty
+Night Audit,Night Audit
+Reports,Reports
+# ========================,# ========================
+# Workspace Labels,# Workspace Labels
+# ========================,# ========================
+Velara Hotel Management,Velara Hotel Management
+Settings,Settings
+Property,Property
+Rooms,Rooms
+Guests,Guests
+Folios,Folios
+HK Tasks,HK Tasks
+Service Requests,Service Requests
+Maintenance,Maintenance
+Restaurants,Restaurants
+Spa Bookings,Spa Bookings
+Guest Feedback,Guest Feedback
+Revenue Budget,Revenue Budget
+Group Bookings,Group Bookings
+Rate Plans,Rate Plans
+Floors,Floors
+Wings,Wings
+Amenities,Amenities
+Bed Types,Bed Types
+Seasons,Seasons
+Cancellation Policies,Cancellation Policies
+Room Blocks,Room Blocks
+HK Assignments,HK Assignments
+Lost and Found,Lost and Found
+Wake Up Calls,Wake Up Calls
+Event Venues,Event Venues
+Preventive Schedules,Preventive Schedules
+Minibar Consumption,Minibar Consumption
+Spa Services,Spa Services
+Loyalty Program,Loyalty Program
+Loyalty Transactions,Loyalty Transactions
+Daily Occupancy,Daily Occupancy
+Revenue Summary,Revenue Summary
+Arrivals & Departures,Arrivals & Departures
+Housekeeping Status,Housekeeping Status
+# ========================,# ========================
+# Customer Dashboard,# Customer Dashboard
+# ========================,# ========================
+Hotel,Hotel
+# ========================,# ========================
+# Field Labels - Night Audit,# Field Labels - Night Audit
+# ========================,# ========================
+Audit Date,Audit Date
+Started At,Started At
+Completed At,Completed At
+Run By,Run By
+Statistics,Statistics
+Total Rooms,Total Rooms
+Occupied Rooms,Occupied Rooms
+Occupancy Rate,Occupancy Rate
+Movement,Movement
+No Shows,No Shows
+Room Charges Posted,Room Charges Posted
+Discrepancies,Discrepancies
+Audit Notes,Audit Notes
+Amended From,Amended From
+# ========================,# ========================
+# Field Labels - Folio,# Field Labels - Folio
+# ========================,# ========================
+Folio Type,Folio Type
+Bill To Company,Bill To Company
+Totals,Totals
+Total Charges,Total Charges
+Total Tax,Total Tax
+Total Payments,Total Payments
+Grand Total,Grand Total
+Paid Amount,Paid Amount
+Balance,Balance
+# ========================,# ========================
+# Field Labels - Check In,# Field Labels - Check In
+# ========================,# ========================
+Check-In Time,Check-In Time
+ID Verified,ID Verified
+Deposit Collected,Deposit Collected
+Key Card #,Key Card #
+# ========================,# ========================
+# Field Labels - Check Out,# Field Labels - Check Out
+# ========================,# ========================
+Check-Out Time,Check-Out Time
+Folio Balance,Folio Balance
+Late Checkout,Late Checkout
+Late Checkout Charge,Late Checkout Charge
+Guest Rating,Guest Rating
+# ========================,# ========================
+# Field Labels - Guest,# Field Labels - Guest
+# ========================,# ========================
+First Name,First Name
+Last Name,Last Name
+Gender,Gender
+Date of Birth,Date of Birth
+Contact,Contact
+Mobile,Mobile
+Nationality,Nationality
+Address,Address
+Identification,Identification
+ID Type,ID Type
+ID Number,ID Number
+ID Expiry Date,ID Expiry Date
+ID Scan,ID Scan
+VIP & Loyalty,VIP & Loyalty
+VIP Code,VIP Code
+Loyalty Tier,Loyalty Tier
+Loyalty Points,Loyalty Points
+Total Stays,Total Stays
+Last Visit,Last Visit
+Preferences,Preferences
+Preferred Room Type,Preferred Room Type
+Preferred Floor,Preferred Floor
+Dietary Requirements,Dietary Requirements
+Special Notes,Special Notes
+Photo,Photo
+# ========================,# ========================
+# Field Labels - Folio Charge,# Field Labels - Folio Charge
+# ========================,# ========================
+Qty,Qty
+Rate,Rate
+Posted By,Posted By
+Sales Invoice,Sales Invoice
+# ========================,# ========================
+# Field Labels - Restaurant,# Field Labels - Restaurant
+# ========================,# ========================
+Restaurant Name,Restaurant Name
+Cuisine Type,Cuisine Type
+Seating Capacity,Seating Capacity
+Opening Time,Opening Time
+Closing Time,Closing Time
+Offers Room Service,Offers Room Service
+POS Profile,POS Profile
+Item,Item
+Item Name,Item Name
+Posted to Folio,Posted to Folio
+# ========================,# ========================
+# Field Labels - HK,# Field Labels - HK
+# ========================,# ========================
+Housekeeper,Housekeeper
+Rooms Assigned,Rooms Assigned
+Rooms Completed,Rooms Completed
+Shift,Shift
+Task Type,Task Type
+Priority,Priority
+Schedule,Schedule
+Scheduled Date,Scheduled Date
+Duration (mins),Duration (mins)
+Inspected By,Inspected By
+Inspection Notes,Inspection Notes
+# ========================,# ========================
+# Field Labels - Lost and Found,# Field Labels - Lost and Found
+# ========================,# ========================
+Item Description,Item Description
+Found in Room,Found in Room
+Found By,Found By
+Found Date,Found Date
+Claimed By,Claimed By
+Claimed Date,Claimed Date
+Storage Location,Storage Location
+# ========================,# ========================
+# Field Labels - Event Booking,# Field Labels - Event Booking
+# ========================,# ========================
+Event Name,Event Name
+Venue,Venue
+Event Type,Event Type
+Contact Person,Contact Person
+Contact Phone,Contact Phone
+Start,Start
+End,End
+Setup Start,Setup Start
+Expected Guests,Expected Guests
+Financial,Financial
+Total Amount,Total Amount
+Requirements,Requirements
+# ========================,# ========================
+# Field Labels - Event Venue,# Field Labels - Event Venue
+# ========================,# ========================
+Venue Name,Venue Name
+Theater Capacity,Theater Capacity
+Banquet Capacity,Banquet Capacity
+Classroom Capacity,Classroom Capacity
+Boardroom Capacity,Boardroom Capacity
+Area (sq m),Area (sq m)
+Hourly Rate,Hourly Rate
+Daily Rate,Daily Rate
+Image,Image
+# ========================,# ========================
+# Field Labels - Spa,# Field Labels - Spa
+# ========================,# ========================
+Service Name,Service Name
+Duration (min),Duration (min)
+Therapist,Therapist
+Appointment Time,Appointment Time
+Guest Room,Guest Room
+Charge,Charge
+# ========================,# ========================
+# Field Labels - Preventive Schedule,# Field Labels - Preventive Schedule
+# ========================,# ========================
+Schedule Name,Schedule Name
+Category,Category
+Frequency,Frequency
+Next Due Date,Next Due Date
+Last Completed,Last Completed
+Default Assignee,Default Assignee
+Location (if not room),Location (if not room)
+# ========================,# ========================
+# Field Labels - Maintenance,# Field Labels - Maintenance
+# ========================,# ========================
+Reported By,Reported By
+Reported Date,Reported Date
+Cost,Cost
+Resolution Notes,Resolution Notes
+# ========================,# ========================
+# Field Labels - Rate Plan,# Field Labels - Rate Plan
+# ========================,# ========================
+Rate Plan Name,Rate Plan Name
+Code,Code
+Meal Plan,Meal Plan
+Refundable,Refundable
+Cancellation Policy,Cancellation Policy
+Rate Configuration,Rate Configuration
+Rate Based On,Rate Based On
+Fixed Rate,Fixed Rate
+# ========================,# ========================
+# Field Labels - Cancellation Policy,# Field Labels - Cancellation Policy
+# ========================,# ========================
+Policy Name,Policy Name
+Free Cancellation (hours before),Free Cancellation (hours before)
+Charge Value,Charge Value
+# ========================,# ========================
+# Field Labels - Group Booking,# Field Labels - Group Booking
+# ========================,# ========================
+Group Name,Group Name
+Company / Org,Company / Org
+# ========================,# ========================
+# Field Labels - Reservation,# Field Labels - Reservation
+# ========================,# ========================
+Check-In Date,Check-In Date
+Check-Out Date,Check-Out Date
+Booking Source,Booking Source
+Confirmation #,Confirmation #
+Stay Details,Stay Details
+Assigned Room,Assigned Room
+Adults,Adults
+Children,Children
+Rate & Charges,Rate & Charges
+Rate Plan,Rate Plan
+Room Rate / Night,Room Rate / Night
+Total Room Charges,Total Room Charges
+Discount %,Discount %
+Net Total,Net Total
+Guest Requests,Guest Requests
+Special Requests,Special Requests
+Expected Arrival Time,Expected Arrival Time
+Group Booking,Group Booking
+Is Group Master,Is Group Master
+Cancellation,Cancellation
+Cancelled On,Cancelled On
+Cancellation Reason,Cancellation Reason
+Cancellation Charge,Cancellation Charge
+# ========================,# ========================
+# Field Labels - Service Request,# Field Labels - Service Request
+# ========================,# ========================
+Request Type,Request Type
+Requested At,Requested At
+Chargeable,Chargeable
+# ========================,# ========================
+# Field Labels - Guest Feedback,# Field Labels - Guest Feedback
+# ========================,# ========================
+Overall Rating,Overall Rating
+Source,Source
+Detailed Ratings,Detailed Ratings
+Cleanliness,Cleanliness
+Service,Service
+Comfort,Comfort
+Location,Location
+Value for Money,Value for Money
+Comments,Comments
+Guest Comments,Guest Comments
+Management Response,Management Response
+Issue Resolved,Issue Resolved
+# ========================,# ========================
+# Field Labels - Wake Up Call,# Field Labels - Wake Up Call
+# ========================,# ========================
+Wake Up Time,Wake Up Time
+Attempts,Attempts
+# ========================,# ========================
+# Field Labels - Room Status Log,# Field Labels - Room Status Log
+# ========================,# ========================
+From Status,From Status
+To Status,To Status
+Changed By,Changed By
+Timestamp,Timestamp
+Reason,Reason
+# ========================,# ========================
+# Field Labels - Room,# Field Labels - Room
+# ========================,# ========================
+Room Number,Room Number
+Room Name,Room Name
+Wing,Wing
+Bed Type,Bed Type
+Max Occupancy,Max Occupancy
+Current Status,Current Status
+Front Office Status,Front Office Status
+Current Guest,Current Guest
+Current Reservation,Current Reservation
+Current Folio,Current Folio
+Pricing,Pricing
+Default Rate,Default Rate
+Override Rate,Override Rate
+Room Image,Room Image
+# ========================,# ========================
+# Field Labels - Room Block,# Field Labels - Room Block
+# ========================,# ========================
+From Date,From Date
+To Date,To Date
+# ========================,# ========================
+# Field Labels - Wing / Floor,# Field Labels - Wing / Floor
+# ========================,# ========================
+Wing Name,Wing Name
+Floor Name,Floor Name
+Floor Number,Floor Number
+# ========================,# ========================
+# Field Labels - Room Type,# Field Labels - Room Type
+# ========================,# ========================
+Room Type Name,Room Type Name
+Extra Bed Capacity,Extra Bed Capacity
+Default Bed Type,Default Bed Type
+# ========================,# ========================
+# Field Labels - Amenity,# Field Labels - Amenity
+# ========================,# ========================
+Amenity Name,Amenity Name
+Icon Name (Tabler),Icon Name (Tabler)
+Is Chargeable,Is Chargeable
+Charge Amount,Charge Amount
+# ========================,# ========================
+# Field Labels - Property,# Field Labels - Property
+# ========================,# ========================
+Property Name,Property Name
+Property Code,Property Code
+Star Rating,Star Rating
+Property Type,Property Type
+Contact Information,Contact Information
+City,City
+Country,Country
+Defaults,Defaults
+Default Manager,Default Manager
+Cost Center,Cost Center
+Room Income Account,Room Income Account
+Property Image,Property Image
+# ========================,# ========================
+# Field Labels - Settings,# Field Labels - Settings
+# ========================,# ========================
+Property Settings,Property Settings
+Default Property,Default Property
+Default Check-In Time,Default Check-In Time
+Default Check-Out Time,Default Check-Out Time
+Default Currency,Default Currency
+Default Tax Template,Default Tax Template
+Night Audit Time,Night Audit Time
+Module Settings,Module Settings
+Enable Rooms,Enable Rooms
+Enable Reservations,Enable Reservations
+Enable Front Desk,Enable Front Desk
+Enable Housekeeping,Enable Housekeeping
+Enable F&B,Enable F&B
+Enable Revenue Mgmt,Enable Revenue Mgmt
+Enable Guest Services,Enable Guest Services
+Enable Events,Enable Events
+Enable Maintenance,Enable Maintenance
+Enable Loyalty,Enable Loyalty
+Enable Night Audit,Enable Night Audit
+Enable Spa,Enable Spa
+Integrations,Integrations
+Enable Channel Manager,Enable Channel Manager
+Enable IoT / Smart Room,Enable IoT / Smart Room
+Enable WhatsApp Guest Comm.,Enable WhatsApp Guest Comm.
+# ========================,# ========================
+# Field Labels - Season,# Field Labels - Season
+# ========================,# ========================
+Season Name,Season Name
+Start Date,Start Date
+End Date,End Date
+Rate Multiplier,Rate Multiplier
+Calendar Color,Calendar Color
+# ========================,# ========================
+# Field Labels - Loyalty Program,# Field Labels - Loyalty Program
+# ========================,# ========================
+Program Name,Program Name
+Points per Currency Unit,Points per Currency Unit
+Silver Threshold,Silver Threshold
+Gold Threshold,Gold Threshold
+Platinum Threshold,Platinum Threshold
+Diamond Threshold,Diamond Threshold
+Tier Benefits,Tier Benefits
+Silver Discount %,Silver Discount %
+Gold Discount %,Gold Discount %
+Platinum Discount %,Platinum Discount %
+Diamond Discount %,Diamond Discount %
+# ========================,# ========================
+# Field Labels - Loyalty Transaction,# Field Labels - Loyalty Transaction
+# ========================,# ========================
+Points,Points
+Ref DocType,Ref DocType
+Reference,Reference
+Remarks,Remarks
+# ========================,# ========================
+# Field Labels - Revenue Budget,# Field Labels - Revenue Budget
+# ========================,# ========================
+Budget Name,Budget Name
+Fiscal Year,Fiscal Year
+Month,Month
+Budgeted Occupancy,Budgeted Occupancy
+Budgeted ADR,Budgeted ADR
+Budgeted Revenue,Budgeted Revenue
+Actual Revenue,Actual Revenue
+Variance,Variance
+# ========================,# ========================
+# Field Descriptions,# Field Descriptions
+# ========================,# ========================
+Average Daily Rate,Average Daily Rate
+Revenue Per Available Room,Revenue Per Available Room
+"1.0 = normal, 1.5 = 50% premium, 0.8 = 20% discount","1.0 = normal, 1.5 = 50% premium, 0.8 = 20% discount"
+# ========================,# ========================
+# Service Request Types,# Service Request Types
+# ========================,# ========================
+Amenity,Amenity
+Transportation,Transportation
+Concierge,Concierge
+Wakeup Call,Wakeup Call
+Baby Sitting,Baby Sitting
+Tour Booking,Tour Booking
+Restaurant Reservation,Restaurant Reservation
+# ========================,# ========================
+# Install / Uninstall Messages,# Install / Uninstall Messages
+# ========================,# ========================
+VELARA Hotel Management installed successfully! 🏨,VELARA Hotel Management installed successfully! 🏨
+VELARA Hotel Management uninstalled. 👋,VELARA Hotel Management uninstalled. 👋
+# ========================,# ========================
+# App Metadata,# App Metadata
+# ========================,# ========================
+VELARA,VELARA
+Hotel & Hospitality Management System,Hotel & Hospitality Management System
+Hotel & Hospitality Management System - نظام إدارة الفنادق والضيافة,Hotel & Hospitality Management System - نظام إدارة الفنادق والضيافة
