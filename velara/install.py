@@ -1,3 +1,8 @@
+# Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+# Developer Website: https://arkan.it.com
+# License: MIT
+# For license information, please see license.txt
+
 """
 VELARA — Installation Scripts
 """
@@ -188,5 +193,3 @@ def create_custom_fields_on_erpnext():
 		create_custom_fields(custom_fields, update=True)
 	except Exception:
 		frappe.log_error("VELARA: Error creating custom fields")
-
-

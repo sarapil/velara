@@ -1,5 +1,8 @@
-# Copyright (c) 2026, ARKAN and contributors
+# Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+# Developer Website: https://arkan.it.com
+# License: MIT
 # For license information, please see license.txt
+
 """VL Loyalty Transaction — Points Earn/Redeem Controller"""
 
 import frappe

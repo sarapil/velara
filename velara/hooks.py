@@ -1,3 +1,8 @@
+# Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+# Developer Website: https://arkan.it.com
+# License: MIT
+# For license information, please see license.txt
+
 app_name = "velara"
 app_title = "VELARA"
 app_publisher = "ARKAN"
@@ -32,7 +37,8 @@ app_include_css = [
 ]
 
 app_include_js = [
-	"/assets/velara/js/velara_boot.js"
+	"/assets/velara/js/velara_boot.js",
+    "/assets/velara/js/fv_integration.js",
 ]
 
 # DocType JS Extensions (ERPNext)

@@ -1,3 +1,8 @@
+// Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+// Developer Website: https://arkan.it.com
+// License: MIT
+// For license information, please see license.txt
+
 frappe.pages["velara-front-desk"].on_page_load = function (wrapper) {
 frappe.velara_front_desk = new VelaraFrontDesk(wrapper);
 };

@@ -1,20 +1,101 @@
-frappe.pages["velara-onboarding"].on_page_load = async function(wrapper) {
-    const page = frappe.ui.make_app_page({ parent: wrapper, title: __("Velara Onboarding"), single_column: true });
-    page.set_secondary_action(__("Skip"), () => frappe.set_route("app"));
-    const $c = $(page.body).html('<div id="velara_onboarding-container"></div>').find("#velara_onboarding-container");
-    const B = "#8B5CF6", BL = "#EDE9FE";
+// Copyright (c) 2024, Arkan Lab — https://arkan.it.com
+// License: MIT
+
+frappe.pages["velara-onboarding"].on_page_load = function(wrapper) {
+    const page = frappe.ui.make_app_page({
+        parent: wrapper,
+        title: __("Velara Onboarding"),
+        single_column: true,
+    });
+
+    page.main.addClass("velara-onboarding-page");
+    const $container = $('<div class="fv-onboarding-container"></div>').appendTo(page.main);
+
     const steps = [
-        { title: __("Welcome to Velara"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><svg viewBox="0 0 120 120" width="120" height="120"><circle cx="60" cy="60" r="55" fill="${BL}" stroke="${B}" stroke-width="3"><animate attributeName="r" values="52;55;52" dur="3s" repeatCount="indefinite"/></circle><text x="60" y="68" text-anchor="middle" font-size="36" font-weight="bold">🏨</text></svg><h3 style="color:${B};margin-top:16px">${__("Velara")}</h3><p style="max-width:500px;margin:12px auto">${__("Comprehensive Hospitality Management")}</p></div>`; } },
-        { title: __("Reservations"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">🏨</span><h3 style="color:${B};margin-top:12px">${__("Reservations")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use Reservations in Velara.")}</p></div>`; } },
-        { title: __("Front Desk"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">🏨</span><h3 style="color:${B};margin-top:12px">${__("Front Desk")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use Front Desk in Velara.")}</p></div>`; } },
-        { title: __("Housekeeping"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">🏨</span><h3 style="color:${B};margin-top:12px">${__("Housekeeping")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use Housekeeping in Velara.")}</p></div>`; } },
-        { title: __("F&B"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">🏨</span><h3 style="color:${B};margin-top:12px">${__("F&B")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use F&B in Velara.")}</p></div>`; } },
-        { title: __("Revenue Management"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">🏨</span><h3 style="color:${B};margin-top:12px">${__("Revenue Management")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use Revenue Management in Velara.")}</p></div>`; } },
-        { title: __("Guest Services"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">🏨</span><h3 style="color:${B};margin-top:12px">${__("Guest Services")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use Guest Services in Velara.")}</p></div>`; } },
-        { title: __("Events"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">🏨</span><h3 style="color:${B};margin-top:12px">${__("Events")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use Events in Velara.")}</p></div>`; } },
-        { title: __("Maintenance"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:3em">🏨</span><h3 style="color:${B};margin-top:12px">${__("Maintenance")}</h3><p style="max-width:500px;margin:12px auto">${__("Learn how to use Maintenance in Velara.")}</p></div>`; } },
-        { title: __("You are Ready!"), content: (el) => { el.innerHTML = `<div style="text-align:center;padding:30px"><span style="font-size:4em">🎉</span><h3 style="color:${B};margin-top:16px">${__("Onboarding Complete!")}</h3><p style="max-width:500px;margin:12px auto">${__("You are now ready to use Velara. Use ❓ for help.")}</p><div style="margin-top:20px"><button class="btn btn-primary btn-lg" onclick="frappe.set_route('app')">${__("Go to Desk")}</button></div></div>`; } },
-    ];
-    if(frappe.visual&&frappe.visual.Storyboard) frappe.visual.Storyboard.create({container:$c[0],steps,brand_color:B,navigation:"both",showProgress:true});
-    else { let h='<div style="max-width:800px;margin:0 auto;padding:20px">'; steps.forEach((s,i)=>{const d=document.createElement("div");if(s.content)s.content(d);h+=`<div style="margin-bottom:24px;padding:20px;border:1px solid var(--border-color);border-radius:12px"><h2 style="color:${B}">${s.title}</h2>${d.innerHTML||""}</div>`}); h+="</div>"; $c.html(h); }
+        {
+                "title": "Hotel Setup",
+                "description": "Configure your property details, room types, and rate plans.",
+                "icon": "building"
+        },
+        {
+                "title": "App Structure",
+                "description": "Explore all Velara modules.",
+                "icon": "sitemap",
+                "component": "app-map"
+        },
+        {
+                "title": "Room Configuration",
+                "description": "Set up rooms, floors, and housekeeping schedules.",
+                "icon": "bed"
+        },
+        {
+                "title": "Data Model",
+                "description": "See how reservations, rooms, guests, and billing connect.",
+                "icon": "hierarchy-2",
+                "component": "erd",
+                "doctype": "VL Reservation"
+        },
+        {
+                "title": "Rate Plans",
+                "description": "Create rate plans, seasons, and pricing rules.",
+                "icon": "report-money"
+        },
+        {
+                "title": "Staff Setup",
+                "description": "Define roles for front desk, housekeeping, F&B, and management.",
+                "icon": "users"
+        },
+        {
+                "title": "Go Live",
+                "description": "Start accepting reservations and managing your hotel.",
+                "icon": "rocket"
+        }
+];
+
+    // Use frappe.visual.generator for premium wizard rendering
+    const renderWithGenerator = () => {
+        try {
+            frappe.visual.generator.onboardingWizard(
+                $container[0],
+                "Velara",
+                steps.map(s => ({
+                    ...s,
+                    onComplete: s.title.includes("rocket") || s.title.includes("Ready") || s.title.includes("Go Live") || s.title.includes("Start")
+                        ? () => frappe.set_route("app")
+                        : undefined,
+                }))
+            );
+        } catch(e) {
+            console.warn("Generator failed, using fallback:", e);
+            renderFallback($container, steps);
+        }
+    };
+
+    const renderFallback = ($el, steps) => {
+        const stepsHtml = steps.map((s, i) => `
+            <div style="display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--border-color)">
+                <div style="width:40px;height:40px;border-radius:50%;background:rgba(99,102,241,0.1);color:#8B5CF6;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0">${i+1}</div>
+                <div><h3 style="font-size:1rem;font-weight:600;margin-bottom:4px">${__(s.title)}</h3><p style="font-size:0.9rem;color:var(--text-muted)">${__(s.description)}</p></div>
+            </div>
+        `).join('');
+        $el.html(`
+            <div style="text-align:center;padding:60px 20px">
+                <h1>🚀 ${__("Get Started with Velara")}</h1>
+                <p style="color:var(--text-muted)">${__("Follow these steps to set up and master Velara.")}</p>
+            </div>
+            <div style="max-width:700px;margin:0 auto;padding:0 20px">${stepsHtml}</div>
+        `);
+    };
+
+    if (frappe.visual && frappe.visual.generator) {
+        renderWithGenerator();
+    } else {
+        frappe.require("frappe_visual.bundle.js", () => {
+            if (frappe.visual && frappe.visual.generator) {
+                renderWithGenerator();
+            } else {
+                renderFallback($container, steps);
+            }
+        });
+    }
 };

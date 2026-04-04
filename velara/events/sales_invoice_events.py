@@ -1,3 +1,8 @@
+# Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+# Developer Website: https://arkan.it.com
+# License: MIT
+# For license information, please see license.txt
+
 """VELARA — Sales Invoice doc_events (Invoice ↔ Folio sync)"""
 import frappe
 from frappe import _
