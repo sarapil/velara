@@ -322,5 +322,8 @@ caps_field_maps = [
 # Website Route Rules
 # --------------------------------------------------------
 website_route_rules = [
+    {"from_route": "/velara-about", "to_route": "velara_about"},
+    {"from_route": "/velara-onboarding", "to_route": "velara_onboarding"},
+    {"from_route": "/عن-velara", "to_route": "velara_about"},
     {"from_route": "/velara/<path:app_path>", "to_route": "velara/<app_path>"},
 ]

@@ -1,0 +1,52 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ _("VELARA Onboarding") }}{% endblock %}
+
+{% block page_content %}
+<div id="velara-onboarding-container" data-page="velara-onboarding"></div>
+
+<style>
+  #velara-onboarding-container { min-height: 80vh; padding: 24px 0; }
+  .vl-onboard-hero { text-align: center; padding: 60px 20px; }
+  .vl-onboard-hero h1 { font-size: 2rem; font-weight: 700; color: var(--text-color); margin-bottom: 16px; }
+  .vl-onboard-hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto 32px; }
+  .vl-onboard-steps { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+  .vl-step { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--border-color); }
+  .vl-step-num { width: 40px; height: 40px; border-radius: 50%; background: rgba(201, 168, 76, 0.1); color: #C9A84C; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+  .vl-step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+  .vl-step p { font-size: 0.9rem; color: var(--text-muted); }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('velara-onboarding-container');
+  const steps = [
+    { title: __("Hotel Setup"), desc: __("Configure your hotel property, room types, rate plans, and seasonal pricing in Velara Setup.") },
+    { title: __("Room Inventory"), desc: __("Register all rooms with types, floor plans, amenities, and maintenance status.") },
+    { title: __("Front Desk Configuration"), desc: __("Set up check-in/check-out workflows, guest registration forms, and room assignment rules.") },
+    { title: __("Reservation Channels"), desc: __("Configure booking sources — direct, OTA, corporate, and group booking workflows.") },
+    { title: __("Housekeeping Schedules"), desc: __("Define cleaning schedules, inspection checklists, and minibar tracking templates.") },
+    { title: __("F&B Operations"), desc: __("Set up restaurant outlets, menus, room service workflows, and banquet packages.") },
+    { title: __("Guest Loyalty"), desc: __("Configure loyalty tiers, points earning rules, and member benefit packages.") },
+    { title: __("Night Audit & Reports"), desc: __("Set up night audit procedures, revenue dashboards, and occupancy reports.") },
+  ];
+  container.innerHTML = `
+    <div class="vl-onboard-hero">
+      <h1>🚀 ${__("Get Started with VELARA")}</h1>
+      <p>${__("Follow these steps to set up your hotel management system.")}</p>
+    </div>
+    <div class="vl-onboard-steps">
+      ${steps.map((s, i) => `
+        <div class="vl-step">
+          <div class="vl-step-num">${i + 1}</div>
+          <div>
+            <h3>${s.title}</h3>
+            <p>${s.desc}</p>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+});
+</script>
+{% endblock %}

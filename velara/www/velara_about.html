@@ -1,0 +1,84 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ _("About VELARA") }}{% endblock %}
+
+{% block page_content %}
+<div id="velara-about-container" data-page="velara-about"></div>
+
+<style>
+  :root { --vl-primary: #C9A84C; --vl-primary-light: #D4B96A; --vl-gradient: linear-gradient(135deg, #C9A84C, #A68B2E); }
+  #velara-about-container { min-height: 80vh; padding: 24px 0; }
+  .vl-about-hero { text-align: center; padding: 60px 20px; }
+  .vl-about-hero img { width: 160px; height: 160px; margin-bottom: 24px; }
+  .vl-about-hero h1 { font-size: 2.5rem; font-weight: 800; background: var(--vl-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; }
+  .vl-about-hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 640px; margin: 0 auto 32px; }
+  .vl-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; padding: 40px 20px; max-width: 1100px; margin: 0 auto; }
+  .vl-feature-card { padding: 28px; border-radius: 16px; background: var(--card-bg); border: 1px solid var(--border-color); transition: transform 0.2s, box-shadow 0.2s; }
+  .vl-feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(201, 168, 76, 0.12); }
+  .vl-feature-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--text-color); margin-bottom: 8px; }
+  .vl-feature-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+  .vl-stat-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 20px; background: rgba(201, 168, 76, 0.08); color: var(--vl-primary); font-weight: 600; font-size: 0.9rem; }
+  .vl-stats-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 32px 0; }
+  .vl-footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.85rem; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('velara-about-container');
+  container.innerHTML = `
+    <div class="vl-about-hero">
+      <img src="/assets/velara/images/velara-logo.svg" alt="VELARA" onerror="this.style.display='none'">
+      <h1>${__("VELARA")}</h1>
+      <p>${__("Hotel & Hospitality Management System — Reservations, Front Desk, Housekeeping, F&B, Events, Spa, Loyalty, Revenue Management, and more.")}</p>
+      <div class="vl-stats-row">
+        <span class="vl-stat-badge">🏨 ${__("14 Modules")}</span>
+        <span class="vl-stat-badge">🛎️ ${__("Front Desk")}</span>
+        <span class="vl-stat-badge">🍽️ ${__("F&B Operations")}</span>
+        <span class="vl-stat-badge">💎 ${__("Guest Loyalty")}</span>
+      </div>
+    </div>
+    <div class="vl-features">
+      <div class="vl-feature-card">
+        <h3>🛎️ ${__("Front Desk")}</h3>
+        <p>${__("Check-in/check-out, room assignment, guest registration, key card management, and real-time room status board.")}</p>
+      </div>
+      <div class="vl-feature-card">
+        <h3>📅 ${__("Reservations")}</h3>
+        <p>${__("Online and walk-in reservations, channel management, overbooking control, waitlist management, and group bookings.")}</p>
+      </div>
+      <div class="vl-feature-card">
+        <h3>🛏️ ${__("Rooms & Housekeeping")}</h3>
+        <p>${__("Room inventory, housekeeping schedules, maintenance requests, minibar tracking, and room inspection checklists.")}</p>
+      </div>
+      <div class="vl-feature-card">
+        <h3>🍽️ ${__("Food & Beverage")}</h3>
+        <p>${__("Restaurant management, room service orders, banquet planning, menu engineering, and kitchen workflow.")}</p>
+      </div>
+      <div class="vl-feature-card">
+        <h3>🎉 ${__("Events & Conferences")}</h3>
+        <p>${__("Event booking, venue management, catering coordination, AV equipment tracking, and event billing.")}</p>
+      </div>
+      <div class="vl-feature-card">
+        <h3>💆 ${__("Spa & Wellness")}</h3>
+        <p>${__("Spa service booking, therapist scheduling, treatment packages, product inventory, and wellness programs.")}</p>
+      </div>
+      <div class="vl-feature-card">
+        <h3>💎 ${__("Guest Loyalty")}</h3>
+        <p>${__("Loyalty points, tier management, member benefits, reward redemption, and guest preference tracking.")}</p>
+      </div>
+      <div class="vl-feature-card">
+        <h3>📊 ${__("Revenue Management")}</h3>
+        <p>${__("Dynamic pricing, occupancy forecasting, RevPAR analytics, night audit, and financial reporting dashboards.")}</p>
+      </div>
+      <div class="vl-feature-card">
+        <h3>🔧 ${__("Maintenance")}</h3>
+        <p>${__("Preventive maintenance schedules, work orders, asset tracking, vendor management, and energy monitoring.")}</p>
+      </div>
+    </div>
+    <div class="vl-footer">
+      <p>${__("Built by")} <strong>Arkan Lab</strong> • ${__("Powered by")} <strong>Frappe + ERPNext</strong></p>
+    </div>
+  `;
+});
+</script>
+{% endblock %}
