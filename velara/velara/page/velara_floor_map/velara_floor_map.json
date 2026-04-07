@@ -1,0 +1,24 @@
+{
+ "content": null,
+ "creation": "2026-04-07 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "layout",
+ "idx": 0,
+ "modified": "2026-04-07 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Velara",
+ "name": "velara-floor-map",
+ "owner": "Administrator",
+ "page_name": "velara-floor-map",
+ "roles": [
+  {"role": "VL Front Desk"},
+  {"role": "VL Housekeeping"},
+  {"role": "VL Manager"},
+  {"role": "VL Admin"},
+  {"role": "System Manager"}
+ ],
+ "standard": "Yes",
+ "system_page": 0,
+ "title": "3D Floor Map"
+}
