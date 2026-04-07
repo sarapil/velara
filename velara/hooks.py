@@ -6,7 +6,7 @@
 app_name = "velara"
 app_title = "VELARA"
 app_publisher = "ARKAN"
-app_description = "Hotel & Hospitality Management System - نظام إدارة الفنادق والضيافة"
+app_description = "Hotel & Hospitality Management System"
 app_email = "moataz.sarapil@gmail.com"
 app_license = "mit"
 app_icon = "/assets/velara/images/velara-logo.svg"
@@ -15,7 +15,41 @@ app_logo_url = "/assets/velara/images/velara-logo.svg"
 
 # Required Apps
 # ------------------
-required_apps = ["frappe", "erpnext", "hrms", "frappe_visual", "arkan_help"]
+required_apps = ["frappe", "erpnext", "hrms", "frappe_visual", "arkan_help", "base_base"]
+
+# ---------------------------------------------------------------------------
+# Feature Registry (Open Core) — consumed by base_base.utils.feature_gating
+# ---------------------------------------------------------------------------
+app_feature_registry = {
+    # FREE TIER — Core hospitality
+    "room_management": "free",
+    "reservation_basic": "free",
+    "guest_management": "free",
+    "housekeeping": "free",
+    "front_desk": "free",
+    "basic_reports": "free",
+    "check_in_out": "free",
+    "room_types": "free",
+    "basic_billing": "free",
+    "maintenance_requests": "free",
+    # PREMIUM TIER — Advanced hospitality
+    "ai_pricing": "premium",
+    "revenue_analytics": "premium",
+    "channel_manager": "premium",
+    "yield_management": "premium",
+    "guest_profiling": "premium",
+    "loyalty_program": "premium",
+    "advanced_reports": "premium",
+    "multi_property": "premium",
+    "ota_integration": "premium",
+    "spa_wellness": "premium",
+    "event_management": "premium",
+    "concierge_ai": "premium",
+    "custom_dashboards": "premium",
+    "api_bulk_operations": "premium",
+    "white_labeling": "premium",
+    "priority_support": "premium",
+}
 
 # Apps Screen
 # ------------------

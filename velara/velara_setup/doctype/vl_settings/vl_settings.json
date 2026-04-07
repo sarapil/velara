@@ -186,13 +186,53 @@
    "fieldtype": "Check",
    "label": "Enable WhatsApp Guest Comm.",
    "default": "0"
+  },
+  {
+   "fieldname": "license_tab",
+   "fieldtype": "Tab Break",
+   "label": "License & Subscription"
+  },
+  {
+   "fieldname": "license_section",
+   "fieldtype": "Section Break",
+   "label": "License Configuration"
+  },
+  {
+   "fieldname": "license_key",
+   "fieldtype": "Password",
+   "label": "License Key",
+   "description": "Enter your license key (XXXX-XXXX-XXXX-HASH) or subscribe on Frappe Cloud Marketplace"
+  },
+  {
+   "fieldname": "license_status",
+   "fieldtype": "Data",
+   "label": "License Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_license",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "license_tier",
+   "fieldtype": "Select",
+   "label": "Current Tier",
+   "options": "\nFree\nPremium",
+   "read_only": 1
+  },
+  {
+   "fieldname": "license_source",
+   "fieldtype": "Data",
+   "label": "License Source",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 0,
  "is_submittable": 0,
  "is_tree": 0,
  "links": [],
- "modified": "2026-03-30 00:00:00",
+ "modified": "2026-04-07 12:00:00.000000",
  "modified_by": "Administrator",
  "module": "Velara Setup",
  "name": "VL Settings",

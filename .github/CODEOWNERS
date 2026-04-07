@@ -1,0 +1,36 @@
+# CODEOWNERS — مالكو الكود
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# These owners will be automatically requested for review when a PR
+# modifies files matching the patterns.
+# سيتم طلب مراجعة هؤلاء المالكين تلقائياً عند تعديل ملفات مطابقة.
+
+# ─── Default Owner — المالك الافتراضي ─────────────────────────────────────────
+*                           @sarapil/velara-maintainers
+
+# ─── Core Configuration — الإعدادات الأساسية ──────────────────────────────────
+velara/hooks.py       @sarapil/velara-maintainers
+velara/install.py     @sarapil/velara-maintainers
+velara/seed.py        @sarapil/velara-maintainers
+pyproject.toml              @sarapil/velara-maintainers
+setup.cfg                   @sarapil/velara-maintainers
+
+# ─── API Layer — طبقة الواجهة البرمجية ────────────────────────────────────────
+velara/api/           @sarapil/velara-maintainers
+
+# ─── Security & Permissions — الأمان والصلاحيات ───────────────────────────────
+velara/caps/          @sarapil/velara-maintainers
+SECURITY.md                 @sarapil/velara-maintainers
+
+# ─── CI/CD — خط الأنابيب ─────────────────────────────────────────────────────
+.github/workflows/          @sarapil/velara-maintainers
+
+# ─── Frontend — الواجهة الأمامية ──────────────────────────────────────────────
+velara/public/        @sarapil/velara-maintainers
+
+# ─── Translations — الترجمات ──────────────────────────────────────────────────
+velara/translations/  @sarapil/velara-maintainers
+
+# ─── Documentation — التوثيق ──────────────────────────────────────────────────
+velara/help/          @sarapil/velara-maintainers
+*.md                        @sarapil/velara-maintainers
