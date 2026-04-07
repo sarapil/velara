@@ -97,6 +97,9 @@ frappe.ui.form.on("VL Reservation", {
 					__("Folio: {0}", [frm.doc.folio]), "green"
 				);
 			}
+
+			// Visual reservation dashboard
+			render_vl_reservation_visual(frm);
 		}
 	},
 
@@ -137,4 +140,54 @@ function calculate_charges(frm) {
 
 	let disc = flt(frm.doc.discount_percent);
 	frm.set_value("net_total", disc > 0 ? total * (1 - disc / 100) : total);
+}
+
+function render_vl_reservation_visual(frm) {
+	const ci = frm.doc.check_in_date;
+	const co = frm.doc.check_out_date;
+	const days_until = ci ? frappe.datetime.get_diff(ci, frappe.datetime.get_today()) : null;
+
+	let arrival_text = "";
+	if (days_until !== null) {
+		if (days_until < 0) arrival_text = __("{0} days ago", [Math.abs(days_until)]);
+		else if (days_until === 0) arrival_text = __("Today");
+		else arrival_text = __("In {0} days", [days_until]);
+	}
+
+	const status_colors = {
+		Draft: "#9CA3AF", Tentative: "#60A5FA", Confirmed: "#34D399",
+		Guaranteed: "#A78BFA", "Checked In": "#10B981", "Checked Out": "#6B7280",
+		Cancelled: "#EF4444", "No Show": "#F87171",
+	};
+	const sc = status_colors[frm.doc.status] || "#9CA3AF";
+
+	const wrapper = frm.dashboard.add_section("", __("Stay Overview"));
+	$(wrapper).html(`
+		<div class="vl-res-visual fv-fx-page-enter" style="padding:12px 0;">
+			<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;">
+				<div class="fv-fx-glass fv-fx-hover-lift" style="padding:14px;border-radius:10px;text-align:center;">
+					<div style="font-size:28px;font-weight:700;color:${sc};">${__(frm.doc.status || "—")}</div>
+					<div style="font-size:11px;color:var(--text-muted);">${__("Status")}</div>
+				</div>
+				<div class="fv-fx-glass fv-fx-hover-lift" style="padding:14px;border-radius:10px;text-align:center;">
+					<div style="font-size:28px;font-weight:700;color:var(--primary);">${frm.doc.nights || 0}</div>
+					<div style="font-size:11px;color:var(--text-muted);">${__("Nights")}</div>
+				</div>
+				<div class="fv-fx-glass fv-fx-hover-lift" style="padding:14px;border-radius:10px;text-align:center;">
+					<div style="font-size:20px;font-weight:700;color:var(--green-500);">
+						${format_currency(frm.doc.net_total || frm.doc.total_room_charges || 0)}
+					</div>
+					<div style="font-size:11px;color:var(--text-muted);">${__("Net Total")}</div>
+				</div>
+				<div class="fv-fx-glass fv-fx-hover-lift" style="padding:14px;border-radius:10px;text-align:center;">
+					<div style="font-size:16px;font-weight:600;">${frm.doc.room || "—"}</div>
+					<div style="font-size:11px;color:var(--text-muted);">${__("Room")}</div>
+				</div>
+				<div class="fv-fx-glass fv-fx-hover-lift" style="padding:14px;border-radius:10px;text-align:center;">
+					<div style="font-size:16px;font-weight:600;">${arrival_text || "—"}</div>
+					<div style="font-size:11px;color:var(--text-muted);">${__("Arrival")}</div>
+				</div>
+			</div>
+		</div>
+	`);
 }

@@ -62,6 +62,42 @@ frappe.ui.form.on("VL Room", {
 					});
 				});
 			}, __("View"));
+
+			// Visual room dashboard
+			render_vl_room_visual(frm);
 		}
 	}
 });
+
+function render_vl_room_visual(frm) {
+	const sc = {
+		Available: "var(--green-500)", Occupied: "var(--red-500)", Reserved: "var(--blue-500)",
+		Dirty: "var(--orange-500)", Clean: "var(--green-400)", Inspected: "var(--text-muted)",
+		"Out of Order": "var(--red-600)", "Out of Service": "var(--text-muted)",
+	};
+	const color = sc[frm.doc.room_status] || "var(--text-muted)";
+
+	const wrapper = frm.dashboard.add_section("", __("Room Info"));
+	$(wrapper).html(`
+		<div class="vl-room-visual fv-fx-page-enter" style="padding:12px 0;">
+			<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;">
+				<div class="fv-fx-glass fv-fx-hover-lift" style="padding:14px;border-radius:10px;text-align:center;">
+					<div style="font-size:20px;font-weight:700;color:${color};">${__(frm.doc.room_status || "—")}</div>
+					<div style="font-size:11px;color:var(--text-muted);">${__("Status")}</div>
+				</div>
+				<div class="fv-fx-glass fv-fx-hover-lift" style="padding:14px;border-radius:10px;text-align:center;">
+					<div style="font-size:16px;font-weight:600;">${frappe.utils.escape_html(frm.doc.room_type || "—")}</div>
+					<div style="font-size:11px;color:var(--text-muted);">${__("Type")}</div>
+				</div>
+				<div class="fv-fx-glass fv-fx-hover-lift" style="padding:14px;border-radius:10px;text-align:center;">
+					<div style="font-size:24px;font-weight:700;color:var(--primary);">${frm.doc.floor_number || "—"}</div>
+					<div style="font-size:11px;color:var(--text-muted);">${__("Floor")}</div>
+				</div>
+				<div class="fv-fx-glass fv-fx-hover-lift" style="padding:14px;border-radius:10px;text-align:center;">
+					<div style="font-size:16px;font-weight:600;">${frappe.utils.escape_html(frm.doc.current_guest || "—")}</div>
+					<div style="font-size:11px;color:var(--text-muted);">${__("Current Guest")}</div>
+				</div>
+			</div>
+		</div>
+	`);
+}
