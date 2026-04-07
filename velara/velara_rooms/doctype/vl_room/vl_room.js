@@ -44,5 +44,24 @@ frappe.ui.form.on("VL Room", {
 		if (frm.doc.current_reservation) {
 			frm.dashboard.add_indicator(__("Res: {0}", [frm.doc.current_reservation]), "green");
 		}
+
+		// 3D Floor Plan button
+		if (!frm.is_new()) {
+			frm.add_custom_button(__("3D Floor Plan"), async () => {
+				const d = new frappe.ui.Dialog({
+					title: __("Hotel Floor Plan — Floor {0}", [frm.doc.floor_number || ""]),
+					size: "extra-large",
+				});
+				d.body.style.height = "600px";
+				d.show();
+
+				frappe.require("/assets/velara/js/3d_engine/velara_3d.js", async () => {
+					await frappe.velara.floorPlan.createDashboard(d.body, {
+						property: frm.doc.property,
+						floor: frm.doc.floor_number,
+					});
+				});
+			}, __("View"));
+		}
 	}
 });
