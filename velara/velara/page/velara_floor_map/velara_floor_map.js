@@ -59,6 +59,20 @@ class VelaraFloorMap {
 		this.page.add_inner_button(__("Auto-refresh ON"), () => this.toggleAutoRefresh());
 		this.page.add_action_item(__("Screenshot"), () => this.takeScreenshot());
 		this.page.add_action_item(__("Full Screen"), () => this.toggleFullScreen());
+
+		// XR integration — VR hotel tour + AR floor review
+		frappe.base_base?.xr_mixin?.attach(this, {
+			get_engine: () => this.viewer?.engine,
+			get_spatial_data: () => this.getXRPanels(),
+			vr_options: { startPosition: [0, 1.7, 8] },
+		});
+	}
+
+	getXRPanels() {
+		const stats = this.page.main?.find(".vl-floor-stats").text() || "";
+		return [
+			{ content: `<h3>${__("Floor Overview")}</h3><p>${stats.substring(0, 100)}</p>`, position: [0, 2.5, -4], billboard: true },
+		];
 	}
 
 	renderSkeleton() {
