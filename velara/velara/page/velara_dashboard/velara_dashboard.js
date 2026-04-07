@@ -40,6 +40,7 @@ frappe.set_route("List", "VL Reservation");
 render_layout() {
 this.page.main.html(`
 <div class="velara-dashboard">
+<div class="vl-scene-header" style="height:180px;border-radius:12px;margin:0 0 16px 0;overflow:hidden;"></div>
 <div class="vl-metrics-row"></div>
 <div class="vl-charts-row">
 <div class="vl-chart-card vl-occupancy-chart">
@@ -81,9 +82,33 @@ this.render_metrics();
 this.render_arrivals_table();
 this.render_departures_table();
 this.render_hk_summary();
+this.init_scene_header();
 }
 },
 });
+}
+
+async init_scene_header() {
+const el = this.page.main.find(".vl-scene-header")[0];
+if (!el) return;
+try {
+await frappe.require("frappe_visual.bundle.js");
+if (frappe.visual?.scenePresetCafe) {
+const d = this.data || {};
+await frappe.visual.scenePresetCafe({
+container: el,
+theme: "warm",
+frames: [
+{ label: __("Occupancy"), value: `${d.occupancy_pct || 0}%`, status: (d.occupancy_pct || 0) > 80 ? "success" : "warning" },
+{ label: __("Revenue"), value: frappe.format(d.revenue_today || 0, {fieldtype:"Currency"}), status: "info" },
+{ label: __("Arrivals"), value: String(d.arrivals_today || 0), status: "success" },
+{ label: __("Departures"), value: String(d.departures_today || 0), status: "danger" },
+],
+});
+}
+} catch {
+el.style.display = "none";
+}
 }
 
 render_metrics() {
