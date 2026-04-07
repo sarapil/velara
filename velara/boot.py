@@ -5,7 +5,7 @@
 
 """
 VELARA - Hotel & Hospitality Management System
-نظام إدارة الفنادق والضيافة
+Hotel & Hospitality Management System
 """
 import frappe
 
