@@ -273,18 +273,17 @@ def check_folio_credit_limits():
 		return
 
 	try:
-		# Find folios approaching credit limit
 		folios = frappe.get_all(
 			"VL Folio",
 			filters={"status": "Open"},
-			fields=["name", "guest", "total_amount", "credit_limit"]
+			fields=["name", "guest", "grand_total", "balance"]
 		)
 
 		for folio in folios:
-			if folio.credit_limit and folio.total_amount > (folio.credit_limit * 0.8):
+			if folio.grand_total and folio.balance and folio.balance > (folio.grand_total * 0.8):
 				frappe.logger().warning(
-					f"VELARA: Folio {folio.name} at {folio.total_amount}/{folio.credit_limit} "
-					f"({(folio.total_amount/folio.credit_limit*100):.0f}%)"
+					f"VELARA: Folio {folio.name} balance {folio.balance}/{folio.grand_total} "
+					f"({(folio.balance/folio.grand_total*100):.0f}%)"
 				)
 	except Exception as e:
 		frappe.log_error(f"Credit Limit Check Error: {str(e)}", "VELARA Folios")

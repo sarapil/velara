@@ -8,7 +8,7 @@
     // App branding registration
     const APP_CONFIG = {
         name: "velara",
-        title: __("Velara"),
+        title: "Velara",
         color: "#8B5CF6",
         module: "Velara Front Desk",
     };

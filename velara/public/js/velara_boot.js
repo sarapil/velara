@@ -11,6 +11,8 @@
 // Global Velara namespace
 window.velara = window.velara || {};
 
+// Guard: skip if frappe core not loaded (transient HTTP/2 proxy failures)
+if (typeof frappe === "undefined" || typeof frappe.provide !== "function") { return; }
 frappe.provide("velara");
 frappe.provide("velara.utils");
 frappe.provide("velara.ui");
