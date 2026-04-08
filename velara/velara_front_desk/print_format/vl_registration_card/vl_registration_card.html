@@ -1,0 +1,119 @@
+{# Copyright (c) 2026, Arkan Lab — https://arkan.it.com
+   License: MIT #}
+
+<style>
+	.vl-reg { font-family: 'Segoe UI', Arial, sans-serif; color: #333; font-size: 10pt; }
+	.vl-reg-hdr { border-bottom: 3px solid #C9A84C; padding-bottom: 10px; margin-bottom: 14px; }
+	.vl-reg-title { font-size: 16pt; font-weight: 700; color: #C9A84C; margin: 0; }
+	.vl-reg-ar { font-size: 11pt; color: #96793A; direction: rtl; margin: 2px 0 0; }
+	.vl-r-label { color: #7f8c8d; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.5px; }
+	.vl-r-value { font-size: 10pt; font-weight: 500; }
+	.vl-r-grid { display: table; width: 100%; }
+	.vl-r-row { display: table-row; }
+	.vl-r-cell { display: table-cell; padding: 5px 8px; vertical-align: top; }
+	.vl-r-section { margin: 12px 0; }
+	.vl-r-section-title { font-size: 10pt; font-weight: 600; color: #C9A84C; border-bottom: 1px solid #E8D9A0; padding-bottom: 3px; margin-bottom: 6px; }
+	.vl-r-box { border: 1px solid #E8D9A0; border-radius: 6px; padding: 12px; background: #FFF8E7; text-align: center; }
+	.vl-r-sign { display: inline-block; width: 40%; border-top: 1px solid #333; margin-top: 50px; padding-top: 6px; text-align: center; }
+	.vl-r-sign-label { font-size: 7pt; color: #7f8c8d; text-transform: uppercase; }
+	.vl-r-footer { margin-top: 16px; border-top: 1px solid #E8D9A0; padding-top: 6px; font-size: 7pt; color: #95a5a6; text-align: center; }
+	.vl-r-check { display: inline-block; width: 14px; height: 14px; border: 2px solid #C9A84C; border-radius: 3px; vertical-align: middle; margin-inline-end: 4px; }
+	.vl-r-check.checked { background: #C9A84C; }
+</style>
+
+<div class="vl-reg">
+	<!-- Header -->
+	<div class="vl-reg-hdr">
+		<div style="display: table; width: 100%;">
+			<div style="display: table-cell; width: 60%; vertical-align: middle;">
+				<p class="vl-reg-title">REGISTRATION CARD</p>
+				<p class="vl-reg-ar">بطاقة تسجيل الدخول</p>
+			</div>
+			<div style="display: table-cell; text-align: right; vertical-align: middle;">
+				<span style="font-size: 9pt; color: #C9A84C; font-weight: 600;">{{ doc.name }}</span>
+				<br><span style="font-size: 8pt; color: #7f8c8d;">{{ frappe.format_datetime(doc.check_in_time) if doc.check_in_time else '' }}</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Guest -->
+	<div class="vl-r-section">
+		<div class="vl-r-section-title">👤 Guest Details — بيانات النزيل</div>
+		<div class="vl-r-grid">
+			<div class="vl-r-row">
+				<div class="vl-r-cell" style="width: 50%;">
+					<div class="vl-r-label">Guest Name / اسم النزيل</div>
+					<div class="vl-r-value" style="font-size: 13pt; font-weight: 700;">{{ doc.guest_name or '-' }}</div>
+				</div>
+				<div class="vl-r-cell" style="width: 25%;">
+					<div class="vl-r-label">Room / الغرفة</div>
+					<div class="vl-r-value" style="font-size: 13pt; font-weight: 700; color: #C9A84C;">{{ doc.room or '-' }}</div>
+				</div>
+				<div class="vl-r-cell" style="width: 25%;">
+					<div class="vl-r-label">Key Card / البطاقة</div>
+					<div class="vl-r-value">{{ doc.key_card_number or '-' }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Reservation & Stay -->
+	<div class="vl-r-section">
+		<div class="vl-r-section-title">🛏️ Stay Details — تفاصيل الإقامة</div>
+		<div class="vl-r-grid">
+			<div class="vl-r-row">
+				<div class="vl-r-cell" style="width: 33%;">
+					<div class="vl-r-label">Reservation / الحجز</div>
+					<div class="vl-r-value">{{ doc.reservation or '-' }}</div>
+				</div>
+				<div class="vl-r-cell" style="width: 33%;">
+					<div class="vl-r-label">Check-In / تسجيل الدخول</div>
+					<div class="vl-r-value">{{ frappe.format_datetime(doc.check_in_time) if doc.check_in_time else '-' }}</div>
+				</div>
+				<div class="vl-r-cell" style="width: 34%;">
+					<div class="vl-r-label">ID Verified / التحقق من الهوية</div>
+					<div class="vl-r-value">
+						<span class="vl-r-check {% if doc.id_verified %}checked{% endif %}"></span>
+						{% if doc.id_verified %}{{ __("Verified") }}{% else %}{{ __("Not Verified") }}{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Deposit -->
+	{% if doc.deposit_collected %}
+	<div class="vl-r-section">
+		<div class="vl-r-box">
+			<div class="vl-r-label">Security Deposit Collected / التأمين المحصل</div>
+			<div style="font-size: 16pt; font-weight: 700; color: #C9A84C; margin-top: 4px;">{{ frappe.format_currency(doc.deposit_collected) }}</div>
+		</div>
+	</div>
+	{% endif %}
+
+	<!-- Notes -->
+	{% if doc.notes %}
+	<div class="vl-r-section">
+		<div class="vl-r-section-title">📝 Notes — ملاحظات</div>
+		<div style="padding: 8px; background: #f8f9fa; border-radius: 4px; font-size: 9pt; line-height: 1.6;">
+			{{ doc.notes }}
+		</div>
+	</div>
+	{% endif %}
+
+	<!-- Signature Area -->
+	<div style="text-align: center; margin-top: 30px;">
+		<div class="vl-r-sign">
+			<div class="vl-r-sign-label">Guest Signature / توقيع النزيل</div>
+		</div>
+		<div style="display: inline-block; width: 15%;"></div>
+		<div class="vl-r-sign">
+			<div class="vl-r-sign-label">Front Desk / الاستقبال</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div class="vl-r-footer">
+		<p>Registration # {{ doc.name }} | {{ frappe.format_datetime(doc.check_in_time) if doc.check_in_time else '' }}</p>
+	</div>
+</div>

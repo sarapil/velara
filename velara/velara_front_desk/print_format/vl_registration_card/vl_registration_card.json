@@ -1,0 +1,10 @@
+{
+	"name": "VL Registration Card",
+	"doctype": "Print Format",
+	"doc_type": "VL Check In",
+	"module": "Velara Front Desk",
+	"print_format_type": "Jinja",
+	"standard": "Yes",
+	"custom_format": 1,
+	"raw_printing": 0
+}

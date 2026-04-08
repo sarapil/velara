@@ -1,0 +1,141 @@
+{# Copyright (c) 2026, Arkan Lab — https://arkan.it.com
+   License: MIT #}
+
+<style>
+	.vl-folio { font-family: 'Segoe UI', Arial, sans-serif; color: #333; font-size: 10pt; }
+	.vl-folio-hdr { border-bottom: 3px solid #C9A84C; padding-bottom: 10px; margin-bottom: 14px; }
+	.vl-folio-title { font-size: 16pt; font-weight: 700; color: #C9A84C; margin: 0; }
+	.vl-folio-ar { font-size: 11pt; color: #96793A; direction: rtl; margin: 2px 0 0; }
+	.vl-f-label { color: #7f8c8d; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.5px; }
+	.vl-f-value { font-size: 10pt; font-weight: 500; }
+	.vl-f-grid { display: table; width: 100%; }
+	.vl-f-row { display: table-row; }
+	.vl-f-cell { display: table-cell; padding: 4px 8px; vertical-align: top; }
+	.vl-f-section { margin: 12px 0; }
+	.vl-f-section-title { font-size: 10pt; font-weight: 600; color: #C9A84C; border-bottom: 1px solid #E8D9A0; padding-bottom: 3px; margin-bottom: 6px; }
+	.vl-f-table { width: 100%; border-collapse: collapse; font-size: 9pt; }
+	.vl-f-table th { background: #C9A84C; color: #fff; padding: 6px 8px; text-align: left; font-size: 8pt; text-transform: uppercase; }
+	.vl-f-table td { padding: 5px 8px; border-bottom: 1px solid #f0f0f0; }
+	.vl-f-table tr:nth-child(even) { background: #FEFCF5; }
+	.vl-f-curr { text-align: right; font-family: 'Courier New', monospace; }
+	.vl-f-total-row { background: #C9A84C !important; color: #fff; font-weight: 700; }
+	.vl-f-total-row td { border-bottom: none; }
+	.vl-f-sumbox { text-align: center; padding: 16px; background: #FFF8E7; border: 1px solid #E8D9A0; border-radius: 8px; }
+	.vl-f-bignum { font-size: 22pt; font-weight: 700; color: #C9A84C; }
+	.vl-f-badge { display: inline-block; padding: 3px 12px; border-radius: 4px; font-size: 9pt; font-weight: 600; color: #fff; }
+	.vl-f-badge-open { background: #2563eb; }
+	.vl-f-badge-settled { background: #059669; }
+	.vl-f-badge-cancelled { background: #dc2626; }
+	.vl-f-footer { margin-top: 20px; border-top: 1px solid #E8D9A0; padding-top: 8px; font-size: 7.5pt; color: #95a5a6; text-align: center; }
+</style>
+
+<div class="vl-folio">
+	{% set status_map = {'Open': 'open', 'Settled': 'settled', 'Cancelled': 'cancelled'} %}
+
+	<!-- Header -->
+	<div class="vl-folio-hdr">
+		<div style="display: table; width: 100%;">
+			<div style="display: table-cell; width: 60%; vertical-align: middle;">
+				<p class="vl-folio-title">GUEST FOLIO</p>
+				<p class="vl-folio-ar">فاتورة النزيل</p>
+			</div>
+			<div style="display: table-cell; text-align: right; vertical-align: middle;">
+				<span class="vl-f-badge vl-f-badge-{{ status_map.get(doc.status, 'open') }}">{{ doc.status or 'Open' }}</span>
+				<br><span style="font-size: 9pt; color: #C9A84C; font-weight: 600;">{{ doc.name }}</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Guest & Room -->
+	<div class="vl-f-section">
+		<div class="vl-f-grid">
+			<div class="vl-f-row">
+				<div class="vl-f-cell" style="width: 40%;">
+					<div class="vl-f-label">Guest / النزيل</div>
+					<div class="vl-f-value" style="font-size: 12pt; font-weight: 700;">{{ doc.guest_name or '-' }}</div>
+				</div>
+				<div class="vl-f-cell" style="width: 20%;">
+					<div class="vl-f-label">Room / الغرفة</div>
+					<div class="vl-f-value">{{ doc.room or '-' }}</div>
+				</div>
+				<div class="vl-f-cell" style="width: 20%;">
+					<div class="vl-f-label">Reservation / الحجز</div>
+					<div class="vl-f-value">{{ doc.reservation or '-' }}</div>
+				</div>
+				<div class="vl-f-cell" style="width: 20%;">
+					<div class="vl-f-label">Folio Type / النوع</div>
+					<div class="vl-f-value">{{ doc.folio_type or '-' }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Charges Table -->
+	{% if doc.charges and doc.charges|length > 0 %}
+	<div class="vl-f-section">
+		<div class="vl-f-section-title">📋 Charges — الرسوم</div>
+		<table class="vl-f-table">
+			<thead>
+				<tr>
+					<th style="width: 10%;">#</th>
+					<th style="width: 20%;">Date / التاريخ</th>
+					<th style="width: 35%;">Description / الوصف</th>
+					<th style="width: 15%;">Category / الفئة</th>
+					<th class="vl-f-curr" style="width: 20%;">Amount / المبلغ</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for charge in doc.charges %}
+				<tr>
+					<td>{{ loop.index }}</td>
+					<td>{{ frappe.format_date(charge.charge_date) if charge.charge_date else '-' }}</td>
+					<td>{{ charge.description or charge.charge_type or '-' }}</td>
+					<td>{{ charge.charge_category or '-' }}</td>
+					<td class="vl-f-curr">{{ frappe.format_currency(charge.amount or 0) }}</td>
+				</tr>
+				{% endfor %}
+				<tr class="vl-f-total-row">
+					<td colspan="4" style="text-align: right; padding-right: 8px;">Total Charges / إجمالي الرسوم</td>
+					<td class="vl-f-curr">{{ frappe.format_currency(doc.total_charges or 0) }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	{% endif %}
+
+	<!-- Financial Summary -->
+	<div class="vl-f-section">
+		<div class="vl-f-section-title">💰 Summary — الملخص</div>
+		<table class="vl-f-table">
+			<tr>
+				<td style="width: 60%;">Total Charges / إجمالي الرسوم</td>
+				<td class="vl-f-curr">{{ frappe.format_currency(doc.total_charges or 0) }}</td>
+			</tr>
+			{% if doc.total_tax %}
+			<tr>
+				<td>Tax / الضريبة</td>
+				<td class="vl-f-curr">{{ frappe.format_currency(doc.total_tax or 0) }}</td>
+			</tr>
+			{% endif %}
+			<tr style="font-weight: 700; background: #FFF8E7;">
+				<td style="border-top: 2px solid #C9A84C;">Grand Total / الإجمالي</td>
+				<td class="vl-f-curr" style="border-top: 2px solid #C9A84C; font-size: 12pt; color: #C9A84C;">{{ frappe.format_currency(doc.grand_total or 0) }}</td>
+			</tr>
+			<tr>
+				<td>Paid / المدفوع</td>
+				<td class="vl-f-curr" style="color: #059669;">{{ frappe.format_currency(doc.paid_amount or 0) }}</td>
+			</tr>
+			<tr style="font-weight: 700;">
+				<td style="border-top: 2px solid #333;">Balance Due / الرصيد المتبقي</td>
+				<td class="vl-f-curr" style="border-top: 2px solid #333; font-size: 14pt; color: {% if (doc.balance or 0) > 0 %}#dc2626{% else %}#059669{% endif %};">{{ frappe.format_currency(doc.balance or 0) }}</td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- Footer -->
+	<div class="vl-f-footer">
+		<p>{{ __("Thank you for choosing our hotel. We hope you enjoyed your stay.") }}</p>
+		<p style="direction: rtl;">شكراً لاختيارك فندقنا. نأمل أن تكون إقامتك ممتعة.</p>
+		<p>Folio {{ doc.name }} | {{ frappe.format_date(frappe.utils.nowdate()) }}</p>
+	</div>
+</div>

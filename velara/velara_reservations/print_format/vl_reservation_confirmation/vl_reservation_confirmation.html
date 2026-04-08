@@ -1,0 +1,171 @@
+{# Copyright (c) 2026, Arkan Lab — https://arkan.it.com
+   License: MIT #}
+
+<style>
+	.vl-print { font-family: 'Segoe UI', Arial, sans-serif; color: #333; font-size: 10pt; direction: ltr; }
+	.vl-header { border-bottom: 3px solid #C9A84C; padding-bottom: 10px; margin-bottom: 14px; }
+	.vl-title { font-size: 16pt; font-weight: 700; color: #C9A84C; margin: 0; }
+	.vl-title-ar { font-size: 12pt; font-weight: 600; color: #96793A; margin: 0; direction: rtl; font-family: 'Segoe UI', Arial, sans-serif; }
+	.vl-subtitle { font-size: 9pt; color: #7f8c8d; }
+	.vl-ref { font-size: 9pt; color: #C9A84C; font-weight: 600; }
+	.vl-section { margin: 10px 0; }
+	.vl-section-title { font-size: 10pt; font-weight: 600; color: #C9A84C; border-bottom: 1px solid #E8D9A0; padding-bottom: 3px; margin-bottom: 8px; }
+	.vl-grid { display: table; width: 100%; }
+	.vl-row { display: table-row; }
+	.vl-cell { display: table-cell; padding: 4px 8px; vertical-align: top; }
+	.vl-label { color: #7f8c8d; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.5px; }
+	.vl-value { font-size: 10pt; font-weight: 500; }
+	.vl-badge { display: inline-block; padding: 3px 12px; border-radius: 4px; font-size: 9pt; font-weight: 600; color: #fff; }
+	.vl-badge-confirmed { background: #059669; }
+	.vl-badge-checked-in { background: #2563eb; }
+	.vl-badge-draft { background: #95a5a6; }
+	.vl-badge-cancelled { background: #dc2626; }
+	.vl-highlight { background: #FFF8E7; border: 1px solid #E8D9A0; border-radius: 6px; padding: 12px; margin: 8px 0; }
+	.vl-summary-box { text-align: center; padding: 14px; background: #FFF8E7; border: 1px solid #E8D9A0; border-radius: 8px; }
+	.vl-big-num { font-size: 20pt; font-weight: 700; color: #C9A84C; }
+	.vl-footer { margin-top: 20px; border-top: 1px solid #E8D9A0; padding-top: 8px; font-size: 7.5pt; color: #95a5a6; text-align: center; }
+	.vl-table { width: 100%; border-collapse: collapse; font-size: 9pt; }
+	.vl-table th { background: #C9A84C; color: #fff; padding: 6px 8px; text-align: left; font-size: 8pt; text-transform: uppercase; }
+	.vl-table td { padding: 5px 8px; border-bottom: 1px solid #f0f0f0; }
+	.vl-currency { text-align: right; font-family: 'Courier New', monospace; }
+</style>
+
+<div class="vl-print">
+	{% set status_class = {'Confirmed': 'confirmed', 'Checked In': 'checked-in', 'Draft': 'draft', 'Cancelled': 'cancelled'} %}
+
+	<!-- Header -->
+	<div class="vl-header">
+		<div style="display: table; width: 100%;">
+			<div style="display: table-cell; width: 60%; vertical-align: middle;">
+				<p class="vl-title">RESERVATION CONFIRMATION</p>
+				<p class="vl-title-ar">تأكيد الحجز</p>
+			</div>
+			<div style="display: table-cell; text-align: right; vertical-align: middle;">
+				<span class="vl-badge vl-badge-{{ status_class.get(doc.status, 'draft') }}">{{ doc.status or 'Draft' }}</span>
+				<br><span class="vl-ref">{{ doc.confirmation_number or doc.name }}</span>
+				<br><span style="font-size: 8pt; color: #7f8c8d;">{{ frappe.format_date(doc.creation) }}</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Guest Info -->
+	<div class="vl-section">
+		<div class="vl-section-title">👤 Guest Information — معلومات النزيل</div>
+		<div class="vl-grid">
+			<div class="vl-row">
+				<div class="vl-cell" style="width: 50%;">
+					<div class="vl-label">Guest Name / اسم النزيل</div>
+					<div class="vl-value" style="font-size: 12pt; font-weight: 700;">{{ doc.guest_name or '-' }}</div>
+				</div>
+				<div class="vl-cell" style="width: 25%;">
+					<div class="vl-label">Adults / بالغين</div>
+					<div class="vl-value">{{ doc.adults or 1 }}</div>
+				</div>
+				<div class="vl-cell" style="width: 25%;">
+					<div class="vl-label">Children / أطفال</div>
+					<div class="vl-value">{{ doc.children or 0 }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Stay Details -->
+	<div class="vl-highlight">
+		<div style="display: table; width: 100%;">
+			<div style="display: table-cell; width: 30%; text-align: center;">
+				<div class="vl-label">Check-In / تسجيل الدخول</div>
+				<div class="vl-value" style="font-size: 12pt; font-weight: 700; color: #059669;">{{ frappe.format_date(doc.check_in_date) }}</div>
+				{% if doc.arrival_time %}<div style="font-size: 9pt; color: #7f8c8d;">{{ doc.arrival_time }}</div>{% endif %}
+			</div>
+			<div style="display: table-cell; width: 20%; text-align: center; vertical-align: middle;">
+				<div class="vl-big-num">{{ doc.nights or 0 }}</div>
+				<div class="vl-label">Nights / ليالي</div>
+			</div>
+			<div style="display: table-cell; width: 30%; text-align: center;">
+				<div class="vl-label">Check-Out / تسجيل الخروج</div>
+				<div class="vl-value" style="font-size: 12pt; font-weight: 700; color: #dc2626;">{{ frappe.format_date(doc.check_out_date) }}</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Room & Rate -->
+	<div class="vl-section">
+		<div class="vl-section-title">🛏️ Room & Rate — الغرفة والسعر</div>
+		<div class="vl-grid">
+			<div class="vl-row">
+				<div class="vl-cell" style="width: 25%;">
+					<div class="vl-label">Room Type / نوع الغرفة</div>
+					<div class="vl-value">{{ doc.room_type or '-' }}</div>
+				</div>
+				<div class="vl-cell" style="width: 25%;">
+					<div class="vl-label">Assigned Room / الغرفة</div>
+					<div class="vl-value">{{ doc.room or __('To be assigned') }}</div>
+				</div>
+				<div class="vl-cell" style="width: 25%;">
+					<div class="vl-label">Rate Plan / خطة الأسعار</div>
+					<div class="vl-value">{{ doc.rate_plan or '-' }}</div>
+				</div>
+				<div class="vl-cell" style="width: 25%;">
+					<div class="vl-label">Meal Plan / خطة الوجبات</div>
+					<div class="vl-value">{{ doc.meal_plan or '-' }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Financial Summary -->
+	<div class="vl-section">
+		<div class="vl-section-title">💰 Financial Summary — الملخص المالي</div>
+		<div class="vl-table">
+			<tr>
+				<th style="width: 60%;">Description / الوصف</th>
+				<th class="vl-currency" style="width: 40%;">Amount / المبلغ</th>
+			</tr>
+			<tr>
+				<td>Room Rate per Night / سعر الليلة</td>
+				<td class="vl-currency">{{ frappe.format_currency(doc.room_rate or 0) }}</td>
+			</tr>
+			<tr>
+				<td>Total Room Charges ({{ doc.nights or 0 }} nights) / إجمالي رسوم الغرفة</td>
+				<td class="vl-currency">{{ frappe.format_currency(doc.total_room_charges or 0) }}</td>
+			</tr>
+			{% if doc.discount_percent %}
+			<tr>
+				<td>Discount / الخصم ({{ doc.discount_percent }}%)</td>
+				<td class="vl-currency" style="color: #059669;">-{{ frappe.format_currency((doc.total_room_charges or 0) - (doc.net_total or 0)) }}</td>
+			</tr>
+			{% endif %}
+			<tr style="background: #FFF8E7; font-weight: 700;">
+				<td style="border-top: 2px solid #C9A84C;">Net Total / الصافي</td>
+				<td class="vl-currency" style="border-top: 2px solid #C9A84C; font-size: 12pt; color: #C9A84C;">{{ frappe.format_currency(doc.net_total or 0) }}</td>
+			</tr>
+		</div>
+	</div>
+
+	<!-- Special Requests -->
+	{% if doc.special_requests %}
+	<div class="vl-section">
+		<div class="vl-section-title">📝 Special Requests — طلبات خاصة</div>
+		<div style="padding: 8px; background: #f8f9fa; border-radius: 4px; font-size: 9pt; line-height: 1.6;">
+			{{ doc.special_requests }}
+		</div>
+	</div>
+	{% endif %}
+
+	<!-- Cancellation Policy -->
+	{% if doc.cancellation_policy %}
+	<div class="vl-section">
+		<div class="vl-section-title">⚠️ Cancellation Policy — سياسة الإلغاء</div>
+		<div style="padding: 8px; background: #FEF2F2; border: 1px solid #FECACA; border-radius: 4px; font-size: 8pt; color: #991B1B; line-height: 1.5;">
+			{{ doc.cancellation_policy }}
+		</div>
+	</div>
+	{% endif %}
+
+	<!-- Footer -->
+	<div class="vl-footer">
+		<p>{{ __("This is a computer-generated document. No signature is required.") }}</p>
+		<p style="direction: rtl;">هذه وثيقة صادرة آلياً. لا تحتاج إلى توقيع.</p>
+		<p>Confirmation # {{ doc.confirmation_number or doc.name }} | {{ frappe.format_date(doc.creation) }}</p>
+	</div>
+</div>
