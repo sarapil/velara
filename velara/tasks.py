@@ -113,7 +113,7 @@ def send_arrival_list():
 				"check_in_date": today(),
 				"status": ["in", ["Confirmed", "Guaranteed"]],
 			},
-			fields=["name", "guest_name", "room_type", "check_in_date", "check_out_date", "notes"]
+			fields=["name", "guest_name", "room_type", "check_in_date", "check_out_date", "special_requests"]
 		)
 
 		if arrivals:

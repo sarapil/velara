@@ -1,21 +1,21 @@
 {
  "app": "velara",
- "creation": "2026-04-01 10:00:00.000000",
+ "creation": "2026-04-01 10:00:00",
  "docstatus": 0,
  "doctype": "Desktop Icon",
  "hidden": 0,
  "icon_type": "Link",
  "idx": 1,
  "label": "Reports",
+ "link_to": "Velara Reports",
  "link_type": "Workspace Sidebar",
  "logo_url": "/assets/velara/icons/desktop_icons/solid/velara_reports.svg",
- "modified": "2026-04-03 08:34:44.210364",
+ "modified": "2026-04-09 21:42:22.899763",
  "modified_by": "Administrator",
- "name": "Velara Reports",
+ "name": "Reports",
  "owner": "Administrator",
+ "parent_icon": "VELARA",
  "restrict_removal": 0,
  "roles": [],
- "standard": 1,
- "parent_icon": "Velara",
- "link_to": "Velara Reports"
+ "standard": 1
 }
