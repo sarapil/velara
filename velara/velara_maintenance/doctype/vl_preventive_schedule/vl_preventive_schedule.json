@@ -23,6 +23,11 @@
    "in_list_view": 1
   },
   {
+   "fieldname": "equipment",
+   "fieldtype": "Data",
+   "label": "Equipment"
+  },
+  {
    "fieldname": "category",
    "fieldtype": "Select",
    "label": "Category",
@@ -65,15 +70,26 @@
    "default": "1"
   },
   {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": "1"
+  },
+  {
    "fieldname": "description",
    "fieldtype": "Text",
    "label": "Description"
+  },
+  {
+   "fieldname": "task_description",
+   "fieldtype": "Small Text",
+   "label": "Task Description"
   }
  ],
  "index_web_pages_for_search": 0,
  "is_submittable": 0,
  "links": [],
- "modified": "2026-03-30 00:00:00",
+ "modified": "2026-04-09 19:49:55.866488",
  "modified_by": "Administrator",
  "module": "Velara Maintenance",
  "name": "VL Preventive Schedule",

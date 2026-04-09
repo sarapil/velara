@@ -188,6 +188,12 @@
    "bold": 1
   },
   {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "label": "Balance",
+   "read_only": 1
+  },
+  {
    "fieldname": "folio",
    "fieldtype": "Link",
    "label": "Folio",
@@ -275,7 +281,7 @@
  "index_web_pages_for_search": 0,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-30 00:00:00",
+ "modified": "2026-04-09 19:38:15.565678",
  "modified_by": "Administrator",
  "module": "Velara Reservations",
  "name": "VL Reservation",

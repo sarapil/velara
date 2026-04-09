@@ -46,7 +46,7 @@ def get_front_desk_data():
 		fields=[
 			"name", "guest", "guest_name", "room_type", "room",
 			"check_in_date", "check_out_date", "adults", "children",
-			"rate_plan", "source", "notes", "vip_code",
+			"rate_plan", "booking_source", "special_requests",
 		],
 		order_by="guest_name asc",
 	)
@@ -136,9 +136,9 @@ def walk_in_check_in(first_name, room_type, nights=1, last_name=None,
 	reservation.room = room
 	reservation.check_in_date = check_in
 	reservation.check_out_date = check_out
-	reservation.total_amount = total
+	reservation.net_total = total
 	reservation.status = "Confirmed"
-	reservation.source = "Walk-In"
+	reservation.booking_source = "Walk-In"
 	reservation.insert()
 
 	return reservation.name

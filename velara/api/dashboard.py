@@ -154,7 +154,7 @@ def get_arrivals_departures(date=None):
 		fields=[
 			"name", "guest", "guest_name", "room_type", "room",
 			"check_in_date", "check_out_date", "adults", "children",
-			"rate_plan", "total_amount", "notes", "vip_code", "source"
+			"rate_plan", "net_total", "special_requests", "booking_source"
 		],
 		order_by="guest_name asc"
 	)

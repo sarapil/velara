@@ -27,12 +27,12 @@ def get_guest_profile(guest):
 			"VL Reservation",
 			filters={"guest": guest},
 			fields=["name", "room", "room_type", "check_in_date", "check_out_date",
-					 "status", "total_amount", "source"],
+					 "status", "net_total", "booking_source"],
 			order_by="check_in_date desc",
 			limit=20
 		)
 		profile["total_stays"] = len(profile["stay_history"])
-		profile["total_revenue"] = flt(sum(s.total_amount or 0 for s in profile["stay_history"]))
+		profile["total_revenue"] = flt(sum(s.net_total or 0 for s in profile["stay_history"]))
 
 	# Current stay
 	if frappe.db.exists("DocType", "VL Reservation"):

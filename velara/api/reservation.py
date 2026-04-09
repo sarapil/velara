@@ -70,10 +70,10 @@ def quick_reservation(guest, room_type, check_in, check_out, rate_plan=None, roo
 	reservation.check_in_date = check_in
 	reservation.check_out_date = check_out
 	reservation.rate_plan = rate_plan
-	reservation.total_amount = total
-	reservation.notes = notes
+	reservation.net_total = total
+	reservation.special_requests = notes
 	reservation.status = "Confirmed"
-	reservation.source = "Front Desk"
+	reservation.booking_source = "Front Desk"
 	reservation.insert()
 
 	return reservation.as_dict()

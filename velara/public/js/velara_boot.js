@@ -280,3 +280,148 @@ frappe.listview_settings["VL Service Request"] = {
 		return colors[doc.status] || [__(doc.status), "gray", ""];
 	},
 };
+
+// ========================================
+// FloatingWindow Onboarding Launcher
+// ========================================
+
+/**
+ * Opens the Velara onboarding tutorial inside a frappe.visual.floatingWindow
+ * on the opposite side of the sidebar (right in LTR, left in RTL).
+ */
+velara.open_onboarding = function () {
+	if (velara._onboarding_win && velara._onboarding_win.is_visible) {
+		velara._onboarding_win.focus();
+		return;
+	}
+
+	const is_rtl = document.documentElement.dir === "rtl" || $("html").attr("dir") === "rtl";
+
+	const open_win = () => {
+		if (frappe.visual && frappe.visual.floatingWindow) {
+			velara._onboarding_win = frappe.visual.floatingWindow({
+				title: __("Velara Onboarding"),
+				width: 520,
+				height: 600,
+				position: is_rtl ? "left" : "right",
+				resizable: true,
+				minimizable: true,
+				maximizable: true,
+				content: '<div class="vl-fw-onboarding" style="padding:16px;"></div>',
+				on_close() {
+					velara._onboarding_win = null;
+				},
+			});
+
+			setTimeout(() => {
+				const container = velara._onboarding_win?.$body
+					? velara._onboarding_win.$body.find(".vl-fw-onboarding")[0]
+					: document.querySelector(".vl-fw-onboarding");
+
+				if (!container) return;
+				_render_velara_onboarding(container);
+			}, 200);
+		} else {
+			frappe.set_route("app", "velara-onboarding");
+		}
+	};
+
+	if (!frappe.visual || !frappe.visual.floatingWindow) {
+		frappe.require("frappe_visual.bundle.js", open_win);
+	} else {
+		open_win();
+	}
+};
+
+function _vl_screen_link(icon, title, desc, route) {
+	return `<a href="/app/${route}" class="vl-onb-link" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid var(--border-color);border-radius:8px;text-decoration:none;color:inherit;transition:all .2s;">
+		<span style="font-size:24px;">${icon}</span>
+		<div><b>${title}</b><br><span class="text-muted" style="font-size:12px;">${desc}</span></div>
+	</a>`;
+}
+
+function _render_velara_onboarding(container) {
+	const steps = [
+		{
+			title: __("Welcome to Velara"),
+			html: `<div class="text-center" style="padding:24px 0;">
+				<img src="/assets/velara/images/velara-logo.svg" style="width:80px;height:80px;margin-bottom:16px;" onerror="this.style.display='none'">
+				<h3 style="color:var(--vl-gold,#C9A84C);">${__("Hotel Property Management")}</h3>
+				<p class="text-muted">${__("Manage your hotel operations — reservations, check-in/out, housekeeping, billing, and guest relations")}</p>
+				<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px;">
+					<span class="badge badge-primary">${__("38+ DocTypes")}</span>
+					<span class="badge badge-info">${__("14 Modules")}</span>
+					<span class="badge badge-success">${__("8 Workflows")}</span>
+					<span class="badge badge-warning">${__("6 Roles")}</span>
+				</div>
+			</div>`,
+		},
+		{
+			title: __("Your Key Screens"),
+			html: `<div style="display:grid;gap:12px;">
+				${_vl_screen_link("🏨", __("Front Desk"), __("Real-time room status & check-ins"), "velara-front-desk")}
+				${_vl_screen_link("📅", __("Reservations"), __("Manage bookings & availability"), "vl-reservation")}
+				${_vl_screen_link("🧹", __("Housekeeping"), __("Room cleaning tasks & inspections"), "vl-hk-task")}
+				${_vl_screen_link("💳", __("Guest Folios"), __("Billing, charges, & settlements"), "vl-folio")}
+				${_vl_screen_link("📊", __("Dashboard"), __("Occupancy & revenue analytics"), "velara-dashboard")}
+			</div>`,
+		},
+		{
+			title: __("Quick Start"),
+			html: `<div style="padding:8px 0;">
+				<div style="display:flex;flex-direction:column;gap:16px;">
+					<div style="display:flex;align-items:center;gap:12px;">
+						<div style="width:32px;height:32px;border-radius:50%;background:var(--vl-gold,#C9A84C);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;">1</div>
+						<div><b>${__("Setup Room Types & Rooms")}</b><br><span class="text-muted">${__("Define your property layout and room categories")}</span></div>
+					</div>
+					<div style="display:flex;align-items:center;gap:12px;">
+						<div style="width:32px;height:32px;border-radius:50%;background:var(--vl-gold,#C9A84C);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;">2</div>
+						<div><b>${__("Create Reservations")}</b><br><span class="text-muted">${__("Book guests into available rooms with rates")}</span></div>
+					</div>
+					<div style="display:flex;align-items:center;gap:12px;">
+						<div style="width:32px;height:32px;border-radius:50%;background:var(--vl-gold,#C9A84C);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;">3</div>
+						<div><b>${__("Check In & Manage Stay")}</b><br><span class="text-muted">${__("Process arrivals, post charges, handle requests")}</span></div>
+					</div>
+					<div style="display:flex;align-items:center;gap:12px;">
+						<div style="width:32px;height:32px;border-radius:50%;background:var(--vl-gold,#C9A84C);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;">4</div>
+						<div><b>${__("Check Out & Settle Folio")}</b><br><span class="text-muted">${__("Complete billing and generate invoice")}</span></div>
+					</div>
+				</div>
+			</div>`,
+		},
+	];
+
+	let current = 0;
+
+	function render_step() {
+		const step = steps[current];
+		const nav_prev = current > 0
+			? `<button class="btn btn-xs btn-default vl-onb-prev">${__("Previous")}</button>` : "";
+		const nav_next = current < steps.length - 1
+			? `<button class="btn btn-xs btn-primary vl-onb-next">${__("Next")}</button>`
+			: `<button class="btn btn-xs btn-success vl-onb-done">${__("Get Started!")}</button>`;
+
+		container.innerHTML = `
+			<div style="margin-bottom:8px;">
+				<span class="text-muted" style="font-size:11px;">${__("Step")} ${current + 1} / ${steps.length}</span>
+				<div style="height:3px;background:var(--border-color);border-radius:2px;margin-top:4px;">
+					<div style="height:100%;width:${((current + 1) / steps.length) * 100}%;background:var(--vl-gold,#C9A84C);border-radius:2px;transition:width .3s;"></div>
+				</div>
+			</div>
+			<h5 style="margin:12px 0 8px;">${step.title}</h5>
+			${step.html}
+			<div style="display:flex;justify-content:space-between;margin-top:16px;">
+				${nav_prev} <span></span> ${nav_next}
+			</div>
+		`;
+
+		container.querySelector(".vl-onb-prev")?.addEventListener("click", () => { current--; render_step(); });
+		container.querySelector(".vl-onb-next")?.addEventListener("click", () => { current++; render_step(); });
+		container.querySelector(".vl-onb-done")?.addEventListener("click", () => {
+			if (velara._onboarding_win) velara._onboarding_win.close();
+			frappe.set_route("velara-dashboard");
+		});
+	}
+
+	render_step();
+}

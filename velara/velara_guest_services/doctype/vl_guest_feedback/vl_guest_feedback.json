@@ -34,6 +34,17 @@
    "in_list_view": 1
   },
   {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating"
+  },
+  {
+   "fieldname": "feedback_type",
+   "fieldtype": "Select",
+   "label": "Feedback Type",
+   "options": "\nGeneral\nRoom\nService\nFood\nFacilities\nStaff\nComplaint"
+  },
+  {
    "fieldname": "reservation",
    "fieldtype": "Link",
    "label": "Reservation",
@@ -130,7 +141,7 @@
  "index_web_pages_for_search": 0,
  "is_submittable": 0,
  "links": [],
- "modified": "2026-03-30 00:00:00",
+ "modified": "2026-04-09 19:38:15.568559",
  "modified_by": "Administrator",
  "module": "Velara Guest Services",
  "name": "VL Guest Feedback",

@@ -73,6 +73,7 @@ app_include_css = [
 app_include_js = [
 	"/assets/velara/js/velara_boot.js",
     "/assets/velara/js/fv_integration.js",
+    "/assets/velara/js/velara_scene.js",
 ]
 
 # DocType JS Extensions (ERPNext)

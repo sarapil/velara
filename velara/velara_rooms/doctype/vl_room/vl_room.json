@@ -108,6 +108,18 @@
    "in_standard_filter": 1
   },
   {
+   "fieldname": "hk_status",
+   "fieldtype": "Select",
+   "label": "HK Status",
+   "options": "\nClean\nDirty\nInspected\nOut of Order"
+  },
+  {
+   "fieldname": "maintenance_status",
+   "fieldtype": "Select",
+   "label": "Maintenance Status",
+   "options": "\nNone\nMinor\nMajor\nOut of Service"
+  },
+  {
    "fieldname": "fo_status",
    "fieldtype": "Select",
    "label": "Front Office Status",
@@ -159,12 +171,40 @@
    "fieldname": "image",
    "fieldtype": "Attach Image",
    "label": "Room Image"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": "1"
+  },
+  {
+   "fieldname": "is_smoking",
+   "fieldtype": "Check",
+   "label": "Is Smoking"
+  },
+  {
+   "fieldname": "is_accessible",
+   "fieldtype": "Check",
+   "label": "Is Accessible"
+  },
+  {
+   "fieldname": "is_connecting",
+   "fieldtype": "Check",
+   "label": "Is Connecting"
+  },
+  {
+   "fieldname": "connecting_room",
+   "fieldtype": "Link",
+   "label": "Connecting Room",
+   "options": "VL Room",
+   "depends_on": "is_connecting"
   }
  ],
  "index_web_pages_for_search": 0,
  "is_submittable": 0,
  "links": [],
- "modified": "2026-03-30 00:00:00",
+ "modified": "2026-04-09 19:38:15.566870",
  "modified_by": "Administrator",
  "module": "Velara Rooms",
  "name": "VL Room",
