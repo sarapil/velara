@@ -427,8 +427,9 @@ def _calculate_daily_statistics(audit):
 	from frappe.utils import flt
 	total_rooms = frappe.db.count("VL Room", {"room_status": ["!=", "Out of Service"]}) or 1
 	occupied = frappe.db.count("VL Room", {"room_status": "Occupied"})
+	room_revenue = flt(audit.room_revenue)
 	audit.total_rooms = total_rooms
 	audit.occupied_rooms = occupied
 	audit.occupancy_rate = flt(occupied / total_rooms * 100, 1)
-	audit.adr = flt(audit.room_revenue / occupied, 2) if occupied else 0
-	audit.revpar = flt(audit.room_revenue / total_rooms, 2) if total_rooms else 0
+	audit.adr = flt(room_revenue / occupied, 2) if occupied else 0
+	audit.revpar = flt(room_revenue / total_rooms, 2) if total_rooms else 0

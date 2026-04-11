@@ -56,7 +56,7 @@ def get_occupancy_percentage(occupied=None, total=None):
 	if occupied is None or total is None:
 		try:
 			total = frappe.db.count("VL Room", {"is_active": 1})
-			occupied = frappe.db.count("VL Room", {"status": "Occupied"})
+			occupied = frappe.db.count("VL Room", {"room_status": "Occupied"})
 		except Exception:
 			return 0
 
@@ -93,7 +93,7 @@ def check_room_availability(room_type, check_in, check_out, exclude_reservation=
 		filters={
 			"room_type": room_type,
 			"is_active": 1,
-			"status": ["not in", ["Out of Order", "Out of Service"]],
+			"room_status": ["not in", ["Out of Order", "Out of Service"]],
 		},
 		pluck="name"
 	)
@@ -131,10 +131,10 @@ def get_room_count_by_status():
 	rooms = frappe.get_all(
 		"VL Room",
 		filters={"is_active": 1},
-		fields=["status", "count(*) as count"],
-		group_by="status"
+		fields=["room_status", "count(*) as count"],
+		group_by="room_status"
 	)
-	return {r.status: r.count for r in rooms}
+	return {r.room_status: r.count for r in rooms}
 
 
 # ============================================================
