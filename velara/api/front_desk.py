@@ -41,7 +41,7 @@ def get_front_desk_data():
 		"VL Reservation",
 		filters={
 			"check_in_date": today(),
-			"status": ["in", ["Confirmed", "Guaranteed", "Tentative"]],
+			"status": "Confirmed",
 		},
 		fields=[
 			"name", "guest", "guest_name", "room_type", "room",
@@ -102,14 +102,14 @@ def walk_in_check_in(first_name, room_type, nights=1, last_name=None,
 	if mobile:
 		guest = frappe.db.get_value("VL Guest", {"mobile": mobile})
 	if not guest and email:
-		guest = frappe.db.get_value("VL Guest", {"email_address": email})
+		guest = frappe.db.get_value("VL Guest", {"email": email})
 
 	if not guest:
 		guest_doc = frappe.new_doc("VL Guest")
 		guest_doc.first_name = first_name
 		guest_doc.last_name = last_name or ""
 		guest_doc.mobile = mobile
-		guest_doc.email_address = email
+		guest_doc.email = email
 		if id_type:
 			guest_doc.id_type = id_type
 		if id_number:

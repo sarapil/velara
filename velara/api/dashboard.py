@@ -25,7 +25,7 @@ def get_dashboard_stats():
 			"total": frappe.db.count("VL Room", {"is_active": 1}),
 			"occupied": frappe.db.count("VL Room", {"room_status": "Occupied", "is_active": 1}),
 			"available": frappe.db.count("VL Room", {"room_status": "Available", "is_active": 1}),
-			"dirty": frappe.db.count("VL Room", {"room_status": "Dirty", "is_active": 1}),
+			"dirty": frappe.db.count("VL Room", {"housekeeping_status": "Dirty", "is_active": 1}),
 			"out_of_order": frappe.db.count("VL Room", {"room_status": "Out of Order", "is_active": 1}),
 			"out_of_service": frappe.db.count("VL Room", {"room_status": "Out of Service", "is_active": 1}),
 		}
@@ -37,7 +37,7 @@ def get_dashboard_stats():
 		stats["today"] = {
 			"arrivals": frappe.db.count("VL Reservation", {
 				"check_in_date": today(),
-				"status": ["in", ["Confirmed", "Guaranteed"]]
+				"status": "Confirmed"
 			}),
 			"departures": frappe.db.count("VL Reservation", {
 				"check_out_date": today(),
@@ -58,9 +58,9 @@ def get_dashboard_stats():
 	# Housekeeping
 	if frappe.db.exists("DocType", "VL HK Task"):
 		stats["housekeeping"] = {
-			"pending": frappe.db.count("VL HK Task", {"date": today(), "status": "Pending"}),
-			"in_progress": frappe.db.count("VL HK Task", {"date": today(), "status": "In Progress"}),
-			"completed": frappe.db.count("VL HK Task", {"date": today(), "status": "Completed"}),
+			"pending": frappe.db.count("VL HK Task", {"scheduled_date": today(), "status": "Pending"}),
+			"in_progress": frappe.db.count("VL HK Task", {"scheduled_date": today(), "status": "In Progress"}),
+			"completed": frappe.db.count("VL HK Task", {"scheduled_date": today(), "status": "Completed"}),
 		}
 
 	# Guest Services
@@ -149,7 +149,7 @@ def get_arrivals_departures(date=None):
 		"VL Reservation",
 		filters={
 			"check_in_date": date,
-			"status": ["in", ["Confirmed", "Guaranteed", "Tentative"]]
+			"status": "Confirmed"
 		},
 		fields=[
 			"name", "guest", "guest_name", "room_type", "room",

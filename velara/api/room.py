@@ -19,8 +19,8 @@ def change_room_status(room, new_status, reason=None):
 	if not frappe.db.exists("VL Room", room):
 		frappe.throw(_("Room {0} not found").format(room))
 
-	old_status = frappe.db.get_value("VL Room", room, "status")
-	frappe.db.set_value("VL Room", room, "status", new_status)
+	old_status = frappe.db.get_value("VL Room", room, "room_status")
+	frappe.db.set_value("VL Room", room, "room_status", new_status)
 
 	# Log the change
 	if frappe.db.exists("DocType", "VL Room Status Log"):
