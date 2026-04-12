@@ -65,9 +65,9 @@ add_to_apps_screen = [
 
 # Includes in <head>
 # ------------------
-# MEGA: app_include_css = ["/assets/velara/css/velara_combined.css"]
+app_include_css = ["/assets/velara/css/velara_combined.css"]
 
-# MEGA: app_include_js = ["/assets/velara/js/velara_combined.js"]
+app_include_js = ["/assets/velara/js/velara_combined.js"]
 
 # DocType JS Extensions (ERPNext)
 # ------------------
