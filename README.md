@@ -96,3 +96,10 @@ This app uses GitHub Actions for CI. The following workflows are configured:
 ## 📄 License
 
 MIT
+
+## Contact
+
+For support and inquiries:
+- Phone: +201508268982
+- WhatsApp: https://wa.me/201508268982
+
