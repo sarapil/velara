@@ -17,7 +17,10 @@
 window.velara = window.velara || {};
 
 // Guard: skip if frappe core not loaded (transient HTTP/2 proxy failures)
-if (typeof frappe === "undefined" || typeof frappe.provide !== "function") { return; }
+if (typeof frappe === "undefined" || typeof frappe.provide !== "function") {
+	window.frappe = window.frappe || {};
+	frappe.provide = frappe.provide || function () {};
+}
 frappe.provide("velara");
 frappe.provide("velara.utils");
 frappe.provide("velara.ui");
